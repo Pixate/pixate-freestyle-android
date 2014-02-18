@@ -202,8 +202,8 @@ Apache License
 
 --------------------------------------------------------------------------------------
 
-The binary distribution of this product bundles JFlex, which is available
-under the following "BSD-Like" license. For details, see pixate-freestyle/parsing/.
+This product bundles JFlex, which is available under the following "BSD-Like" license. 
+    For details, see pixate-freestyle/parsing/.
 
     Copyright © Gerwin Klein, Steve Rowe, Regis Decamp. All rights reserved.
 

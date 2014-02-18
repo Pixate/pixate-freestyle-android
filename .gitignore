@@ -31,4 +31,4 @@ proguard/
 # Our packaged distributable
 pixate-android-freestyle-*.zip
 
-/.DS_Store
+.DS_Store

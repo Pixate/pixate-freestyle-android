@@ -1,0 +1,29 @@
+/* ToggleButton - Set the toggle text color and size per state */
+.myToggleButton {
+    color: #FC1501;
+    font-size: 16px;
+}
+
+.myToggleButton:checked {
+    color: #7FFF00;
+    font-size: 16px;
+}
+
+.myToggleButton:pressed {
+    color: white;
+    font-size: 16px;
+}
+
+/* Set the toggle icons per state */
+.myToggleButton toggle:off {
+    background-image: url(unchecked.svg);
+    background-size:  200px;
+}
+
+/* We use the 'toggle' virtual child to define the image */
+.myToggleButton toggle:on {
+    background-image: url(checked.svg);
+    background-size: 200px;
+    color: white;
+    font-size: 20px;
+}

@@ -1,0 +1,98 @@
+/* Spinner widget background (we use a nine-patch here) */
+#spinner1 {
+	background-image: url(spinner.png);
+}
+
+#spinner1:pressed {
+	background-image: url(spinner_pressed.png);
+}
+
+/* Place an image on the left. You can also do 'icon-right', 'icon-top' and 'icon-bottom' */ 
+#spinner1 icon-left {
+	background-image: url(list/wifi-icon.svg);
+	background-size: 48px;
+}
+
+/* Style the currently selected item in the Spinner */
+#spinner1 > #text1 {
+	color: #EAEAEC;
+	font-family: sanse-serif;
+	font-weight: bold;
+	font-size: 18pt;
+	compound-padding: 20px;
+}
+
+/* Effects the Spinner's DropDown (API 16 and above) */
+#spinner1 dropdown {
+	vertical-offset: 2px;
+}
+
+/* 
+Style the list that will be opened with the spinner.
+Here we style the items in the list, and also style the divider by
+setting it to take only 90% of the width.
+*/
+#spinner1 > list-view {
+    background-color: #61646D;
+	divider: linear-gradient(90deg, #61646D 0%, #61646D 4%, #5A5D67 5%, #5A5D67 95%, #61646D 96%, #61646D 100%);
+	divider-height: 2px;
+}
+
+#spinner1 > list-view > #text1{
+	color: #8A8B93;
+}
+
+#spinner1 > list-view > #text1:checked {
+	color: #FFFFFF;
+}
+
+#spinner1 > list-view > #text1:pressed {
+	background-color: #909096;
+	color: #FFFFFF;
+}
+
+/* 
+We can set four icons, one of each direction, around the list item.
+Here, we set one on the left, and we also make it react to the pressed state.
+*/
+#spinner1 > list-view > #text1 {
+	compound-padding: 15px;
+}
+
+#spinner1 > list-view > #text1 icon-left {
+	background-image: url(list/checkmark_inactive.svg);
+	background-size: 48px;
+}
+
+#spinner1 > list-view > #text1 icon-left:checked {
+	background-image: url(list/checkmark_active.svg);
+}
+
+/* 
+Right icons - The signal bars.
+We use the 'icon' attribute that will set the icon on the row's CheckedTextView,
+but we can also use the 'icon-right' attribute to get the same effect.
+*/
+#spinner1 > list-view > #text1 icon {
+    background-size: 54px;
+}
+
+#spinner1 > list-view > #text1:nth-child(5n) icon {
+	background-image: url(list/1bars.svg);
+}
+
+#spinner1 > list-view > #text1:nth-child(5n + 1) icon {
+    background-image: url(list/3bars.svg);
+}
+
+#spinner1 > list-view > #text1:nth-child(5n + 2) icon {
+    background-image: url(list/5bars.svg);
+}
+
+#spinner1 > list-view > #text1:nth-child(5n + 3) icon {
+    background-image: url(list/4bars.svg);
+}
+
+#spinner1 > list-view > #text1:nth-child(5n + 4) icon {
+    background-image: url(list/2bars.svg);
+}

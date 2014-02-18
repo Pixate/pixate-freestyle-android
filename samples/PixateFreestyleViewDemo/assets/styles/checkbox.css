@@ -1,0 +1,24 @@
+/* CheckBox - Note the 'icon' virtual child */
+
+#myCheckbox {
+	background-color: linear-gradient(red, orange);
+	background-size: 600px 100px;
+	border: 2px solid purple;
+	color: white;
+	font-size: 24;
+}
+
+#myCheckbox icon {
+	background-image: url(unchecked.svg);
+	background-size: 48px;
+}
+
+#myCheckbox icon:checked {
+	background-image: url(checked.svg);
+	background-size: 48px;
+}
+
+#myCheckbox icon:pressed {
+	background-image: url(checked.svg);
+	background-size: 48px;
+}

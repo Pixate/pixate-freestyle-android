@@ -1,0 +1,13 @@
+/* ImageButton */
+
+#myImageButton image {
+	background-image: url(dollar.svg);
+	background-size: 250px;
+	border: 1px solid blue;
+}
+
+#myImageButton image:pressed {
+	background-image: url(dollar-red.svg);
+	background-size: 250px;
+	border: 2px solid linear-gradient(blue, yellow);
+}

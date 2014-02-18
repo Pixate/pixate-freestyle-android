@@ -1,0 +1,65 @@
+// java -jar beaver.jar -T -w Transforms.grammar
+%package "com.pixate.freestyle.cg.parsing";
+
+%class "PXTransformParser";
+
+%import "java.util.ArrayList";
+%import "java.util.List";
+
+//%terminals ERROR, EOF, WHITESPACE;
+%terminals EMS, EXS, LENGTH, ANGLE, TIME, FREQUENCY, PERCENTAGE, DIMENSION, NUMBER;
+%terminals LPAREN, RPAREN, COMMA;
+%terminals TRANSLATE, TRANSLATEX, TRANSLATEY;
+%terminals SCALE, SCALEX, SCALEY;
+%terminals SKEW, SKEWX, SKEWY;
+%terminals ROTATE;
+%terminals MATRIX;
+
+%embed {:
+:};
+
+%init {:
+:};
+
+%goal Program;
+
+Program
+	=	Statements.p
+		{:
+			return new Object();
+		:}
+	|	{:
+			return new Object();
+		:}
+	;
+
+Statements
+	=	Statements Statement
+	|	Statement
+	;
+
+Statement
+	=	EMS
+	|	EXS
+	|	LENGTH
+	|	ANGLE
+	|	TIME
+	|	FREQUENCY
+	|	PERCENTAGE
+	|	DIMENSION
+	|	NUMBER
+	|	LPAREN
+	|	RPAREN
+	|	COMMA
+	|	TRANSLATE
+	|	TRANSLATEX
+	|	TRANSLATEY
+	|	SCALE
+	|	SCALEX
+	|	SCALEY
+	|	SKEW
+	|	SKEWX
+	|	SKEWY
+	|	ROTATE
+	|	MATRIX
+	;

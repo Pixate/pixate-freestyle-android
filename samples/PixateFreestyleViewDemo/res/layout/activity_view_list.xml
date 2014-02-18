@@ -1,0 +1,10 @@
+<fragment xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/view_list"
+    android:name="com.pixate.freestyle.viewdemo.ViewListFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="8dp"
+    android:layout_marginRight="8dp"
+    tools:context=".viewListActivity"
+    tools:layout="@android:layout/list_content" />

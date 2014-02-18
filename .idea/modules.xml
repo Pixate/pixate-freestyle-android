@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/samples/PixateFreestyleActionBarDemo/PixateFreestyleActionBarDemo.iml" filepath="$PROJECT_DIR$/samples/PixateFreestyleActionBarDemo/PixateFreestyleActionBarDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/samples/PixateFreestyleViewDemo/PixateFreestyleViewDemo.iml" filepath="$PROJECT_DIR$/samples/PixateFreestyleViewDemo/PixateFreestyleViewDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pixate-android-freestyle-staging.iml" filepath="$PROJECT_DIR$/pixate-android-freestyle-staging.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pixate-freestyle/pixate-freestyle.iml" filepath="$PROJECT_DIR$/pixate-freestyle/pixate-freestyle.iml" />
+    </modules>
+  </component>
+</project>
+

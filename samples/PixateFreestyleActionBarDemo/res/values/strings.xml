@@ -1,0 +1,15 @@
+<resources>
+
+    <string name="app_name">Pixate Freestyle ActionBar Demo</string>
+    <string name="menu_kiwi">Kiwi</string>
+    <string name="menu_apple">Apple</string>
+    <string name="menu_banana">Banana</string>
+    <string name="action_bar_title">ActionBar</string>
+    <string name="fragment1">This is Fragment 1</string>
+    <string name="fragment2">This is Fragment 2</string>
+    <string name="fragment3">This is Fragment 3</string>
+    <string name="tab1_title">First Tab</string>
+    <string name="tab2_title">Second Tab</string>
+    <string name="tab3_title">Third Tab</string>
+
+</resources>

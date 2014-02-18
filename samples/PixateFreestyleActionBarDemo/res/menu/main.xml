@@ -1,0 +1,16 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/menu_kiwi"
+        android:showAsAction="never"
+        android:title="@string/menu_kiwi"/>
+    <item
+        android:id="@+id/menu_apple"
+        android:showAsAction="never"
+        android:title="@string/menu_apple"/>
+    <item
+        android:id="@+id/menu_banana"
+        android:showAsAction="never"
+        android:title="@string/menu_banana"/>
+
+</menu>

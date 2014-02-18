@@ -1,0 +1,6 @@
+/* EditText - At the moment, only the basic 'default' state is supported. */
+.myEditText {
+	background-color: #20FF0000;
+	border: 1px solid #FF2234;
+	color: blue;
+}

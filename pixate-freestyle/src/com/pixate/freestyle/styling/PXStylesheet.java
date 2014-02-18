@@ -22,7 +22,6 @@ import java.util.List;
 import java.util.Map;
 
 import android.content.Context;
-import beaver.Symbol;
 
 import com.pixate.freestyle.PixateFreestyle;
 import com.pixate.freestyle.styling.animation.PXKeyframe;
@@ -34,7 +33,7 @@ import com.pixate.freestyle.util.PXLog;
 import com.pixate.freestyle.util.StringUtil;
 
 // TODO: Create container to hold PXStylesheet so parser can return that instead of having to subclass this from Symbol
-public class PXStylesheet extends Symbol {
+public class PXStylesheet {
 
     // @formatter:off
     public enum PXStyleSheetOrigin {
@@ -189,7 +188,8 @@ public class PXStylesheet extends Symbol {
         List<PXRuleSet> result = new ArrayList<PXRuleSet>();
 
         if (styleable != null) {
-            List<PXRuleSet> candidateRuleSets = getRuleSets(styleable, PixateFreestyle.getAppContext());
+            List<PXRuleSet> candidateRuleSets = getRuleSets(styleable,
+                    PixateFreestyle.getAppContext());
             if (candidateRuleSets != null) {
                 for (PXRuleSet ruleSet : candidateRuleSets) {
                     if (ruleSet.matches(styleable)) {

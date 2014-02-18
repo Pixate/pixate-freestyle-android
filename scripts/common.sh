@@ -56,7 +56,7 @@ if [ -z "$PX_FREESTYLE_SCRIPT" ]; then
   PX_FREESTYLE_FRAMEWORK=$PX_FREESTYLE_BUILD/$PX_FREESTYLE_FRAMEWORK_NAME
 
   # Extract the lib version from Version.h
-  PX_FREESTYLE_VERSION_RAW=$(sed -n 's/.*PIXATE_FREESTYLE_VERSION = \"\(.*\)\"/\1/p' ${PX_FREESTYLE_SRC}/com/pixate/freestyle/Version.java)
+  PX_FREESTYLE_VERSION_RAW=$(sed -n 's/.*PIXATE_FREESTYLE_VERSION = \"\(.*\)\";/\1/p' ${PX_FREESTYLE_SRC}/com/pixate/freestyle/Version.java)
   PX_FREESTYLE_VERSION_MAJOR=$(echo $PX_FREESTYLE_VERSION_RAW | awk -F'.' '{print $1}')
   PX_FREESTYLE_VERSION_MINOR=$(echo $PX_FREESTYLE_VERSION_RAW | awk -F'.' '{print $2}')
   PX_FREESTYLE_VERSION_REVISION=$(echo $PX_FREESTYLE_VERSION_RAW | awk -F'.' '{print $3}')

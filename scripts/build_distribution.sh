@@ -4,7 +4,6 @@
 
 
 VERSION=$PX_FREESTYLE_VERSION
-VERSION="0.3"
 
 echo "Building Pixate Freestyle Distribution v${VERSION}"
 
@@ -14,5 +13,5 @@ git archive --format=zip --prefix=pixate-android-freestyle-$VERSION/ -9  -o $PX_
  
 mkdir -p $PX_FREESTYLE_ROOT/build
 
-zip $PX_FREESTYLE_ROOT/build/pixate-android-freestyle-$VERSION.zip  -d \*/.idea/\*
+zip $PX_FREESTYLE_ROOT/build/pixate-android-freestyle-$VERSION.zip  -d \*/.idea/\* \*/scripts/\*
 

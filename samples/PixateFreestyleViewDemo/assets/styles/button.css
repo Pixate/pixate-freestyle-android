@@ -1,6 +1,0 @@
-/* Button - We only change the 'pressed' state */
-.myButton:pressed {
-	background-color: url(boom.png);
-	border: 1px solid #FF2234;
-	color: blue;
-}

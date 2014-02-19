@@ -1,3 +1,0 @@
-include ':pixate-freestyle'
-include ':samples:PixateFreestyleActionBarDemo'
-include ':samples:PixateFreestyleViewDemo'

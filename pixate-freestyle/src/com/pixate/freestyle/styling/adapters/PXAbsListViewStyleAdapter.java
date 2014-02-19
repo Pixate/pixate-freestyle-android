@@ -24,12 +24,14 @@ import android.view.View;
 import android.view.ViewParent;
 import android.widget.AbsListView;
 
+import com.pixate.freestyle.annotations.PXAElement;
+import com.pixate.freestyle.annotations.PXAProperty;
 import com.pixate.freestyle.styling.PXDeclaration;
 import com.pixate.freestyle.styling.PXRuleSet;
 import com.pixate.freestyle.styling.stylers.PXGenericStyler;
 import com.pixate.freestyle.styling.stylers.PXStyler;
-import com.pixate.freestyle.styling.stylers.PXStylerContext;
 import com.pixate.freestyle.styling.stylers.PXStylerBase.PXDeclarationHandler;
+import com.pixate.freestyle.styling.stylers.PXStylerContext;
 import com.pixate.freestyle.styling.virtualStyleables.PXVirtualListSelector;
 import com.pixate.freestyle.util.CollectionUtil;
 
@@ -49,6 +51,7 @@ import com.pixate.freestyle.util.CollectionUtil;
  * 
  * @author Bill Dawson
  */
+@PXAElement(hide = true, properties = { @PXAProperty(name = "selection-mode", syntax = "single | multiple") })
 public abstract class PXAbsListViewStyleAdapter extends PXViewStyleAdapter {
 
     @Override

@@ -22,6 +22,8 @@ import android.annotation.TargetApi;
 import android.os.Build;
 import android.widget.Spinner;
 
+import com.pixate.freestyle.annotations.PXAProperty;
+import com.pixate.freestyle.annotations.PXAStyler;
 import com.pixate.freestyle.styling.PXDeclaration;
 import com.pixate.freestyle.util.PXLog;
 
@@ -32,6 +34,9 @@ import com.pixate.freestyle.util.PXLog;
  * - width: length
  */
 // @formatter:on
+@PXAStyler(properties = { @PXAProperty(name = "vertical-offset", syntax = "<length>"),
+        @PXAProperty(name = "horizontal-offset", syntax = "<length>"),
+        @PXAProperty(name = "width", syntax = "<length>"), })
 public class PXSpinnerDropDownStyler extends PXStylerBase {
 
     private static String TAG = PXSpinnerDropDownStyler.class.getSimpleName();

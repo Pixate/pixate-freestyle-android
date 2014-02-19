@@ -20,6 +20,7 @@ import java.util.List;
 
 import android.widget.Spinner;
 
+import com.pixate.freestyle.annotations.PXAElement;
 import com.pixate.freestyle.styling.virtualStyleables.PXVirtualDropdown;
 
 /**
@@ -27,6 +28,7 @@ import com.pixate.freestyle.styling.virtualStyleables.PXVirtualDropdown;
  * 
  * @author Shalom Gibly
  */
+@PXAElement
 public class PXSpinnerStyleAdapter extends PXViewStyleAdapter {
     private static String ELEMENT_NAME = "spinner";
     private static PXSpinnerStyleAdapter instance;

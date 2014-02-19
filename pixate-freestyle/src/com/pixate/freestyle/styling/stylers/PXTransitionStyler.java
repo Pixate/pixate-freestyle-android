@@ -20,6 +20,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import com.pixate.freestyle.annotations.PXAStyler;
 import com.pixate.freestyle.styling.PXDeclaration;
 import com.pixate.freestyle.styling.infos.PXAnimationInfo;
 import com.pixate.freestyle.styling.infos.PXAnimationInfo.PXAnimationTimingFunction;
@@ -33,6 +34,7 @@ import com.pixate.freestyle.styling.infos.PXAnimationInfo.PXAnimationTimingFunct
  *  - transition-delay: <number>+
  */
 // @formatter:on
+@PXAStyler(hide=true)
 public class PXTransitionStyler extends PXStylerBase {
 
     private static Map<String, PXDeclarationHandler> declarationHandlers;

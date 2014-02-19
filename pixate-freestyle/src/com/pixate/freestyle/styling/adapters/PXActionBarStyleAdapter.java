@@ -26,6 +26,7 @@ import android.util.DisplayMetrics;
 import android.view.WindowManager;
 
 import com.pixate.freestyle.PixateFreestyle;
+import com.pixate.freestyle.annotations.PXAElement;
 import com.pixate.freestyle.styling.PXRuleSet;
 import com.pixate.freestyle.styling.stylers.PXFillStyler;
 import com.pixate.freestyle.styling.stylers.PXShapeStyler;
@@ -42,6 +43,7 @@ import com.pixate.freestyle.util.PXDrawableUtil;
  * 
  * @author Shalom Gibly
  */
+@PXAElement
 public class PXActionBarStyleAdapter extends PXStyleAdapter {
 
     private static String ELEMENT_NAME = "action-bar";

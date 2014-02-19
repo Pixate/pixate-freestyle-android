@@ -19,6 +19,7 @@ import java.util.List;
 
 import android.widget.GridView;
 
+import com.pixate.freestyle.annotations.PXAElement;
 import com.pixate.freestyle.styling.stylers.PXGridStyler;
 import com.pixate.freestyle.styling.stylers.PXStyler;
 
@@ -57,6 +58,7 @@ import com.pixate.freestyle.styling.stylers.PXStyler;
  * </pre>
  * @author Bill Dawson
  */
+@PXAElement
 public class PXGridViewStyleAdapter extends PXAbsListViewStyleAdapter {
 
     private static String ELEMENT_NAME = "grid-view";

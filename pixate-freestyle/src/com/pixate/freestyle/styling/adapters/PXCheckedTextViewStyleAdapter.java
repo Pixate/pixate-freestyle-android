@@ -20,6 +20,7 @@ import java.util.List;
 
 import android.widget.CheckedTextView;
 
+import com.pixate.freestyle.annotations.PXAElement;
 import com.pixate.freestyle.styling.virtualStyleables.PXVirtualCheckedTextViewIcon;
 
 /**
@@ -55,6 +56,7 @@ import com.pixate.freestyle.styling.virtualStyleables.PXVirtualCheckedTextViewIc
  * 
  * @author Bill Dawson (via shalom)
  */
+@PXAElement
 public class PXCheckedTextViewStyleAdapter extends PXTextViewStyleAdapter {
     private static String ELEMENT_NAME = "checked-text-view";
     private static PXCheckedTextViewStyleAdapter instance;

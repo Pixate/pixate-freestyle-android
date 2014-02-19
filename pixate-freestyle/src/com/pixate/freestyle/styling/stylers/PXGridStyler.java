@@ -20,6 +20,8 @@ import java.util.Map;
 
 import android.widget.GridView;
 
+import com.pixate.freestyle.annotations.PXAProperty;
+import com.pixate.freestyle.annotations.PXAStyler;
 import com.pixate.freestyle.styling.PXDeclaration;
 import com.pixate.freestyle.styling.stylers.PXStylerContext.GridStyle;
 import com.pixate.freestyle.styling.stylers.PXStylerContext.GridStyle.PXColumnStretchMode;
@@ -39,7 +41,12 @@ import com.pixate.freestyle.styling.stylers.PXStylerContext.GridStyle.PXColumnSt
  * 
  * @author Bill Dawson
  */
-
+@PXAStyler(properties = {
+        @PXAProperty(name = "column-width", syntax = "<length> | auto"),
+        @PXAProperty(name = "column-count", syntax = "<number> | auto"),
+        @PXAProperty(name = "column-stretch-mode", syntax = "none | spacing | spacing-uniform | column-width"),
+        @PXAProperty(name = "column-gap", syntax = "<length> | normal"),
+        @PXAProperty(name = "row-gap", syntax = "<length> | normal"), })
 public class PXGridStyler extends PXStylerBase {
 
     private static Map<String, PXDeclarationHandler> handlers;
@@ -59,7 +66,9 @@ public class PXGridStyler extends PXStylerBase {
     @Override
     /*
      * (non-Javadoc)
-     * @see com.pixate.freestyle.styling.stylers.PXStylerBase#getDeclarationHandlers()
+     * @see
+     * com.pixate.freestyle.styling.stylers.PXStylerBase#getDeclarationHandlers
+     * ()
      */
     public Map<String, PXDeclarationHandler> getDeclarationHandlers() {
         synchronized (PXGridStyler.class) {

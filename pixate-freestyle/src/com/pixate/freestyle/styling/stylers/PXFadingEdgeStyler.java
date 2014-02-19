@@ -18,6 +18,8 @@ package com.pixate.freestyle.styling.stylers;
 import java.util.HashMap;
 import java.util.Map;
 
+import com.pixate.freestyle.annotations.PXAProperty;
+import com.pixate.freestyle.annotations.PXAStyler;
 import com.pixate.freestyle.styling.PXDeclaration;
 
 /**
@@ -27,6 +29,9 @@ import com.pixate.freestyle.styling.PXDeclaration;
  */
 // Support fading-edge styles for Views that scroll and support it (like
 // ListView).
+@PXAStyler(properties = { @PXAProperty(name = "android-fading-edge-length", syntax = "<length>"),
+        @PXAProperty(name = "android-vertical-fading-edge", syntax = "enabled | disabled"),
+        @PXAProperty(name = "android-horizontal-fading-edge", syntax = "enabled | disabled"), })
 public class PXFadingEdgeStyler extends PXStylerBase {
     private static String ENABLED = "enabled";
     private static PXFadingEdgeStyler instance;

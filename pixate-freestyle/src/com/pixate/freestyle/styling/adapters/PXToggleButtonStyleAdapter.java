@@ -25,6 +25,7 @@ import android.graphics.drawable.StateListDrawable;
 import android.view.View;
 import android.widget.ToggleButton;
 
+import com.pixate.freestyle.annotations.PXAElement;
 import com.pixate.freestyle.styling.PXRuleSet;
 import com.pixate.freestyle.styling.stylers.PXStylerContext;
 import com.pixate.freestyle.styling.virtualStyleables.PXVirtualToggle;
@@ -65,6 +66,7 @@ import com.pixate.freestyle.util.PXDrawableUtil;
  * 
  * @author Shalom Gibly
  */
+@PXAElement
 public class PXToggleButtonStyleAdapter extends PXCompoundButtonStyleAdapter {
 
     private static final String ELEMENT_NAME = "toggle-button";

@@ -24,6 +24,7 @@ import android.widget.ListView;
 import android.widget.Spinner;
 
 import com.pixate.freestyle.PXAdapterInvocationHandler;
+import com.pixate.freestyle.annotations.PXAElement;
 import com.pixate.freestyle.styling.stylers.PXDividerStyler;
 import com.pixate.freestyle.styling.stylers.PXStyler;
 import com.pixate.freestyle.styling.virtualStyleables.PXVirtualListOverscroll;
@@ -67,6 +68,7 @@ import com.pixate.freestyle.util.ViewUtil;
  * 
  * @author Shalom Gibly
  */
+@PXAElement(hide=true)
 public class PXListViewStyleAdapter extends PXAbsListViewStyleAdapter {
 
     private static String ELEMENT_NAME = "list-view";

@@ -20,6 +20,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import com.pixate.freestyle.annotations.PXAProperty;
+import com.pixate.freestyle.annotations.PXAStyler;
 import com.pixate.freestyle.cg.math.PXOffsets;
 import com.pixate.freestyle.cg.paints.PXPaint;
 import com.pixate.freestyle.cg.paints.PXPaintGroup;
@@ -42,6 +44,19 @@ import com.pixate.freestyle.styling.PXDeclaration;
  *  - background-padding-left: <length>
  */
 // @formatter:on
+@PXAStyler(properties = { @PXAProperty(name = "background-color", syntax = "<paint>"),
+        @PXAProperty(name = "background-image", syntax = "<url>"),
+        @PXAProperty(name = "background-size", syntax = "<size>"),
+        @PXAProperty(name = "background-inset", syntax = "<inset>"),
+        @PXAProperty(name = "background-inset-top", syntax = "<length>"),
+        @PXAProperty(name = "background-inset-right", syntax = "<length>"),
+        @PXAProperty(name = "background-inset-bottom", syntax = "<length>"),
+        @PXAProperty(name = "background-inset-left", syntax = "<length>"),
+        @PXAProperty(name = "background-padding", syntax = "<padding>"),
+        @PXAProperty(name = "background-padding-top", syntax = "<length>"),
+        @PXAProperty(name = "background-padding-right", syntax = "<length>"),
+        @PXAProperty(name = "background-padding-bottom", syntax = "<length>"),
+        @PXAProperty(name = "background-padding-left", syntax = "<length>"), })
 public class PXFillStyler extends PXStylerBase {
 
     private static Map<String, PXDeclarationHandler> declarationHandlers;

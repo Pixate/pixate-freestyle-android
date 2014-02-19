@@ -20,6 +20,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import com.pixate.freestyle.annotations.PXAProperty;
+import com.pixate.freestyle.annotations.PXAStyler;
 import com.pixate.freestyle.styling.PXDeclaration;
 import com.pixate.freestyle.styling.infos.PXAnimationInfo;
 import com.pixate.freestyle.styling.infos.PXAnimationInfo.PXAnimationDirection;
@@ -40,6 +42,15 @@ import com.pixate.freestyle.styling.infos.PXAnimationInfo.PXAnimationTimingFunct
  *  - animation-fill-mode: <fill-mode>+
  */
 // @formatter:on
+@PXAStyler(properties = { @PXAProperty(name = "animation", syntax = "<single-animation>#"),
+        @PXAProperty(name = "animation-name", syntax = "<name>#"),
+        @PXAProperty(name = "animation-duration", syntax = "<time>#"),
+        @PXAProperty(name = "animation-timing-function", syntax = "<timing-function>#"),
+        @PXAProperty(name = "animation-iteration-count", syntax = "<number>#"),
+        @PXAProperty(name = "animation-direction", syntax = "<direction>#"),
+        @PXAProperty(name = "animation-play-state", syntax = "<play-state>#"),
+        @PXAProperty(name = "animation-delay", syntax = "<number>#"),
+        @PXAProperty(name = "animation-fill-mode", syntax = "<fill-mode>#"), })
 public class PXAnimationStyler extends PXStylerBase {
 
     private static PXAnimationStyler instance;
@@ -99,7 +110,8 @@ public class PXAnimationStyler extends PXStylerBase {
 
                 declarationHandlers.put("animation-timing-function", new PXDeclarationHandler() {
                     public void process(PXDeclaration declaration, PXStylerContext stylerContext) {
-                        List<PXAnimationTimingFunction> timingFunctions = declaration.getAnimationTimingFunctionList();
+                        List<PXAnimationTimingFunction> timingFunctions = declaration
+                                .getAnimationTimingFunctionList();
                         int count = timingFunctions.size();
 
                         for (int i = 0; i < count; i++) {

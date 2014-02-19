@@ -27,6 +27,8 @@ import android.graphics.Typeface;
 import android.text.TextUtils.TruncateAt;
 import android.widget.TextView;
 
+import com.pixate.freestyle.annotations.PXAElement;
+import com.pixate.freestyle.annotations.PXAProperty;
 import com.pixate.freestyle.cg.shadow.PXShadow;
 import com.pixate.freestyle.cg.shadow.PXShadowPaint;
 import com.pixate.freestyle.styling.PXDeclaration;
@@ -38,11 +40,11 @@ import com.pixate.freestyle.styling.stylers.PXFontStyler;
 import com.pixate.freestyle.styling.stylers.PXGenericStyler;
 import com.pixate.freestyle.styling.stylers.PXStyler;
 import com.pixate.freestyle.styling.stylers.PXStylerBase;
+import com.pixate.freestyle.styling.stylers.PXStylerBase.PXDeclarationHandler;
+import com.pixate.freestyle.styling.stylers.PXStylerBase.PXStylerInvocation;
 import com.pixate.freestyle.styling.stylers.PXStylerContext;
 import com.pixate.freestyle.styling.stylers.PXTextContentStyler;
 import com.pixate.freestyle.styling.stylers.PXTextShadowStyler;
-import com.pixate.freestyle.styling.stylers.PXStylerBase.PXDeclarationHandler;
-import com.pixate.freestyle.styling.stylers.PXStylerBase.PXStylerInvocation;
 import com.pixate.freestyle.styling.virtualStyleables.PXVirtualBottomIcon;
 import com.pixate.freestyle.styling.virtualStyleables.PXVirtualLeftIcon;
 import com.pixate.freestyle.styling.virtualStyleables.PXVirtualRightIcon;
@@ -50,6 +52,10 @@ import com.pixate.freestyle.styling.virtualStyleables.PXVirtualTopIcon;
 import com.pixate.freestyle.util.PXColorUtil;
 import com.pixate.freestyle.util.PXLog;
 
+@PXAElement(properties = {
+        @PXAProperty(name = "text-transform", syntax = "uppercase | lowercase"),
+        @PXAProperty(name = "text-overflow", syntax = "word-wrap | character-wrap | ellipsis-head | ellipsis-tail | ellipsis-middle"),
+        @PXAProperty(name = "compound-padding", syntax = "<length>") })
 public class PXTextViewStyleAdapter extends PXViewStyleAdapter {
 
     private static String COLOR_PROPERTY = "color";

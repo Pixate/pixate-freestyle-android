@@ -1,5 +1,5 @@
 Pixate Freestyle for Android
-================================
+============================
 
 This repo contains the *Pixate Freestyle* library project.
 

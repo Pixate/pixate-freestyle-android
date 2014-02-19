@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/pixate-freestyle-android/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="/pixate-freestyle-android/js/google-code-prettify/prettify.css" type="text/css" rel="stylesheet">
+    <link href="/pixate-freestyle-android/css/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+    <link href="//cloud.typography.com/6299652/637262/css/fonts.css" rel="stylesheet" type="text/css">
+    <!--[if lt IE 9]>
+    <script src="/pixate-freestyle-android/js/html5shiv.js"></script>
+    <script src="/pixate-freestyle-android/js/respond.min.js"></script>
+    <![endif]-->
+    <!--[if IE]>
+    <link href="/pixate-freestyle-android/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css">
+    <![endif]-->
+    <title>Pixate Freestyle for iOS Styling Reference</title>
+  </head>
+  <body>
+    <nav role="navigation" class="navbar navbar-default navbar-fixed-top">
+      <div class="navbar-header">
+        <button type="button" data-toggle="collapse" data-target=".navbar-ex1-collapse" class="navbar-toggle"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+        <div class="navbar-brand"><a href="/pixate-freestyle-android/index.html" class="logo-docs"><span class="pixate-logo-dark">Pixate</span><span class="logo-docs">Docs</span></a></div>
+      </div>
+      <div class="collapse navbar-collapse navbar-ex1-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="/pixate-freestyle-android/getting-started/index.html">Getting Started</a></li>
+          <li><a href="/pixate-freestyle-android/themes/index.html">Themes</a></li>
+          <li class="active"><a href="/pixate-freestyle-android/style-reference/index.html">Style Reference</a></li>
+          <li><a href="/pixate-freestyle-android/dev-reference.html">Developer Reference</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="sidebar">
+            <ul class="nav nav-nested side-nav">
+              <li><a href="/pixate-freestyle-android/style-reference/index.html#styling_with_freestyle">App Styling with Freestyle for iOS</a>
+                <ul class="nav">
+                  <li><a href="/pixate-freestyle-android/style-reference/index.html#app_structure">Application Structure</a></li>
+                  <li><a href="/pixate-freestyle-android/style-reference/index.html#specificity">Specificity</a></li>
+                  <li><a href="/pixate-freestyle-android/style-reference/index.html#media">CSS Media Queries</a></li>
+                  <li><a href="/pixate-freestyle-android/style-reference/index.html#inline_css">Inline CSS</a></li>
+                  <li><a href="/pixate-freestyle-android/style-reference/index.html#imports">Importing Style Sheets</a></li>
+                  <li><a href="/pixate-freestyle-android/style-reference/index.html#assets">Media Assets</a></li>
+                  <li><a href="/pixate-freestyle-android/style-reference/index.html#configuration">Runtime Configuration</a></li>
+                </ul>
+              </li>
+              <li><a href="/pixate-freestyle-android/style-reference/selectors.html">CSS Selectors</a>
+                <ul class="nav">
+                  <li><a href="/pixate-freestyle-android/style-reference/selectors.html#simple_selectors">Simple Selectors</a></li>
+                  <li><a href="/pixate-freestyle-android/style-reference/selectors.html#attribute_selectors">Attribute Selectors</a></li>
+                  <li><a href="/pixate-freestyle-android/style-reference/selectors.html#pseudo_classes">Pseudo-Classes</a></li>
+                  <li><a href="/pixate-freestyle-android/style-reference/selectors.html#combinators">Combinators</a></li>
+                </ul>
+              </li>
+              <li><a href="/pixate-freestyle-android/style-reference/controls.html">iOS Native Controls</a>
+                <ul class="nav">
+                </ul>
+              </li>
+              <li><a href="/pixate-freestyle-android/style-reference/values.html">Values</a>
+                <ul class="nav">
+                  <li><a href="/pixate-freestyle-android/style-reference/values.html#angle">Angle</a></li>
+                  <li><a href="/pixate-freestyle-android/style-reference/values.html#blend_modes">Blend Modes</a></li>
+                  <li><a href="/pixate-freestyle-android/style-reference/values.html#color">Color</a></li>
+                  <li><a href="/pixate-freestyle-android/style-reference/values.html#inset">Inset</a></li>
+                  <li><a href="/pixate-freestyle-android/style-reference/values.html#length">Length</a></li>
+                  <li><a href="/pixate-freestyle-android/style-reference/values.html#number">Number</a></li>
+                  <li><a href="/pixate-freestyle-android/style-reference/values.html#padding">Padding</a></li>
+                  <li><a href="/pixate-freestyle-android/style-reference/values.html#paint">Paint</a></li>
+                  <li><a href="/pixate-freestyle-android/style-reference/values.html#percentage">Percentage</a></li>
+                  <li><a href="/pixate-freestyle-android/style-reference/values.html#shadow">Shadow</a></li>
+                  <li><a href="/pixate-freestyle-android/style-reference/values.html#shape">Shape</a></li>
+                  <li><a href="/pixate-freestyle-android/style-reference/values.html#string">String</a></li>
+                  <li><a href="/pixate-freestyle-android/style-reference/values.html#size">Size</a></li>
+                  <li><a href="/pixate-freestyle-android/style-reference/values.html#transform">Transform</a></li>
+                  <li><a href="/pixate-freestyle-android/style-reference/values.html#url">URL</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-9"><h2 id="native-ios-controls">Native iOS Controls</h2>
+<p>This section documents all of the controls that can be styled with Freestyle.</p>
+<p>Each page shows all of the CSS information about a control: the selectors that reference it, the properties it supports, its children, and its pseudo-classes. </p>
+<p>Since many UIKit controls contain important subviews, this guide lists each element&#39;s <em>child elements</em>, along with their properties. Pay close attention to these, as many common styling changes actually occur on the children of controls. For example, <a href="/pixate-freestyle-android/style-reference/controls/uislider.html"><code>UISlider</code></a> is composed of a <code>min-track</code>, a <code>max-track</code>, and a <code>thumb</code>. Freestyle exposes these as children of the parent control. Styling these will change the appearance of the slider.</p>
+<p>Others controls have different visual states. For example, a <a href="/pixate-freestyle-android/style-reference/controls/uibutton.html"><code>UIButton</code></a> has a <code>normal</code> and <code>highlighted</code> state, as well as others. Each state allows for differing styles which take effect when the control is in that particular state. Freestyle allows you to use pseudo-classes to indicate to which state the given rule set applies.</p>
+<p>Values are referenced by type or string values. Alternate selections for a single value type are separated by commas. Types appear as links to the corresponding information in the <a href="/pixate-freestyle-android/style-reference/values.html">Values</a> section. String values are the literal text as they appear in this document.</p>
+
+        </div>
+      </div>
+    </div>
+    <script src="/pixate-freestyle-android/js/jquery.js"></script>
+    <script src="/pixate-freestyle-android/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/pixate-freestyle-android/js/google-code-prettify/prettify.js"></script>
+    <script>
+      !function ($) {
+        $(function(){
+          window.prettyPrint && prettyPrint()
+        })
+      }(window.jQuery)
+      
+    </script>
+    <script>
+      var _gaq=[['_setAccount','UA-32478444-1'],['_setDomainName', 'pixate.com'],['_trackPageview']];
+      (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+      g.src='//www.google-analytics.com/ga.js';
+      s.parentNode.insertBefore(g,s)}(document,'script'));
+      
+    </script>
+    <script src="/pixate-freestyle-android/js/nested-nav.js"></script>
+  </body>
+</html>

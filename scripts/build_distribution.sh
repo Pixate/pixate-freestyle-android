@@ -9,9 +9,9 @@ echo "Building Pixate Freestyle Distribution v${VERSION}"
 
 cd $PX_FREESTYLE_ROOT
 
-git archive --format=zip --prefix=pixate-android-freestyle-$VERSION/ -9  -o $PX_FREESTYLE_ROOT/build/pixate-android-freestyle-$VERSION.zip HEAD
+git archive --format=zip --prefix=pixate-freestyle-android-$VERSION/ -9  -o $PX_FREESTYLE_ROOT/build/pixate-freestyle-android-$VERSION.zip HEAD
  
 mkdir -p $PX_FREESTYLE_ROOT/build
 
-zip $PX_FREESTYLE_ROOT/build/pixate-android-freestyle-$VERSION.zip  -d \*/.idea/\* \*/scripts/\*
+zip $PX_FREESTYLE_ROOT/build/pixate-freestyle-android-$VERSION.zip  -d \*/.idea/\* \*/scripts/\*
 

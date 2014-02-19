@@ -1,0 +1,811 @@
+{
+  "com.android.internal.view.menu.ActionMenuPresenter$OverflowMenuButton": {
+    "elementName": "action-bar-overflow",
+    "properties": {
+      "scale-type": {
+        "syntax": "center | center-crop | center-inside | fit-center | fit-end | fit-start | fit-xy | matrix"
+      },
+      "max-height": {
+        "syntax": "\u003clength\u003e"
+      },
+      "max-width": {
+        "syntax": "\u003clength\u003e"
+      },
+      "view-bounds": {
+        "syntax": "adjust"
+      },
+      "tint": {
+        "syntax": "\u003ccolor\u003e"
+      },
+      "shape": {
+        "syntax": "ellipse | rectangle | arrow-button-left | arrow-button-right"
+      },
+      "background-color": {
+        "syntax": "\u003cpaint\u003e"
+      },
+      "background-image": {
+        "syntax": "\u003curl\u003e"
+      }
+    }
+  },
+  "android.widget.RadioButton.icon": {
+    "elementName": "icon",
+    "properties": {
+      "background-color": {
+        "syntax": "\u003cpaint\u003e"
+      },
+      "shape": {
+        "syntax": "ellipse | rectangle | arrow-button-left | arrow-button-right"
+      },
+      "background-image": {
+        "syntax": "\u003curl\u003e"
+      }
+    }
+  },
+  "android.widget.CheckedTextView.icon-right": {
+    "elementName": "icon-right",
+    "properties": {
+      "background-color": {
+        "syntax": "\u003cpaint\u003e"
+      },
+      "shape": {
+        "syntax": "ellipse | rectangle | arrow-button-left | arrow-button-right"
+      },
+      "background-image": {
+        "syntax": "\u003curl\u003e"
+      }
+    }
+  },
+  "android.widget.RadioButton": {
+    "elementName": "radio-button",
+    "properties": {
+      "compound-padding": {
+        "syntax": "\u003clength\u003e"
+      },
+      "text-transform": {
+        "syntax": "uppercase | lowercase"
+      },
+      "text-overflow": {
+        "syntax": "word-wrap | character-wrap | ellipsis-head | ellipsis-tail | ellipsis-middle"
+      },
+      "background-color": {
+        "syntax": "\u003cpaint\u003e"
+      },
+      "shape": {
+        "syntax": "ellipse | rectangle | arrow-button-left | arrow-button-right"
+      },
+      "background-image": {
+        "syntax": "\u003curl\u003e"
+      }
+    }
+  },
+  "android.widget.ListView.overscroll": {
+    "elementName": "overscroll",
+    "properties": {}
+  },
+  "android.widget.CheckedTextView.icon-top": {
+    "elementName": "icon-top",
+    "properties": {
+      "background-color": {
+        "syntax": "\u003cpaint\u003e"
+      },
+      "shape": {
+        "syntax": "ellipse | rectangle | arrow-button-left | arrow-button-right"
+      },
+      "background-image": {
+        "syntax": "\u003curl\u003e"
+      }
+    }
+  },
+  "android.widget.ToggleButton": {
+    "elementName": "toggle-button",
+    "properties": {
+      "compound-padding": {
+        "syntax": "\u003clength\u003e"
+      },
+      "text-transform": {
+        "syntax": "uppercase | lowercase"
+      },
+      "text-overflow": {
+        "syntax": "word-wrap | character-wrap | ellipsis-head | ellipsis-tail | ellipsis-middle"
+      },
+      "background-color": {
+        "syntax": "\u003cpaint\u003e"
+      },
+      "shape": {
+        "syntax": "ellipse | rectangle | arrow-button-left | arrow-button-right"
+      },
+      "background-image": {
+        "syntax": "\u003curl\u003e"
+      }
+    }
+  },
+  "android.app.ActionBar.stacked": {
+    "elementName": "stacked",
+    "properties": {
+      "background-color": {
+        "syntax": "\u003cpaint\u003e"
+      },
+      "shape": {
+        "syntax": "ellipse | rectangle | arrow-button-left | arrow-button-right"
+      },
+      "background-image": {
+        "syntax": "\u003curl\u003e"
+      }
+    }
+  },
+  "android.widget.RadioButton.icon-left": {
+    "elementName": "icon-left",
+    "properties": {
+      "background-color": {
+        "syntax": "\u003cpaint\u003e"
+      },
+      "shape": {
+        "syntax": "ellipse | rectangle | arrow-button-left | arrow-button-right"
+      },
+      "background-image": {
+        "syntax": "\u003curl\u003e"
+      }
+    }
+  },
+  "android.widget.CheckBox": {
+    "elementName": "checkbox",
+    "properties": {
+      "compound-padding": {
+        "syntax": "\u003clength\u003e"
+      },
+      "text-transform": {
+        "syntax": "uppercase | lowercase"
+      },
+      "text-overflow": {
+        "syntax": "word-wrap | character-wrap | ellipsis-head | ellipsis-tail | ellipsis-middle"
+      },
+      "background-color": {
+        "syntax": "\u003cpaint\u003e"
+      },
+      "shape": {
+        "syntax": "ellipse | rectangle | arrow-button-left | arrow-button-right"
+      },
+      "background-image": {
+        "syntax": "\u003curl\u003e"
+      }
+    }
+  },
+  "android.widget.ListView.selector": {
+    "elementName": "selector",
+    "properties": {
+      "background-color": {
+        "syntax": "\u003cpaint\u003e"
+      },
+      "shape": {
+        "syntax": "ellipse | rectangle | arrow-button-left | arrow-button-right"
+      },
+      "background-image": {
+        "syntax": "\u003curl\u003e"
+      }
+    }
+  },
+  "android.widget.CheckBox.icon-bottom": {
+    "elementName": "icon-bottom",
+    "properties": {
+      "background-color": {
+        "syntax": "\u003cpaint\u003e"
+      },
+      "shape": {
+        "syntax": "ellipse | rectangle | arrow-button-left | arrow-button-right"
+      },
+      "background-image": {
+        "syntax": "\u003curl\u003e"
+      }
+    }
+  },
+  "android.widget.CheckBox.icon": {
+    "elementName": "icon",
+    "properties": {
+      "background-color": {
+        "syntax": "\u003cpaint\u003e"
+      },
+      "shape": {
+        "syntax": "ellipse | rectangle | arrow-button-left | arrow-button-right"
+      },
+      "background-image": {
+        "syntax": "\u003curl\u003e"
+      }
+    }
+  },
+  "android.widget.Spinner.dropdown": {
+    "elementName": "dropdown",
+    "properties": {
+      "background-color": {
+        "syntax": "\u003cpaint\u003e"
+      },
+      "background-image": {
+        "syntax": "\u003curl\u003e"
+      }
+    }
+  },
+  "android.app.ActionBar.icon": {
+    "elementName": "icon",
+    "properties": {
+      "background-color": {
+        "syntax": "\u003cpaint\u003e"
+      },
+      "shape": {
+        "syntax": "ellipse | rectangle | arrow-button-left | arrow-button-right"
+      },
+      "background-image": {
+        "syntax": "\u003curl\u003e"
+      }
+    }
+  },
+  "android.widget.RadioButton.icon-top": {
+    "elementName": "icon-top",
+    "properties": {
+      "background-color": {
+        "syntax": "\u003cpaint\u003e"
+      },
+      "shape": {
+        "syntax": "ellipse | rectangle | arrow-button-left | arrow-button-right"
+      },
+      "background-image": {
+        "syntax": "\u003curl\u003e"
+      }
+    }
+  },
+  "android.widget.CheckedTextView.icon-left": {
+    "elementName": "icon-left",
+    "properties": {
+      "background-color": {
+        "syntax": "\u003cpaint\u003e"
+      },
+      "shape": {
+        "syntax": "ellipse | rectangle | arrow-button-left | arrow-button-right"
+      },
+      "background-image": {
+        "syntax": "\u003curl\u003e"
+      }
+    }
+  },
+  "android.widget.CheckBox.icon-top": {
+    "elementName": "icon-top",
+    "properties": {
+      "background-color": {
+        "syntax": "\u003cpaint\u003e"
+      },
+      "shape": {
+        "syntax": "ellipse | rectangle | arrow-button-left | arrow-button-right"
+      },
+      "background-image": {
+        "syntax": "\u003curl\u003e"
+      }
+    }
+  },
+  "android.widget.EditText": {
+    "elementName": "edit-text",
+    "properties": {
+      "text-transform": {
+        "syntax": "uppercase | lowercase"
+      },
+      "text-overflow": {
+        "syntax": "word-wrap | character-wrap | ellipsis-head | ellipsis-tail | ellipsis-middle"
+      },
+      "compound-padding": {
+        "syntax": "\u003clength\u003e"
+      },
+      "shape": {
+        "syntax": "ellipse | rectangle | arrow-button-left | arrow-button-right"
+      },
+      "background-color": {
+        "syntax": "\u003cpaint\u003e"
+      },
+      "background-image": {
+        "syntax": "\u003curl\u003e"
+      }
+    }
+  },
+  "android.widget.CheckBox.icon-left": {
+    "elementName": "icon-left",
+    "properties": {
+      "background-color": {
+        "syntax": "\u003cpaint\u003e"
+      },
+      "shape": {
+        "syntax": "ellipse | rectangle | arrow-button-left | arrow-button-right"
+      },
+      "background-image": {
+        "syntax": "\u003curl\u003e"
+      }
+    }
+  },
+  "android.widget.EditText.icon-bottom": {
+    "elementName": "icon-bottom",
+    "properties": {
+      "background-color": {
+        "syntax": "\u003cpaint\u003e"
+      },
+      "shape": {
+        "syntax": "ellipse | rectangle | arrow-button-left | arrow-button-right"
+      },
+      "background-image": {
+        "syntax": "\u003curl\u003e"
+      }
+    }
+  },
+  "android.widget.CheckedTextView": {
+    "elementName": "checked-text-view",
+    "properties": {
+      "text-transform": {
+        "syntax": "uppercase | lowercase"
+      },
+      "text-overflow": {
+        "syntax": "word-wrap | character-wrap | ellipsis-head | ellipsis-tail | ellipsis-middle"
+      },
+      "compound-padding": {
+        "syntax": "\u003clength\u003e"
+      },
+      "shape": {
+        "syntax": "ellipse | rectangle | arrow-button-left | arrow-button-right"
+      },
+      "background-color": {
+        "syntax": "\u003cpaint\u003e"
+      },
+      "background-image": {
+        "syntax": "\u003curl\u003e"
+      }
+    }
+  },
+  "android.widget.ToggleButton.icon-top": {
+    "elementName": "icon-top",
+    "properties": {
+      "background-color": {
+        "syntax": "\u003cpaint\u003e"
+      },
+      "shape": {
+        "syntax": "ellipse | rectangle | arrow-button-left | arrow-button-right"
+      },
+      "background-image": {
+        "syntax": "\u003curl\u003e"
+      }
+    }
+  },
+  "android.widget.ToggleButton.toggle": {
+    "elementName": "toggle",
+    "properties": {
+      "background-color": {
+        "syntax": "\u003cpaint\u003e"
+      },
+      "shape": {
+        "syntax": "ellipse | rectangle | arrow-button-left | arrow-button-right"
+      },
+      "background-image": {
+        "syntax": "\u003curl\u003e"
+      }
+    }
+  },
+  "android.app.ActionBar": {
+    "elementName": "action-bar",
+    "properties": {
+      "shape": {
+        "syntax": "ellipse | rectangle | arrow-button-left | arrow-button-right"
+      },
+      "background-color": {
+        "syntax": "\u003cpaint\u003e"
+      },
+      "background-image": {
+        "syntax": "\u003curl\u003e"
+      }
+    }
+  },
+  "android.widget.CheckedTextView.icon-bottom": {
+    "elementName": "icon-bottom",
+    "properties": {
+      "background-color": {
+        "syntax": "\u003cpaint\u003e"
+      },
+      "shape": {
+        "syntax": "ellipse | rectangle | arrow-button-left | arrow-button-right"
+      },
+      "background-image": {
+        "syntax": "\u003curl\u003e"
+      }
+    }
+  },
+  "com.android.internal.widget.ScrollingTabContainerView$TabView": {
+    "elementName": "action-bar-tab",
+    "properties": {
+      "shape": {
+        "syntax": "ellipse | rectangle | arrow-button-left | arrow-button-right"
+      },
+      "background-color": {
+        "syntax": "\u003cpaint\u003e"
+      },
+      "background-image": {
+        "syntax": "\u003curl\u003e"
+      }
+    }
+  },
+  "com.android.internal.view.menu.ActionMenuPresenter$OverflowMenuButton.image": {
+    "elementName": "image",
+    "properties": {
+      "background-color": {
+        "syntax": "\u003cpaint\u003e"
+      },
+      "shape": {
+        "syntax": "ellipse | rectangle | arrow-button-left | arrow-button-right"
+      },
+      "background-image": {
+        "syntax": "\u003curl\u003e"
+      }
+    }
+  },
+  "android.widget.EditText.icon-left": {
+    "elementName": "icon-left",
+    "properties": {
+      "background-color": {
+        "syntax": "\u003cpaint\u003e"
+      },
+      "shape": {
+        "syntax": "ellipse | rectangle | arrow-button-left | arrow-button-right"
+      },
+      "background-image": {
+        "syntax": "\u003curl\u003e"
+      }
+    }
+  },
+  "android.widget.CheckedTextView.icon": {
+    "elementName": "icon",
+    "properties": {
+      "background-color": {
+        "syntax": "\u003cpaint\u003e"
+      },
+      "shape": {
+        "syntax": "ellipse | rectangle | arrow-button-left | arrow-button-right"
+      },
+      "background-image": {
+        "syntax": "\u003curl\u003e"
+      }
+    }
+  },
+  "android.widget.ToggleButton.icon-bottom": {
+    "elementName": "icon-bottom",
+    "properties": {
+      "background-color": {
+        "syntax": "\u003cpaint\u003e"
+      },
+      "shape": {
+        "syntax": "ellipse | rectangle | arrow-button-left | arrow-button-right"
+      },
+      "background-image": {
+        "syntax": "\u003curl\u003e"
+      }
+    }
+  },
+  "com.pixate.freestyle.styling.virtualStyleables.PXVirtualImageViewImage": {
+    "elementName": "image",
+    "properties": {
+      "background-color": {
+        "syntax": "\u003cpaint\u003e"
+      },
+      "shape": {
+        "syntax": "ellipse | rectangle | arrow-button-left | arrow-button-right"
+      },
+      "background-image": {
+        "syntax": "\u003curl\u003e"
+      }
+    }
+  },
+  "android.widget.ImageButton.image": {
+    "elementName": "image",
+    "properties": {
+      "background-color": {
+        "syntax": "\u003cpaint\u003e"
+      },
+      "shape": {
+        "syntax": "ellipse | rectangle | arrow-button-left | arrow-button-right"
+      },
+      "background-image": {
+        "syntax": "\u003curl\u003e"
+      }
+    }
+  },
+  "android.widget.ImageView": {
+    "elementName": "image-view",
+    "properties": {
+      "scale-type": {
+        "syntax": "center | center-crop | center-inside | fit-center | fit-end | fit-start | fit-xy | matrix"
+      },
+      "max-height": {
+        "syntax": "\u003clength\u003e"
+      },
+      "max-width": {
+        "syntax": "\u003clength\u003e"
+      },
+      "view-bounds": {
+        "syntax": "adjust"
+      },
+      "tint": {
+        "syntax": "\u003ccolor\u003e"
+      },
+      "shape": {
+        "syntax": "ellipse | rectangle | arrow-button-left | arrow-button-right"
+      },
+      "background-color": {
+        "syntax": "\u003cpaint\u003e"
+      },
+      "background-image": {
+        "syntax": "\u003curl\u003e"
+      }
+    }
+  },
+  "android.app.ActionBar.logo": {
+    "elementName": "logo",
+    "properties": {
+      "background-color": {
+        "syntax": "\u003cpaint\u003e"
+      },
+      "shape": {
+        "syntax": "ellipse | rectangle | arrow-button-left | arrow-button-right"
+      },
+      "background-image": {
+        "syntax": "\u003curl\u003e"
+      }
+    }
+  },
+  "android.widget.Spinner": {
+    "elementName": "spinner",
+    "properties": {
+      "shape": {
+        "syntax": "ellipse | rectangle | arrow-button-left | arrow-button-right"
+      },
+      "background-color": {
+        "syntax": "\u003cpaint\u003e"
+      },
+      "background-image": {
+        "syntax": "\u003curl\u003e"
+      }
+    }
+  },
+  "android.widget.ImageButton": {
+    "elementName": "image-button",
+    "properties": {
+      "scale-type": {
+        "syntax": "center | center-crop | center-inside | fit-center | fit-end | fit-start | fit-xy | matrix"
+      },
+      "max-height": {
+        "syntax": "\u003clength\u003e"
+      },
+      "max-width": {
+        "syntax": "\u003clength\u003e"
+      },
+      "view-bounds": {
+        "syntax": "adjust"
+      },
+      "tint": {
+        "syntax": "\u003ccolor\u003e"
+      },
+      "shape": {
+        "syntax": "ellipse | rectangle | arrow-button-left | arrow-button-right"
+      },
+      "background-color": {
+        "syntax": "\u003cpaint\u003e"
+      },
+      "background-image": {
+        "syntax": "\u003curl\u003e"
+      }
+    }
+  },
+  "android.widget.CheckBox.icon-right": {
+    "elementName": "icon-right",
+    "properties": {
+      "background-color": {
+        "syntax": "\u003cpaint\u003e"
+      },
+      "shape": {
+        "syntax": "ellipse | rectangle | arrow-button-left | arrow-button-right"
+      },
+      "background-image": {
+        "syntax": "\u003curl\u003e"
+      }
+    }
+  },
+  "com.pixate.freestyle.styling.virtualStyleables.PXVirtualCompoundButtonIcon": {
+    "elementName": "icon",
+    "properties": {
+      "background-color": {
+        "syntax": "\u003cpaint\u003e"
+      },
+      "shape": {
+        "syntax": "ellipse | rectangle | arrow-button-left | arrow-button-right"
+      },
+      "background-image": {
+        "syntax": "\u003curl\u003e"
+      }
+    }
+  },
+  "android.widget.EditText.icon-right": {
+    "elementName": "icon-right",
+    "properties": {
+      "background-color": {
+        "syntax": "\u003cpaint\u003e"
+      },
+      "shape": {
+        "syntax": "ellipse | rectangle | arrow-button-left | arrow-button-right"
+      },
+      "background-image": {
+        "syntax": "\u003curl\u003e"
+      }
+    }
+  },
+  "android.widget.GridView.selector": {
+    "elementName": "selector",
+    "properties": {
+      "background-color": {
+        "syntax": "\u003cpaint\u003e"
+      },
+      "shape": {
+        "syntax": "ellipse | rectangle | arrow-button-left | arrow-button-right"
+      },
+      "background-image": {
+        "syntax": "\u003curl\u003e"
+      }
+    }
+  },
+  "android.widget.RadioButton.icon-right": {
+    "elementName": "icon-right",
+    "properties": {
+      "background-color": {
+        "syntax": "\u003cpaint\u003e"
+      },
+      "shape": {
+        "syntax": "ellipse | rectangle | arrow-button-left | arrow-button-right"
+      },
+      "background-image": {
+        "syntax": "\u003curl\u003e"
+      }
+    }
+  },
+  "android.widget.TextView": {
+    "elementName": "text-view",
+    "properties": {
+      "text-transform": {
+        "syntax": "uppercase | lowercase"
+      },
+      "text-overflow": {
+        "syntax": "word-wrap | character-wrap | ellipsis-head | ellipsis-tail | ellipsis-middle"
+      },
+      "compound-padding": {
+        "syntax": "\u003clength\u003e"
+      },
+      "shape": {
+        "syntax": "ellipse | rectangle | arrow-button-left | arrow-button-right"
+      },
+      "background-color": {
+        "syntax": "\u003cpaint\u003e"
+      },
+      "background-image": {
+        "syntax": "\u003curl\u003e"
+      }
+    }
+  },
+  "android.widget.RadioButton.icon-bottom": {
+    "elementName": "icon-bottom",
+    "properties": {
+      "background-color": {
+        "syntax": "\u003cpaint\u003e"
+      },
+      "shape": {
+        "syntax": "ellipse | rectangle | arrow-button-left | arrow-button-right"
+      },
+      "background-image": {
+        "syntax": "\u003curl\u003e"
+      }
+    }
+  },
+  "com.android.internal.widget.ScrollingTabContainerView$TabView.icon": {
+    "elementName": "icon",
+    "properties": {
+      "background-color": {
+        "syntax": "\u003cpaint\u003e"
+      },
+      "shape": {
+        "syntax": "ellipse | rectangle | arrow-button-left | arrow-button-right"
+      },
+      "background-image": {
+        "syntax": "\u003curl\u003e"
+      }
+    }
+  },
+  "android.widget.Button": {
+    "elementName": "button",
+    "properties": {
+      "compound-padding": {
+        "syntax": "\u003clength\u003e"
+      },
+      "text-transform": {
+        "syntax": "uppercase | lowercase"
+      },
+      "text-overflow": {
+        "syntax": "word-wrap | character-wrap | ellipsis-head | ellipsis-tail | ellipsis-middle"
+      },
+      "background-color": {
+        "syntax": "\u003cpaint\u003e"
+      },
+      "shape": {
+        "syntax": "ellipse | rectangle | arrow-button-left | arrow-button-right"
+      },
+      "background-image": {
+        "syntax": "\u003curl\u003e"
+      }
+    }
+  },
+  "android.widget.ToggleButton.icon-left": {
+    "elementName": "icon-left",
+    "properties": {
+      "background-color": {
+        "syntax": "\u003cpaint\u003e"
+      },
+      "shape": {
+        "syntax": "ellipse | rectangle | arrow-button-left | arrow-button-right"
+      },
+      "background-image": {
+        "syntax": "\u003curl\u003e"
+      }
+    }
+  },
+  "android.widget.GridView": {
+    "elementName": "grid-view",
+    "properties": {
+      "shape": {
+        "syntax": "ellipse | rectangle | arrow-button-left | arrow-button-right"
+      },
+      "background-color": {
+        "syntax": "\u003cpaint\u003e"
+      },
+      "background-image": {
+        "syntax": "\u003curl\u003e"
+      }
+    }
+  },
+  "android.app.ActionBar.split": {
+    "elementName": "split",
+    "properties": {
+      "background-color": {
+        "syntax": "\u003cpaint\u003e"
+      },
+      "shape": {
+        "syntax": "ellipse | rectangle | arrow-button-left | arrow-button-right"
+      },
+      "background-image": {
+        "syntax": "\u003curl\u003e"
+      }
+    }
+  },
+  "android.widget.EditText.icon-top": {
+    "elementName": "icon-top",
+    "properties": {
+      "background-color": {
+        "syntax": "\u003cpaint\u003e"
+      },
+      "shape": {
+        "syntax": "ellipse | rectangle | arrow-button-left | arrow-button-right"
+      },
+      "background-image": {
+        "syntax": "\u003curl\u003e"
+      }
+    }
+  },
+  "android.widget.ToggleButton.icon-right": {
+    "elementName": "icon-right",
+    "properties": {
+      "background-color": {
+        "syntax": "\u003cpaint\u003e"
+      },
+      "shape": {
+        "syntax": "ellipse | rectangle | arrow-button-left | arrow-button-right"
+      },
+      "background-image": {
+        "syntax": "\u003curl\u003e"
+      }
+    }
+  }
+}

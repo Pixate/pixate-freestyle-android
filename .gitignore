@@ -32,3 +32,6 @@ proguard/
 pixate-android-freestyle-*.zip
 
 .DS_Store
+
+docs/src/node_modules
+docs/src/.sass-cache

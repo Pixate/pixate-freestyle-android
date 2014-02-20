@@ -56,15 +56,20 @@
               </li>
               <li><a href="/pixate-freestyle-android/style-reference/controls.html">iOS Native Controls</a>
                 <ul class="nav">
-                  <li><a href="/pixate-freestyle-android/style-reference/controls/spinner.html">Spinner</a></li>
                   <li><a href="/pixate-freestyle-android/style-reference/controls/actionbar.html">ActionBar</a></li>
-                  <li><a href="/pixate-freestyle-android/style-reference/controls/togglebutton.html">ToggleButton</a></li>
+                  <li><a href="/pixate-freestyle-android/style-reference/controls/actionbaroverflow.html">ActionBarOverflow</a></li>
+                  <li><a href="/pixate-freestyle-android/style-reference/controls/button.html">Button</a></li>
+                  <li><a href="/pixate-freestyle-android/style-reference/controls/checkbox.html">Checkbox</a></li>
                   <li><a href="/pixate-freestyle-android/style-reference/controls/checkedtextview.html">CheckedTextView</a></li>
-                  <li><a href="/pixate-freestyle-android/style-reference/controls/imagebutton.html">ImageButton</a></li>
-                  <li><a href="/pixate-freestyle-android/style-reference/controls/checkbox.html">CheckBox</a></li>
-                  <li><a href="/pixate-freestyle-android/style-reference/controls/radiobutton.html">RadioButton</a></li>
                   <li><a href="/pixate-freestyle-android/style-reference/controls/edittext.html">EditText</a></li>
                   <li><a href="/pixate-freestyle-android/style-reference/controls/gridview.html">GridView</a></li>
+                  <li><a href="/pixate-freestyle-android/style-reference/controls/imagebutton.html">ImageButton</a></li>
+                  <li><a href="/pixate-freestyle-android/style-reference/controls/imageview.html">ImageView</a></li>
+                  <li><a href="/pixate-freestyle-android/style-reference/controls/radiobutton.html">RadioButton</a></li>
+                  <li><a href="/pixate-freestyle-android/style-reference/controls/spinner.html">Spinner</a></li>
+                  <li><a href="/pixate-freestyle-android/style-reference/controls/tabview.html">TabView</a></li>
+                  <li><a href="/pixate-freestyle-android/style-reference/controls/textview.html">TextView</a></li>
+                  <li><a href="/pixate-freestyle-android/style-reference/controls/togglebutton.html">ToggleButton</a></li>
                 </ul>
               </li>
               <li><a href="/pixate-freestyle-android/style-reference/values.html">Values</a>
@@ -89,15 +94,15 @@
             </ul>
           </div>
         </div>
-        <div class="col-md-9"><h1 id="pixate-freestyle-for-ios-styling-reference">Pixate Freestyle for iOS Styling Reference</h1>
+        <div class="col-md-9"><h1 id="pixate-freestyle-for-android-styling-reference">Pixate Freestyle for Android Styling Reference</h1>
 <p>This reference the explains Freestyle from a designer&#39;s perspective. It summarizes the Freestyle&#39;s CSS3 support, and the style-able iOS native controls and their properties.</p>
 <a id="styling_with_freestyle"></a><h2 id="app-styling-with-freestyle">App Styling with Freestyle</h2>
-<p>Freestyle styles native iOS controls using CSS. The runtime is built on a scalable vector graphics engine, a standards-based CSS styling language, and a lightweight library for interacting with iOS native controls.</p>
+<p>Freestyle styles native Android controls using CSS. The runtime is built on a scalable vector graphics engine, a standards-based CSS styling language, and a lightweight library for interacting with Android native controls.</p>
 <p>Freestyle has tailored the familiar CSS3 language for the styling needs of native mobile components. Freestyle CSS is &quot;full CSS&quot; with the exception of not supporting pseudo-elements and a few minor differences noted in this document.</p>
 <a id="app_structure"></a><h2 id="application-structure">Application Structure</h2>
 <p>Let&#39;s begin with an overview of a Freestyle-based application.  At application start-up, Freestyle looks for your application&#39;s CSS in a file named <code>default.css</code>, which can be located anywhere within your project.  The default.css file can include other CSS files by using <code>@import</code>.</p>
 <p>CSS rules are applied using a control&#39;s <code>element name</code>, <code>class</code>, <code>id</code> or other attributes.  This information is represented at runtime by properties on Objective-C objects.</p>
-<p>The <code>element name</code> is determined by the type of control.  For example, all UIButton controls have the <code>button</code> element name.  The control descriptions (see <a href="/pixate-freestyle-android/style-reference/controls.html">Native iOS Controls</a>) lists the element name for each iOS control.</p>
+<p>The <code>element name</code> is determined by the type of control.  For example, all UIButton controls have the <code>button</code> element name.  The control descriptions (see <a href="/pixate-freestyle-android/style-reference/controls.html">Native Android Controls</a>) lists the element name for each Android control.</p>
 <p><code>class</code> and <code>id</code> are determined by the <code>styleClass</code> and <code>styleId</code> properties respectively of individual control instances. By convention, <code>styleClass</code> is shared by all controls with a related function or layout in the application, perhaps members within the same view.  <code>styleId</code> is expected to be unique across the application.  These conventions are not enforced by the Freestyle, and setting of these properties is not required unless you want to select controls using these properties.  These properties are typically set by the application developer.</p>
 <a id="inline_css"></a><h2 id="inline-css">Inline CSS</h2>
 <p>Application developers can style a specific control by setting the control&#39;s <code>styleCSS</code> property. This property is analogous to the style property of web CSS.</p>

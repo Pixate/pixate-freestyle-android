@@ -26,7 +26,7 @@
         <ul class="nav navbar-nav navbar-right">
           <li><a href="/pixate-freestyle-android/getting-started/index.html">Getting Started</a></li>
           <li><a href="/pixate-freestyle-android/themes/index.html">Themes</a></li>
-          <li class="active"><a href="/pixate-freestyle-android/style-reference/index.html">Style Reference</a></li>
+          <li><a href="/pixate-freestyle-android/style-reference/index.html">Style Reference</a></li>
           <li><a href="/pixate-freestyle-android/dev-reference.html">Developer Reference</a></li>
         </ul>
       </div>
@@ -83,13 +83,86 @@
             </ul>
           </div>
         </div>
-        <div class="col-md-9"><h2 id="native-ios-controls">Native iOS Controls</h2>
-<p>This section documents all of the controls that can be styled with Freestyle.</p>
-<p>Each page shows all of the CSS information about a control: the selectors that reference it, the properties it supports, its children, and its pseudo-classes. </p>
-<p>Since many UIKit controls contain important subviews, this guide lists each element&#39;s <em>child elements</em>, along with their properties. Pay close attention to these, as many common styling changes actually occur on the children of controls. For example, <a href="/pixate-freestyle-android/style-reference/controls/uislider.html"><code>UISlider</code></a> is composed of a <code>min-track</code>, a <code>max-track</code>, and a <code>thumb</code>. Freestyle exposes these as children of the parent control. Styling these will change the appearance of the slider.</p>
-<p>Others controls have different visual states. For example, a <a href="/pixate-freestyle-android/style-reference/controls/uibutton.html"><code>UIButton</code></a> has a <code>normal</code> and <code>highlighted</code> state, as well as others. Each state allows for differing styles which take effect when the control is in that particular state. Freestyle allows you to use pseudo-classes to indicate to which state the given rule set applies.</p>
-<p>Values are referenced by type or string values. Alternate selections for a single value type are separated by commas. Types appear as links to the corresponding information in the <a href="/pixate-freestyle-android/style-reference/values.html">Values</a> section. String values are the literal text as they appear in this document.</p>
-
+        <div class="col-md-9">
+          <h2>ActionBar</h2>
+          <h3>Selector</h3><code>action-bar</code>
+          <h3>Properties</h3>
+          <table class="property-table">
+            <thead>
+              <th>Property</th>
+              <th>Value</th>
+            </thead>
+            <tr>
+              <td class="property-name">shape</td>
+              <td class="property-value"><span>ellipse</span><span>,</span><span>rectangle</span><span>,</span><span>arrow-button-left</span><span>,</span><span>arrow-button-right</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="property-name">background-padding-top</td>
+              <td class="property-value"><a href="/pixate-freestyle-android/style-reference/values.html#length">length</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="property-name">background-inset-right</td>
+              <td class="property-value"><a href="/pixate-freestyle-android/style-reference/values.html#length">length</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="property-name">background-inset-bottom</td>
+              <td class="property-value"><a href="/pixate-freestyle-android/style-reference/values.html#length">length</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="property-name">background-inset-top</td>
+              <td class="property-value"><a href="/pixate-freestyle-android/style-reference/values.html#length">length</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="property-name">background-color</td>
+              <td class="property-value"><a href="/pixate-freestyle-android/style-reference/values.html#paint">paint</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="property-name">background-inset</td>
+              <td class="property-value"><a href="/pixate-freestyle-android/style-reference/values.html#inset">inset</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="property-name">background-size</td>
+              <td class="property-value"><a href="/pixate-freestyle-android/style-reference/values.html#size">size</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="property-name">background-padding-right</td>
+              <td class="property-value"><a href="/pixate-freestyle-android/style-reference/values.html#length">length</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="property-name">background-padding-bottom</td>
+              <td class="property-value"><a href="/pixate-freestyle-android/style-reference/values.html#length">length</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="property-name">background-padding-left</td>
+              <td class="property-value"><a href="/pixate-freestyle-android/style-reference/values.html#length">length</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="property-name">background-inset-left</td>
+              <td class="property-value"><a href="/pixate-freestyle-android/style-reference/values.html#length">length</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="property-name">background-padding</td>
+              <td class="property-value"><a href="/pixate-freestyle-android/style-reference/values.html#padding">padding</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="property-name">background-image</td>
+              <td class="property-value"><a href="/pixate-freestyle-android/style-reference/values.html#url">url</a>
+              </td>
+            </tr>
+          </table>
         </div>
       </div>
     </div>

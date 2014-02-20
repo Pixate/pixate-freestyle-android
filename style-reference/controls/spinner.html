@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/pixate-freestyle-android/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="/pixate-freestyle-android/js/google-code-prettify/prettify.css" type="text/css" rel="stylesheet">
+    <link href="/pixate-freestyle-android/css/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+    <link href="//cloud.typography.com/6299652/637262/css/fonts.css" rel="stylesheet" type="text/css">
+    <!--[if lt IE 9]>
+    <script src="/pixate-freestyle-android/js/html5shiv.js"></script>
+    <script src="/pixate-freestyle-android/js/respond.min.js"></script>
+    <![endif]-->
+    <!--[if IE]>
+    <link href="/pixate-freestyle-android/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css">
+    <![endif]-->
+    <title>Pixate Freestyle for iOS Styling Reference</title>
+  </head>
+  <body>
+    <nav role="navigation" class="navbar navbar-default navbar-fixed-top">
+      <div class="navbar-header">
+        <button type="button" data-toggle="collapse" data-target=".navbar-ex1-collapse" class="navbar-toggle"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+        <div class="navbar-brand"><a href="/pixate-freestyle-android/index.html" class="logo-docs"><span class="pixate-logo-dark">Pixate</span><span class="logo-docs">Docs</span></a></div>
+      </div>
+      <div class="collapse navbar-collapse navbar-ex1-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="/pixate-freestyle-android/getting-started/index.html">Getting Started</a></li>
+          <li><a href="/pixate-freestyle-android/themes/index.html">Themes</a></li>
+          <li><a href="/pixate-freestyle-android/style-reference/index.html">Style Reference</a></li>
+          <li><a href="/pixate-freestyle-android/dev-reference.html">Developer Reference</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="sidebar">
+            <ul class="nav nav-nested side-nav">
+              <li><a href="/pixate-freestyle-android/style-reference/index.html#styling_with_freestyle">App Styling with Freestyle for iOS</a>
+                <ul class="nav">
+                  <li><a href="/pixate-freestyle-android/style-reference/index.html#app_structure">Application Structure</a></li>
+                  <li><a href="/pixate-freestyle-android/style-reference/index.html#specificity">Specificity</a></li>
+                  <li><a href="/pixate-freestyle-android/style-reference/index.html#media">CSS Media Queries</a></li>
+                  <li><a href="/pixate-freestyle-android/style-reference/index.html#inline_css">Inline CSS</a></li>
+                  <li><a href="/pixate-freestyle-android/style-reference/index.html#imports">Importing Style Sheets</a></li>
+                  <li><a href="/pixate-freestyle-android/style-reference/index.html#assets">Media Assets</a></li>
+                  <li><a href="/pixate-freestyle-android/style-reference/index.html#configuration">Runtime Configuration</a></li>
+                </ul>
+              </li>
+              <li><a href="/pixate-freestyle-android/style-reference/selectors.html">CSS Selectors</a>
+                <ul class="nav">
+                  <li><a href="/pixate-freestyle-android/style-reference/selectors.html#simple_selectors">Simple Selectors</a></li>
+                  <li><a href="/pixate-freestyle-android/style-reference/selectors.html#attribute_selectors">Attribute Selectors</a></li>
+                  <li><a href="/pixate-freestyle-android/style-reference/selectors.html#pseudo_classes">Pseudo-Classes</a></li>
+                  <li><a href="/pixate-freestyle-android/style-reference/selectors.html#combinators">Combinators</a></li>
+                </ul>
+              </li>
+              <li><a href="/pixate-freestyle-android/style-reference/controls.html">iOS Native Controls</a>
+                <ul class="nav">
+                  <li><a href="/pixate-freestyle-android/style-reference/controls/spinner.html">Spinner</a></li>
+                  <li><a href="/pixate-freestyle-android/style-reference/controls/actionbar.html">ActionBar</a></li>
+                </ul>
+              </li>
+              <li><a href="/pixate-freestyle-android/style-reference/values.html">Values</a>
+                <ul class="nav">
+                  <li><a href="/pixate-freestyle-android/style-reference/values.html#angle">Angle</a></li>
+                  <li><a href="/pixate-freestyle-android/style-reference/values.html#blend_modes">Blend Modes</a></li>
+                  <li><a href="/pixate-freestyle-android/style-reference/values.html#color">Color</a></li>
+                  <li><a href="/pixate-freestyle-android/style-reference/values.html#inset">Inset</a></li>
+                  <li><a href="/pixate-freestyle-android/style-reference/values.html#length">Length</a></li>
+                  <li><a href="/pixate-freestyle-android/style-reference/values.html#number">Number</a></li>
+                  <li><a href="/pixate-freestyle-android/style-reference/values.html#padding">Padding</a></li>
+                  <li><a href="/pixate-freestyle-android/style-reference/values.html#paint">Paint</a></li>
+                  <li><a href="/pixate-freestyle-android/style-reference/values.html#percentage">Percentage</a></li>
+                  <li><a href="/pixate-freestyle-android/style-reference/values.html#shadow">Shadow</a></li>
+                  <li><a href="/pixate-freestyle-android/style-reference/values.html#shape">Shape</a></li>
+                  <li><a href="/pixate-freestyle-android/style-reference/values.html#string">String</a></li>
+                  <li><a href="/pixate-freestyle-android/style-reference/values.html#size">Size</a></li>
+                  <li><a href="/pixate-freestyle-android/style-reference/values.html#transform">Transform</a></li>
+                  <li><a href="/pixate-freestyle-android/style-reference/values.html#url">URL</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-9">
+          <h2>Spinner</h2>
+          <h3>Selector</h3><code>spinner</code>
+          <h3>Properties</h3>
+          <table class="property-table">
+            <thead>
+              <th>Property</th>
+              <th>Value</th>
+            </thead>
+            <tr>
+              <td class="property-name">position</td>
+              <td class="property-value"><a href="/pixate-freestyle-android/style-reference/values.html#size">size</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="property-name">height</td>
+              <td class="property-value"><a href="/pixate-freestyle-android/style-reference/values.html#length">length</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="property-name">width</td>
+              <td class="property-value"><a href="/pixate-freestyle-android/style-reference/values.html#length">length</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="property-name">left</td>
+              <td class="property-value"><a href="/pixate-freestyle-android/style-reference/values.html#length">length</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="property-name">size</td>
+              <td class="property-value"><a href="/pixate-freestyle-android/style-reference/values.html#size">size</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="property-name">top</td>
+              <td class="property-value"><a href="/pixate-freestyle-android/style-reference/values.html#length">length</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="property-name">opacity</td>
+              <td class="property-value"><a href="/pixate-freestyle-android/style-reference/values.html#number">number</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="property-name">shape</td>
+              <td class="property-value"><span>ellipse</span><span>,</span><span>rectangle</span><span>,</span><span>arrow-button-left</span><span>,</span><span>arrow-button-right</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="property-name">background-padding-top</td>
+              <td class="property-value"><a href="/pixate-freestyle-android/style-reference/values.html#length">length</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="property-name">background-inset-right</td>
+              <td class="property-value"><a href="/pixate-freestyle-android/style-reference/values.html#length">length</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="property-name">background-inset-bottom</td>
+              <td class="property-value"><a href="/pixate-freestyle-android/style-reference/values.html#length">length</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="property-name">background-inset-top</td>
+              <td class="property-value"><a href="/pixate-freestyle-android/style-reference/values.html#length">length</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="property-name">background-color</td>
+              <td class="property-value"><a href="/pixate-freestyle-android/style-reference/values.html#paint">paint</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="property-name">background-inset</td>
+              <td class="property-value"><a href="/pixate-freestyle-android/style-reference/values.html#inset">inset</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="property-name">background-size</td>
+              <td class="property-value"><a href="/pixate-freestyle-android/style-reference/values.html#size">size</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="property-name">background-padding-right</td>
+              <td class="property-value"><a href="/pixate-freestyle-android/style-reference/values.html#length">length</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="property-name">background-padding-bottom</td>
+              <td class="property-value"><a href="/pixate-freestyle-android/style-reference/values.html#length">length</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="property-name">background-padding-left</td>
+              <td class="property-value"><a href="/pixate-freestyle-android/style-reference/values.html#length">length</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="property-name">background-inset-left</td>
+              <td class="property-value"><a href="/pixate-freestyle-android/style-reference/values.html#length">length</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="property-name">background-padding</td>
+              <td class="property-value"><a href="/pixate-freestyle-android/style-reference/values.html#padding">padding</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="property-name">background-image</td>
+              <td class="property-value"><a href="/pixate-freestyle-android/style-reference/values.html#url">url</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="property-name">border-bottom-width</td>
+              <td class="property-value"><a href="/pixate-freestyle-android/style-reference/values.html#length">length</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="property-name">border-right</td>
+              <td class="property-value"><span>width</span><span>,</span><span>border-style</span><span>,</span><a href="/pixate-freestyle-android/style-reference/values.html#paint">paint</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="property-name">border-top-style</td>
+              <td class="property-value"><span>border-style</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="property-name">border-style</td>
+              <td class="property-value"><span>border-style{1,4}</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="property-name">border-right-style</td>
+              <td class="property-value"><span>border-style</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="property-name">border-bottom-style</td>
+              <td class="property-value"><span>border-style</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="property-name">border-top-right-radius</td>
+              <td class="property-value"><a href="/pixate-freestyle-android/style-reference/values.html#length">length</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="property-name">border-right-color</td>
+              <td class="property-value"><a href="/pixate-freestyle-android/style-reference/values.html#paint">paint</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="property-name">border-right-width</td>
+              <td class="property-value"><a href="/pixate-freestyle-android/style-reference/values.html#length">length</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="property-name">border-bottom</td>
+              <td class="property-value"><span>width</span><span>,</span><span>border-style</span><span>,</span><a href="/pixate-freestyle-android/style-reference/values.html#paint">paint</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="property-name">border-width</td>
+              <td class="property-value"><span>length{1,4}</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="property-name">border-top</td>
+              <td class="property-value"><span>width</span><span>,</span><span>border-style</span><span>,</span><a href="/pixate-freestyle-android/style-reference/values.html#paint">paint</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="property-name">border</td>
+              <td class="property-value"><span>width</span><span>,</span><span>border-style</span><span>,</span><a href="/pixate-freestyle-android/style-reference/values.html#paint">paint</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="property-name">border-left-width</td>
+              <td class="property-value"><a href="/pixate-freestyle-android/style-reference/values.html#length">length</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="property-name">border-bottom-left-radius</td>
+              <td class="property-value"><a href="/pixate-freestyle-android/style-reference/values.html#length">length</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="property-name">border-radius</td>
+              <td class="property-value"><span>size{1,4}</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="property-name">border-top-left-radius</td>
+              <td class="property-value"><a href="/pixate-freestyle-android/style-reference/values.html#length">length</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="property-name">border-color</td>
+              <td class="property-value"><span>paint{1,4}</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="property-name">border-bottom-color</td>
+              <td class="property-value"><a href="/pixate-freestyle-android/style-reference/values.html#paint">paint</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="property-name">border-top-width</td>
+              <td class="property-value"><a href="/pixate-freestyle-android/style-reference/values.html#length">length</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="property-name">border-left-color</td>
+              <td class="property-value"><a href="/pixate-freestyle-android/style-reference/values.html#paint">paint</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="property-name">border-top-color</td>
+              <td class="property-value"><a href="/pixate-freestyle-android/style-reference/values.html#paint">paint</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="property-name">border-left-style</td>
+              <td class="property-value"><span>border-style</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="property-name">border-bottom-right-radius</td>
+              <td class="property-value"><a href="/pixate-freestyle-android/style-reference/values.html#length">length</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="property-name">border-left</td>
+              <td class="property-value"><span>width</span><span>,</span><span>border-style</span><span>,</span><a href="/pixate-freestyle-android/style-reference/values.html#paint">paint</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="property-name">box-shadow</td>
+              <td class="property-value"><span>shadow[&quot;,&quot;shadow]*</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="property-name">animation-play-state</td>
+              <td class="property-value"><span>play-state#</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="property-name">animation-fill-mode</td>
+              <td class="property-value"><span>fill-mode#</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="property-name">animation-iteration-count</td>
+              <td class="property-value"><span>number#</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="property-name">animation</td>
+              <td class="property-value"><span>single-animation#</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="property-name">animation-direction</td>
+              <td class="property-value"><span>direction#</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="property-name">animation-delay</td>
+              <td class="property-value"><span>number#</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="property-name">animation-name</td>
+              <td class="property-value"><span>name#</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="property-name">animation-duration</td>
+              <td class="property-value"><span>time#</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="property-name">animation-timing-function</td>
+              <td class="property-value"><span>timing-function#</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="property-name">android-horizontal-fading-edge</td>
+              <td class="property-value"><span>enabled</span><span>,</span><span>disabled</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="property-name">android-fading-edge-length</td>
+              <td class="property-value"><a href="/pixate-freestyle-android/style-reference/values.html#length">length</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="property-name">android-vertical-fading-edge</td>
+              <td class="property-value"><span>enabled</span><span>,</span><span>disabled</span>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+    <script src="/pixate-freestyle-android/js/jquery.js"></script>
+    <script src="/pixate-freestyle-android/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/pixate-freestyle-android/js/google-code-prettify/prettify.js"></script>
+    <script>
+      !function ($) {
+        $(function(){
+          window.prettyPrint && prettyPrint()
+        })
+      }(window.jQuery)
+      
+    </script>
+    <script>
+      var _gaq=[['_setAccount','UA-32478444-1'],['_setDomainName', 'pixate.com'],['_trackPageview']];
+      (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+      g.src='//www.google-analytics.com/ga.js';
+      s.parentNode.insertBefore(g,s)}(document,'script'));
+      
+    </script>
+    <script src="/pixate-freestyle-android/js/nested-nav.js"></script>
+  </body>
+</html>

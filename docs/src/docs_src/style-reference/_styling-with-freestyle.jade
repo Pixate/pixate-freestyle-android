@@ -2,7 +2,7 @@ a#styling_with_freestyle
 :markdown
   ## App Styling with Freestyle
 
-  Freestyle styles native iOS controls using CSS. The runtime is built on a scalable vector graphics engine, a standards-based CSS styling language, and a lightweight library for interacting with iOS native controls.
+  Freestyle styles native Android controls using CSS. The runtime is built on a scalable vector graphics engine, a standards-based CSS styling language, and a lightweight library for interacting with Android native controls.
 
   Freestyle has tailored the familiar CSS3 language for the styling needs of native mobile components. Freestyle CSS is "full CSS" with the exception of not supporting pseudo-elements and a few minor differences noted in this document.
 
@@ -14,7 +14,7 @@ a#app_structure
 
   CSS rules are applied using a control's `element name`, `class`, `id` or other attributes.  This information is represented at runtime by properties on Objective-C objects.
 
-  The `element name` is determined by the type of control.  For example, all UIButton controls have the `button` element name.  The control descriptions (see <a href="#{rootURL}/style-reference/controls.html">Native iOS Controls</a>) lists the element name for each iOS control.
+  The `element name` is determined by the type of control.  For example, all UIButton controls have the `button` element name.  The control descriptions (see <a href="#{rootURL}/style-reference/controls.html">Native Android Controls</a>) lists the element name for each Android control.
 
   `class` and `id` are determined by the `styleClass` and `styleId` properties respectively of individual control instances. By convention, `styleClass` is shared by all controls with a related function or layout in the application, perhaps members within the same view.  `styleId` is expected to be unique across the application.  These conventions are not enforced by the Freestyle, and setting of these properties is not required unless you want to select controls using these properties.  These properties are typically set by the application developer.
 

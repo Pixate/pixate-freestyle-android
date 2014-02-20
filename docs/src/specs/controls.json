@@ -1,0 +1,5535 @@
+{
+  "ActionBar": {
+    "elementName": "action-bar",
+    "properties": {
+      "background-color": {
+        "syntax": "\u003cpaint\u003e"
+      },
+      "background-image": {
+        "syntax": "\u003curl\u003e"
+      },
+      "background-inset": {
+        "syntax": "\u003cinset\u003e"
+      },
+      "background-inset-bottom": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-right": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding": {
+        "syntax": "\u003cpadding\u003e"
+      },
+      "background-padding-bottom": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-right": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-size": {
+        "syntax": "\u003csize\u003e"
+      },
+      "shape": {
+        "syntax": "ellipse | rectangle | arrow-button-left | arrow-button-right"
+      }
+    }
+  },
+  "ActionBar.icon": {
+    "elementName": "icon",
+    "properties": {
+      "background-color": {
+        "syntax": "\u003cpaint\u003e"
+      },
+      "background-image": {
+        "syntax": "\u003curl\u003e"
+      },
+      "background-inset": {
+        "syntax": "\u003cinset\u003e"
+      },
+      "background-inset-bottom": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-right": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding": {
+        "syntax": "\u003cpadding\u003e"
+      },
+      "background-padding-bottom": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-right": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-size": {
+        "syntax": "\u003csize\u003e"
+      },
+      "border": {
+        "syntax": "\u003cwidth\u003e || \u003cborder-style\u003e || \u003cpaint\u003e"
+      },
+      "border-bottom-left-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-bottom-right-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-color": {
+        "syntax": "\u003cpaint\u003e{1,4}"
+      },
+      "border-radius": {
+        "syntax": "\u003csize\u003e{1,4}"
+      },
+      "border-style": {
+        "syntax": "\u003cborder-style\u003e{1,4}"
+      },
+      "border-top-left-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-top-right-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-width": {
+        "syntax": "\u003clength\u003e{1,4}"
+      },
+      "height": {
+        "syntax": "\u003clength\u003e"
+      },
+      "left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "position": {
+        "syntax": "\u003csize\u003e"
+      },
+      "shape": {
+        "syntax": "ellipse | rectangle | arrow-button-left | arrow-button-right"
+      },
+      "size": {
+        "syntax": "\u003csize\u003e"
+      },
+      "top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "width": {
+        "syntax": "\u003clength\u003e"
+      }
+    }
+  },
+  "ActionBar.logo": {
+    "elementName": "logo",
+    "properties": {
+      "background-color": {
+        "syntax": "\u003cpaint\u003e"
+      },
+      "background-image": {
+        "syntax": "\u003curl\u003e"
+      },
+      "background-inset": {
+        "syntax": "\u003cinset\u003e"
+      },
+      "background-inset-bottom": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-right": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding": {
+        "syntax": "\u003cpadding\u003e"
+      },
+      "background-padding-bottom": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-right": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-size": {
+        "syntax": "\u003csize\u003e"
+      },
+      "border": {
+        "syntax": "\u003cwidth\u003e || \u003cborder-style\u003e || \u003cpaint\u003e"
+      },
+      "border-bottom-left-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-bottom-right-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-color": {
+        "syntax": "\u003cpaint\u003e{1,4}"
+      },
+      "border-radius": {
+        "syntax": "\u003csize\u003e{1,4}"
+      },
+      "border-style": {
+        "syntax": "\u003cborder-style\u003e{1,4}"
+      },
+      "border-top-left-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-top-right-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-width": {
+        "syntax": "\u003clength\u003e{1,4}"
+      },
+      "height": {
+        "syntax": "\u003clength\u003e"
+      },
+      "left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "position": {
+        "syntax": "\u003csize\u003e"
+      },
+      "shape": {
+        "syntax": "ellipse | rectangle | arrow-button-left | arrow-button-right"
+      },
+      "size": {
+        "syntax": "\u003csize\u003e"
+      },
+      "top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "width": {
+        "syntax": "\u003clength\u003e"
+      }
+    }
+  },
+  "ActionBar.split": {
+    "elementName": "split",
+    "properties": {
+      "background-color": {
+        "syntax": "\u003cpaint\u003e"
+      },
+      "background-image": {
+        "syntax": "\u003curl\u003e"
+      },
+      "background-inset": {
+        "syntax": "\u003cinset\u003e"
+      },
+      "background-inset-bottom": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-right": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding": {
+        "syntax": "\u003cpadding\u003e"
+      },
+      "background-padding-bottom": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-right": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-size": {
+        "syntax": "\u003csize\u003e"
+      },
+      "border": {
+        "syntax": "\u003cwidth\u003e || \u003cborder-style\u003e || \u003cpaint\u003e"
+      },
+      "border-bottom-left-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-bottom-right-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-color": {
+        "syntax": "\u003cpaint\u003e{1,4}"
+      },
+      "border-radius": {
+        "syntax": "\u003csize\u003e{1,4}"
+      },
+      "border-style": {
+        "syntax": "\u003cborder-style\u003e{1,4}"
+      },
+      "border-top-left-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-top-right-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-width": {
+        "syntax": "\u003clength\u003e{1,4}"
+      },
+      "height": {
+        "syntax": "\u003clength\u003e"
+      },
+      "left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "position": {
+        "syntax": "\u003csize\u003e"
+      },
+      "shape": {
+        "syntax": "ellipse | rectangle | arrow-button-left | arrow-button-right"
+      },
+      "size": {
+        "syntax": "\u003csize\u003e"
+      },
+      "top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "width": {
+        "syntax": "\u003clength\u003e"
+      }
+    }
+  },
+  "ActionBar.stacked": {
+    "elementName": "stacked",
+    "properties": {
+      "background-color": {
+        "syntax": "\u003cpaint\u003e"
+      },
+      "background-image": {
+        "syntax": "\u003curl\u003e"
+      },
+      "background-inset": {
+        "syntax": "\u003cinset\u003e"
+      },
+      "background-inset-bottom": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-right": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding": {
+        "syntax": "\u003cpadding\u003e"
+      },
+      "background-padding-bottom": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-right": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-size": {
+        "syntax": "\u003csize\u003e"
+      },
+      "border": {
+        "syntax": "\u003cwidth\u003e || \u003cborder-style\u003e || \u003cpaint\u003e"
+      },
+      "border-bottom-left-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-bottom-right-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-color": {
+        "syntax": "\u003cpaint\u003e{1,4}"
+      },
+      "border-radius": {
+        "syntax": "\u003csize\u003e{1,4}"
+      },
+      "border-style": {
+        "syntax": "\u003cborder-style\u003e{1,4}"
+      },
+      "border-top-left-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-top-right-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-width": {
+        "syntax": "\u003clength\u003e{1,4}"
+      },
+      "height": {
+        "syntax": "\u003clength\u003e"
+      },
+      "left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "position": {
+        "syntax": "\u003csize\u003e"
+      },
+      "shape": {
+        "syntax": "ellipse | rectangle | arrow-button-left | arrow-button-right"
+      },
+      "size": {
+        "syntax": "\u003csize\u003e"
+      },
+      "top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "width": {
+        "syntax": "\u003clength\u003e"
+      }
+    }
+  },
+  "ActionBarOverflow": {
+    "elementName": "action-bar-overflow",
+    "properties": {
+      "android-fading-edge-length": {
+        "syntax": "\u003clength\u003e"
+      },
+      "android-horizontal-fading-edge": {
+        "syntax": "enabled | disabled"
+      },
+      "android-vertical-fading-edge": {
+        "syntax": "enabled | disabled"
+      },
+      "background-color": {
+        "syntax": "\u003cpaint\u003e"
+      },
+      "background-image": {
+        "syntax": "\u003curl\u003e"
+      },
+      "background-inset": {
+        "syntax": "\u003cinset\u003e"
+      },
+      "background-inset-bottom": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-right": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding": {
+        "syntax": "\u003cpadding\u003e"
+      },
+      "background-padding-bottom": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-right": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-size": {
+        "syntax": "\u003csize\u003e"
+      },
+      "border": {
+        "syntax": "\u003cwidth\u003e || \u003cborder-style\u003e || \u003cpaint\u003e"
+      },
+      "border-bottom-left-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-bottom-right-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-color": {
+        "syntax": "\u003cpaint\u003e{1,4}"
+      },
+      "border-radius": {
+        "syntax": "\u003csize\u003e{1,4}"
+      },
+      "border-style": {
+        "syntax": "\u003cborder-style\u003e{1,4}"
+      },
+      "border-top-left-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-top-right-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-width": {
+        "syntax": "\u003clength\u003e{1,4}"
+      },
+      "box-shadow": {
+        "syntax": "\u003cshadow\u003e [\",\" \u003cshadow\u003e]*"
+      },
+      "height": {
+        "syntax": "\u003clength\u003e"
+      },
+      "left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "max-height": {
+        "syntax": "\u003clength\u003e"
+      },
+      "max-width": {
+        "syntax": "\u003clength\u003e"
+      },
+      "opacity": {
+        "syntax": "\u003cnumber\u003e"
+      },
+      "position": {
+        "syntax": "\u003csize\u003e"
+      },
+      "scale-type": {
+        "syntax": "center | center-crop | center-inside | fit-center | fit-end | fit-start | fit-xy | matrix"
+      },
+      "shape": {
+        "syntax": "ellipse | rectangle | arrow-button-left | arrow-button-right"
+      },
+      "size": {
+        "syntax": "\u003csize\u003e"
+      },
+      "tint": {
+        "syntax": "\u003ccolor\u003e"
+      },
+      "top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "view-bounds": {
+        "syntax": "adjust"
+      },
+      "width": {
+        "syntax": "\u003clength\u003e"
+      }
+    }
+  },
+  "ActionBarOverflow.image": {
+    "elementName": "image",
+    "properties": {
+      "background-color": {
+        "syntax": "\u003cpaint\u003e"
+      },
+      "background-image": {
+        "syntax": "\u003curl\u003e"
+      },
+      "background-inset": {
+        "syntax": "\u003cinset\u003e"
+      },
+      "background-inset-bottom": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-right": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding": {
+        "syntax": "\u003cpadding\u003e"
+      },
+      "background-padding-bottom": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-right": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-size": {
+        "syntax": "\u003csize\u003e"
+      },
+      "border": {
+        "syntax": "\u003cwidth\u003e || \u003cborder-style\u003e || \u003cpaint\u003e"
+      },
+      "border-bottom-left-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-bottom-right-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-color": {
+        "syntax": "\u003cpaint\u003e{1,4}"
+      },
+      "border-radius": {
+        "syntax": "\u003csize\u003e{1,4}"
+      },
+      "border-style": {
+        "syntax": "\u003cborder-style\u003e{1,4}"
+      },
+      "border-top-left-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-top-right-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-width": {
+        "syntax": "\u003clength\u003e{1,4}"
+      },
+      "height": {
+        "syntax": "\u003clength\u003e"
+      },
+      "left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "position": {
+        "syntax": "\u003csize\u003e"
+      },
+      "shape": {
+        "syntax": "ellipse | rectangle | arrow-button-left | arrow-button-right"
+      },
+      "size": {
+        "syntax": "\u003csize\u003e"
+      },
+      "top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "width": {
+        "syntax": "\u003clength\u003e"
+      }
+    }
+  },
+  "Button": {
+    "elementName": "button",
+    "properties": {
+      "android-fading-edge-length": {
+        "syntax": "\u003clength\u003e"
+      },
+      "android-horizontal-fading-edge": {
+        "syntax": "enabled | disabled"
+      },
+      "android-vertical-fading-edge": {
+        "syntax": "enabled | disabled"
+      },
+      "background-color": {
+        "syntax": "\u003cpaint\u003e"
+      },
+      "background-image": {
+        "syntax": "\u003curl\u003e"
+      },
+      "background-inset": {
+        "syntax": "\u003cinset\u003e"
+      },
+      "background-inset-bottom": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-right": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding": {
+        "syntax": "\u003cpadding\u003e"
+      },
+      "background-padding-bottom": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-right": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-size": {
+        "syntax": "\u003csize\u003e"
+      },
+      "border": {
+        "syntax": "\u003cwidth\u003e || \u003cborder-style\u003e || \u003cpaint\u003e"
+      },
+      "border-bottom-left-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-bottom-right-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-color": {
+        "syntax": "\u003cpaint\u003e{1,4}"
+      },
+      "border-radius": {
+        "syntax": "\u003csize\u003e{1,4}"
+      },
+      "border-style": {
+        "syntax": "\u003cborder-style\u003e{1,4}"
+      },
+      "border-top-left-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-top-right-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-width": {
+        "syntax": "\u003clength\u003e{1,4}"
+      },
+      "box-shadow": {
+        "syntax": "\u003cshadow\u003e [\",\" \u003cshadow\u003e]*"
+      },
+      "color": {
+        "syntax": "\u003ccolor\u003e"
+      },
+      "compound-padding": {
+        "syntax": "\u003clength\u003e"
+      },
+      "font-family": {
+        "syntax": "\u003cstring\u003e"
+      },
+      "font-size": {
+        "syntax": "\u003clength\u003e"
+      },
+      "font-style": {
+        "syntax": "normal | italic"
+      },
+      "font-weight": {
+        "syntax": "normal | bold"
+      },
+      "height": {
+        "syntax": "\u003clength\u003e"
+      },
+      "left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "opacity": {
+        "syntax": "\u003cnumber\u003e"
+      },
+      "position": {
+        "syntax": "\u003csize\u003e"
+      },
+      "shape": {
+        "syntax": "ellipse | rectangle | arrow-button-left | arrow-button-right"
+      },
+      "size": {
+        "syntax": "\u003csize\u003e"
+      },
+      "text": {
+        "syntax": "\u003cstring\u003e"
+      },
+      "text-overflow": {
+        "syntax": "word-wrap | character-wrap | ellipsis-head | ellipsis-tail | ellipsis-middle"
+      },
+      "text-shadow": {
+        "syntax": "\u003cshadow\u003e"
+      },
+      "text-transform": {
+        "syntax": "uppercase | lowercase"
+      },
+      "top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "width": {
+        "syntax": "\u003clength\u003e"
+      }
+    }
+  },
+  "Button.icon-bottom": {
+    "elementName": "icon-bottom",
+    "properties": {
+      "background-color": {
+        "syntax": "\u003cpaint\u003e"
+      },
+      "background-image": {
+        "syntax": "\u003curl\u003e"
+      },
+      "background-inset": {
+        "syntax": "\u003cinset\u003e"
+      },
+      "background-inset-bottom": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-right": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding": {
+        "syntax": "\u003cpadding\u003e"
+      },
+      "background-padding-bottom": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-right": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-size": {
+        "syntax": "\u003csize\u003e"
+      },
+      "border": {
+        "syntax": "\u003cwidth\u003e || \u003cborder-style\u003e || \u003cpaint\u003e"
+      },
+      "border-bottom-left-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-bottom-right-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-color": {
+        "syntax": "\u003cpaint\u003e{1,4}"
+      },
+      "border-radius": {
+        "syntax": "\u003csize\u003e{1,4}"
+      },
+      "border-style": {
+        "syntax": "\u003cborder-style\u003e{1,4}"
+      },
+      "border-top-left-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-top-right-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-width": {
+        "syntax": "\u003clength\u003e{1,4}"
+      },
+      "height": {
+        "syntax": "\u003clength\u003e"
+      },
+      "left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "position": {
+        "syntax": "\u003csize\u003e"
+      },
+      "shape": {
+        "syntax": "ellipse | rectangle | arrow-button-left | arrow-button-right"
+      },
+      "size": {
+        "syntax": "\u003csize\u003e"
+      },
+      "top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "width": {
+        "syntax": "\u003clength\u003e"
+      }
+    }
+  },
+  "Button.icon-left": {
+    "elementName": "icon-left",
+    "properties": {
+      "background-color": {
+        "syntax": "\u003cpaint\u003e"
+      },
+      "background-image": {
+        "syntax": "\u003curl\u003e"
+      },
+      "background-inset": {
+        "syntax": "\u003cinset\u003e"
+      },
+      "background-inset-bottom": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-right": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding": {
+        "syntax": "\u003cpadding\u003e"
+      },
+      "background-padding-bottom": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-right": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-size": {
+        "syntax": "\u003csize\u003e"
+      },
+      "border": {
+        "syntax": "\u003cwidth\u003e || \u003cborder-style\u003e || \u003cpaint\u003e"
+      },
+      "border-bottom-left-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-bottom-right-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-color": {
+        "syntax": "\u003cpaint\u003e{1,4}"
+      },
+      "border-radius": {
+        "syntax": "\u003csize\u003e{1,4}"
+      },
+      "border-style": {
+        "syntax": "\u003cborder-style\u003e{1,4}"
+      },
+      "border-top-left-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-top-right-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-width": {
+        "syntax": "\u003clength\u003e{1,4}"
+      },
+      "height": {
+        "syntax": "\u003clength\u003e"
+      },
+      "left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "position": {
+        "syntax": "\u003csize\u003e"
+      },
+      "shape": {
+        "syntax": "ellipse | rectangle | arrow-button-left | arrow-button-right"
+      },
+      "size": {
+        "syntax": "\u003csize\u003e"
+      },
+      "top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "width": {
+        "syntax": "\u003clength\u003e"
+      }
+    }
+  },
+  "Button.icon-right": {
+    "elementName": "icon-right",
+    "properties": {
+      "background-color": {
+        "syntax": "\u003cpaint\u003e"
+      },
+      "background-image": {
+        "syntax": "\u003curl\u003e"
+      },
+      "background-inset": {
+        "syntax": "\u003cinset\u003e"
+      },
+      "background-inset-bottom": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-right": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding": {
+        "syntax": "\u003cpadding\u003e"
+      },
+      "background-padding-bottom": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-right": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-size": {
+        "syntax": "\u003csize\u003e"
+      },
+      "border": {
+        "syntax": "\u003cwidth\u003e || \u003cborder-style\u003e || \u003cpaint\u003e"
+      },
+      "border-bottom-left-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-bottom-right-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-color": {
+        "syntax": "\u003cpaint\u003e{1,4}"
+      },
+      "border-radius": {
+        "syntax": "\u003csize\u003e{1,4}"
+      },
+      "border-style": {
+        "syntax": "\u003cborder-style\u003e{1,4}"
+      },
+      "border-top-left-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-top-right-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-width": {
+        "syntax": "\u003clength\u003e{1,4}"
+      },
+      "height": {
+        "syntax": "\u003clength\u003e"
+      },
+      "left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "position": {
+        "syntax": "\u003csize\u003e"
+      },
+      "shape": {
+        "syntax": "ellipse | rectangle | arrow-button-left | arrow-button-right"
+      },
+      "size": {
+        "syntax": "\u003csize\u003e"
+      },
+      "top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "width": {
+        "syntax": "\u003clength\u003e"
+      }
+    }
+  },
+  "Button.icon-top": {
+    "elementName": "icon-top",
+    "properties": {
+      "background-color": {
+        "syntax": "\u003cpaint\u003e"
+      },
+      "background-image": {
+        "syntax": "\u003curl\u003e"
+      },
+      "background-inset": {
+        "syntax": "\u003cinset\u003e"
+      },
+      "background-inset-bottom": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-right": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding": {
+        "syntax": "\u003cpadding\u003e"
+      },
+      "background-padding-bottom": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-right": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-size": {
+        "syntax": "\u003csize\u003e"
+      },
+      "border": {
+        "syntax": "\u003cwidth\u003e || \u003cborder-style\u003e || \u003cpaint\u003e"
+      },
+      "border-bottom-left-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-bottom-right-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-color": {
+        "syntax": "\u003cpaint\u003e{1,4}"
+      },
+      "border-radius": {
+        "syntax": "\u003csize\u003e{1,4}"
+      },
+      "border-style": {
+        "syntax": "\u003cborder-style\u003e{1,4}"
+      },
+      "border-top-left-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-top-right-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-width": {
+        "syntax": "\u003clength\u003e{1,4}"
+      },
+      "height": {
+        "syntax": "\u003clength\u003e"
+      },
+      "left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "position": {
+        "syntax": "\u003csize\u003e"
+      },
+      "shape": {
+        "syntax": "ellipse | rectangle | arrow-button-left | arrow-button-right"
+      },
+      "size": {
+        "syntax": "\u003csize\u003e"
+      },
+      "top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "width": {
+        "syntax": "\u003clength\u003e"
+      }
+    }
+  },
+  "Checkbox": {
+    "elementName": "checkbox",
+    "properties": {
+      "android-fading-edge-length": {
+        "syntax": "\u003clength\u003e"
+      },
+      "android-horizontal-fading-edge": {
+        "syntax": "enabled | disabled"
+      },
+      "android-vertical-fading-edge": {
+        "syntax": "enabled | disabled"
+      },
+      "background-color": {
+        "syntax": "\u003cpaint\u003e"
+      },
+      "background-image": {
+        "syntax": "\u003curl\u003e"
+      },
+      "background-inset": {
+        "syntax": "\u003cinset\u003e"
+      },
+      "background-inset-bottom": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-right": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding": {
+        "syntax": "\u003cpadding\u003e"
+      },
+      "background-padding-bottom": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-right": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-size": {
+        "syntax": "\u003csize\u003e"
+      },
+      "border": {
+        "syntax": "\u003cwidth\u003e || \u003cborder-style\u003e || \u003cpaint\u003e"
+      },
+      "border-bottom-left-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-bottom-right-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-color": {
+        "syntax": "\u003cpaint\u003e{1,4}"
+      },
+      "border-radius": {
+        "syntax": "\u003csize\u003e{1,4}"
+      },
+      "border-style": {
+        "syntax": "\u003cborder-style\u003e{1,4}"
+      },
+      "border-top-left-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-top-right-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-width": {
+        "syntax": "\u003clength\u003e{1,4}"
+      },
+      "box-shadow": {
+        "syntax": "\u003cshadow\u003e [\",\" \u003cshadow\u003e]*"
+      },
+      "color": {
+        "syntax": "\u003ccolor\u003e"
+      },
+      "compound-padding": {
+        "syntax": "\u003clength\u003e"
+      },
+      "font-family": {
+        "syntax": "\u003cstring\u003e"
+      },
+      "font-size": {
+        "syntax": "\u003clength\u003e"
+      },
+      "font-style": {
+        "syntax": "normal | italic"
+      },
+      "font-weight": {
+        "syntax": "normal | bold"
+      },
+      "height": {
+        "syntax": "\u003clength\u003e"
+      },
+      "left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "opacity": {
+        "syntax": "\u003cnumber\u003e"
+      },
+      "position": {
+        "syntax": "\u003csize\u003e"
+      },
+      "shape": {
+        "syntax": "ellipse | rectangle | arrow-button-left | arrow-button-right"
+      },
+      "size": {
+        "syntax": "\u003csize\u003e"
+      },
+      "text": {
+        "syntax": "\u003cstring\u003e"
+      },
+      "text-overflow": {
+        "syntax": "word-wrap | character-wrap | ellipsis-head | ellipsis-tail | ellipsis-middle"
+      },
+      "text-shadow": {
+        "syntax": "\u003cshadow\u003e"
+      },
+      "text-transform": {
+        "syntax": "uppercase | lowercase"
+      },
+      "top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "width": {
+        "syntax": "\u003clength\u003e"
+      }
+    }
+  },
+  "Checkbox.icon": {
+    "elementName": "icon",
+    "properties": {
+      "background-color": {
+        "syntax": "\u003cpaint\u003e"
+      },
+      "background-image": {
+        "syntax": "\u003curl\u003e"
+      },
+      "background-inset": {
+        "syntax": "\u003cinset\u003e"
+      },
+      "background-inset-bottom": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-right": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding": {
+        "syntax": "\u003cpadding\u003e"
+      },
+      "background-padding-bottom": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-right": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-size": {
+        "syntax": "\u003csize\u003e"
+      },
+      "border": {
+        "syntax": "\u003cwidth\u003e || \u003cborder-style\u003e || \u003cpaint\u003e"
+      },
+      "border-bottom-left-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-bottom-right-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-color": {
+        "syntax": "\u003cpaint\u003e{1,4}"
+      },
+      "border-radius": {
+        "syntax": "\u003csize\u003e{1,4}"
+      },
+      "border-style": {
+        "syntax": "\u003cborder-style\u003e{1,4}"
+      },
+      "border-top-left-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-top-right-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-width": {
+        "syntax": "\u003clength\u003e{1,4}"
+      },
+      "height": {
+        "syntax": "\u003clength\u003e"
+      },
+      "left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "position": {
+        "syntax": "\u003csize\u003e"
+      },
+      "shape": {
+        "syntax": "ellipse | rectangle | arrow-button-left | arrow-button-right"
+      },
+      "size": {
+        "syntax": "\u003csize\u003e"
+      },
+      "top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "width": {
+        "syntax": "\u003clength\u003e"
+      }
+    }
+  },
+  "Checkbox.icon-bottom": {
+    "elementName": "icon-bottom",
+    "properties": {
+      "background-color": {
+        "syntax": "\u003cpaint\u003e"
+      },
+      "background-image": {
+        "syntax": "\u003curl\u003e"
+      },
+      "background-inset": {
+        "syntax": "\u003cinset\u003e"
+      },
+      "background-inset-bottom": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-right": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding": {
+        "syntax": "\u003cpadding\u003e"
+      },
+      "background-padding-bottom": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-right": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-size": {
+        "syntax": "\u003csize\u003e"
+      },
+      "border": {
+        "syntax": "\u003cwidth\u003e || \u003cborder-style\u003e || \u003cpaint\u003e"
+      },
+      "border-bottom-left-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-bottom-right-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-color": {
+        "syntax": "\u003cpaint\u003e{1,4}"
+      },
+      "border-radius": {
+        "syntax": "\u003csize\u003e{1,4}"
+      },
+      "border-style": {
+        "syntax": "\u003cborder-style\u003e{1,4}"
+      },
+      "border-top-left-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-top-right-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-width": {
+        "syntax": "\u003clength\u003e{1,4}"
+      },
+      "height": {
+        "syntax": "\u003clength\u003e"
+      },
+      "left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "position": {
+        "syntax": "\u003csize\u003e"
+      },
+      "shape": {
+        "syntax": "ellipse | rectangle | arrow-button-left | arrow-button-right"
+      },
+      "size": {
+        "syntax": "\u003csize\u003e"
+      },
+      "top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "width": {
+        "syntax": "\u003clength\u003e"
+      }
+    }
+  },
+  "Checkbox.icon-left": {
+    "elementName": "icon-left",
+    "properties": {
+      "background-color": {
+        "syntax": "\u003cpaint\u003e"
+      },
+      "background-image": {
+        "syntax": "\u003curl\u003e"
+      },
+      "background-inset": {
+        "syntax": "\u003cinset\u003e"
+      },
+      "background-inset-bottom": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-right": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding": {
+        "syntax": "\u003cpadding\u003e"
+      },
+      "background-padding-bottom": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-right": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-size": {
+        "syntax": "\u003csize\u003e"
+      },
+      "border": {
+        "syntax": "\u003cwidth\u003e || \u003cborder-style\u003e || \u003cpaint\u003e"
+      },
+      "border-bottom-left-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-bottom-right-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-color": {
+        "syntax": "\u003cpaint\u003e{1,4}"
+      },
+      "border-radius": {
+        "syntax": "\u003csize\u003e{1,4}"
+      },
+      "border-style": {
+        "syntax": "\u003cborder-style\u003e{1,4}"
+      },
+      "border-top-left-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-top-right-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-width": {
+        "syntax": "\u003clength\u003e{1,4}"
+      },
+      "height": {
+        "syntax": "\u003clength\u003e"
+      },
+      "left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "position": {
+        "syntax": "\u003csize\u003e"
+      },
+      "shape": {
+        "syntax": "ellipse | rectangle | arrow-button-left | arrow-button-right"
+      },
+      "size": {
+        "syntax": "\u003csize\u003e"
+      },
+      "top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "width": {
+        "syntax": "\u003clength\u003e"
+      }
+    }
+  },
+  "Checkbox.icon-right": {
+    "elementName": "icon-right",
+    "properties": {
+      "background-color": {
+        "syntax": "\u003cpaint\u003e"
+      },
+      "background-image": {
+        "syntax": "\u003curl\u003e"
+      },
+      "background-inset": {
+        "syntax": "\u003cinset\u003e"
+      },
+      "background-inset-bottom": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-right": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding": {
+        "syntax": "\u003cpadding\u003e"
+      },
+      "background-padding-bottom": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-right": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-size": {
+        "syntax": "\u003csize\u003e"
+      },
+      "border": {
+        "syntax": "\u003cwidth\u003e || \u003cborder-style\u003e || \u003cpaint\u003e"
+      },
+      "border-bottom-left-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-bottom-right-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-color": {
+        "syntax": "\u003cpaint\u003e{1,4}"
+      },
+      "border-radius": {
+        "syntax": "\u003csize\u003e{1,4}"
+      },
+      "border-style": {
+        "syntax": "\u003cborder-style\u003e{1,4}"
+      },
+      "border-top-left-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-top-right-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-width": {
+        "syntax": "\u003clength\u003e{1,4}"
+      },
+      "height": {
+        "syntax": "\u003clength\u003e"
+      },
+      "left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "position": {
+        "syntax": "\u003csize\u003e"
+      },
+      "shape": {
+        "syntax": "ellipse | rectangle | arrow-button-left | arrow-button-right"
+      },
+      "size": {
+        "syntax": "\u003csize\u003e"
+      },
+      "top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "width": {
+        "syntax": "\u003clength\u003e"
+      }
+    }
+  },
+  "Checkbox.icon-top": {
+    "elementName": "icon-top",
+    "properties": {
+      "background-color": {
+        "syntax": "\u003cpaint\u003e"
+      },
+      "background-image": {
+        "syntax": "\u003curl\u003e"
+      },
+      "background-inset": {
+        "syntax": "\u003cinset\u003e"
+      },
+      "background-inset-bottom": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-right": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding": {
+        "syntax": "\u003cpadding\u003e"
+      },
+      "background-padding-bottom": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-right": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-size": {
+        "syntax": "\u003csize\u003e"
+      },
+      "border": {
+        "syntax": "\u003cwidth\u003e || \u003cborder-style\u003e || \u003cpaint\u003e"
+      },
+      "border-bottom-left-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-bottom-right-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-color": {
+        "syntax": "\u003cpaint\u003e{1,4}"
+      },
+      "border-radius": {
+        "syntax": "\u003csize\u003e{1,4}"
+      },
+      "border-style": {
+        "syntax": "\u003cborder-style\u003e{1,4}"
+      },
+      "border-top-left-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-top-right-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-width": {
+        "syntax": "\u003clength\u003e{1,4}"
+      },
+      "height": {
+        "syntax": "\u003clength\u003e"
+      },
+      "left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "position": {
+        "syntax": "\u003csize\u003e"
+      },
+      "shape": {
+        "syntax": "ellipse | rectangle | arrow-button-left | arrow-button-right"
+      },
+      "size": {
+        "syntax": "\u003csize\u003e"
+      },
+      "top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "width": {
+        "syntax": "\u003clength\u003e"
+      }
+    }
+  },
+  "CheckedTextView": {
+    "elementName": "checked-text-view",
+    "properties": {
+      "android-fading-edge-length": {
+        "syntax": "\u003clength\u003e"
+      },
+      "android-horizontal-fading-edge": {
+        "syntax": "enabled | disabled"
+      },
+      "android-vertical-fading-edge": {
+        "syntax": "enabled | disabled"
+      },
+      "background-color": {
+        "syntax": "\u003cpaint\u003e"
+      },
+      "background-image": {
+        "syntax": "\u003curl\u003e"
+      },
+      "background-inset": {
+        "syntax": "\u003cinset\u003e"
+      },
+      "background-inset-bottom": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-right": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding": {
+        "syntax": "\u003cpadding\u003e"
+      },
+      "background-padding-bottom": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-right": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-size": {
+        "syntax": "\u003csize\u003e"
+      },
+      "border": {
+        "syntax": "\u003cwidth\u003e || \u003cborder-style\u003e || \u003cpaint\u003e"
+      },
+      "border-bottom-left-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-bottom-right-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-color": {
+        "syntax": "\u003cpaint\u003e{1,4}"
+      },
+      "border-radius": {
+        "syntax": "\u003csize\u003e{1,4}"
+      },
+      "border-style": {
+        "syntax": "\u003cborder-style\u003e{1,4}"
+      },
+      "border-top-left-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-top-right-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-width": {
+        "syntax": "\u003clength\u003e{1,4}"
+      },
+      "box-shadow": {
+        "syntax": "\u003cshadow\u003e [\",\" \u003cshadow\u003e]*"
+      },
+      "color": {
+        "syntax": "\u003ccolor\u003e"
+      },
+      "compound-padding": {
+        "syntax": "\u003clength\u003e"
+      },
+      "font-family": {
+        "syntax": "\u003cstring\u003e"
+      },
+      "font-size": {
+        "syntax": "\u003clength\u003e"
+      },
+      "font-style": {
+        "syntax": "normal | italic"
+      },
+      "font-weight": {
+        "syntax": "normal | bold"
+      },
+      "height": {
+        "syntax": "\u003clength\u003e"
+      },
+      "left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "opacity": {
+        "syntax": "\u003cnumber\u003e"
+      },
+      "position": {
+        "syntax": "\u003csize\u003e"
+      },
+      "shape": {
+        "syntax": "ellipse | rectangle | arrow-button-left | arrow-button-right"
+      },
+      "size": {
+        "syntax": "\u003csize\u003e"
+      },
+      "text": {
+        "syntax": "\u003cstring\u003e"
+      },
+      "text-overflow": {
+        "syntax": "word-wrap | character-wrap | ellipsis-head | ellipsis-tail | ellipsis-middle"
+      },
+      "text-shadow": {
+        "syntax": "\u003cshadow\u003e"
+      },
+      "text-transform": {
+        "syntax": "uppercase | lowercase"
+      },
+      "top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "width": {
+        "syntax": "\u003clength\u003e"
+      }
+    }
+  },
+  "CheckedTextView.icon": {
+    "elementName": "icon",
+    "properties": {
+      "background-color": {
+        "syntax": "\u003cpaint\u003e"
+      },
+      "background-image": {
+        "syntax": "\u003curl\u003e"
+      },
+      "background-inset": {
+        "syntax": "\u003cinset\u003e"
+      },
+      "background-inset-bottom": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-right": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding": {
+        "syntax": "\u003cpadding\u003e"
+      },
+      "background-padding-bottom": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-right": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-size": {
+        "syntax": "\u003csize\u003e"
+      },
+      "border": {
+        "syntax": "\u003cwidth\u003e || \u003cborder-style\u003e || \u003cpaint\u003e"
+      },
+      "border-bottom-left-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-bottom-right-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-color": {
+        "syntax": "\u003cpaint\u003e{1,4}"
+      },
+      "border-radius": {
+        "syntax": "\u003csize\u003e{1,4}"
+      },
+      "border-style": {
+        "syntax": "\u003cborder-style\u003e{1,4}"
+      },
+      "border-top-left-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-top-right-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-width": {
+        "syntax": "\u003clength\u003e{1,4}"
+      },
+      "height": {
+        "syntax": "\u003clength\u003e"
+      },
+      "left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "position": {
+        "syntax": "\u003csize\u003e"
+      },
+      "shape": {
+        "syntax": "ellipse | rectangle | arrow-button-left | arrow-button-right"
+      },
+      "size": {
+        "syntax": "\u003csize\u003e"
+      },
+      "top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "width": {
+        "syntax": "\u003clength\u003e"
+      }
+    }
+  },
+  "CheckedTextView.icon-bottom": {
+    "elementName": "icon-bottom",
+    "properties": {
+      "background-color": {
+        "syntax": "\u003cpaint\u003e"
+      },
+      "background-image": {
+        "syntax": "\u003curl\u003e"
+      },
+      "background-inset": {
+        "syntax": "\u003cinset\u003e"
+      },
+      "background-inset-bottom": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-right": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding": {
+        "syntax": "\u003cpadding\u003e"
+      },
+      "background-padding-bottom": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-right": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-size": {
+        "syntax": "\u003csize\u003e"
+      },
+      "border": {
+        "syntax": "\u003cwidth\u003e || \u003cborder-style\u003e || \u003cpaint\u003e"
+      },
+      "border-bottom-left-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-bottom-right-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-color": {
+        "syntax": "\u003cpaint\u003e{1,4}"
+      },
+      "border-radius": {
+        "syntax": "\u003csize\u003e{1,4}"
+      },
+      "border-style": {
+        "syntax": "\u003cborder-style\u003e{1,4}"
+      },
+      "border-top-left-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-top-right-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-width": {
+        "syntax": "\u003clength\u003e{1,4}"
+      },
+      "height": {
+        "syntax": "\u003clength\u003e"
+      },
+      "left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "position": {
+        "syntax": "\u003csize\u003e"
+      },
+      "shape": {
+        "syntax": "ellipse | rectangle | arrow-button-left | arrow-button-right"
+      },
+      "size": {
+        "syntax": "\u003csize\u003e"
+      },
+      "top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "width": {
+        "syntax": "\u003clength\u003e"
+      }
+    }
+  },
+  "CheckedTextView.icon-left": {
+    "elementName": "icon-left",
+    "properties": {
+      "background-color": {
+        "syntax": "\u003cpaint\u003e"
+      },
+      "background-image": {
+        "syntax": "\u003curl\u003e"
+      },
+      "background-inset": {
+        "syntax": "\u003cinset\u003e"
+      },
+      "background-inset-bottom": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-right": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding": {
+        "syntax": "\u003cpadding\u003e"
+      },
+      "background-padding-bottom": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-right": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-size": {
+        "syntax": "\u003csize\u003e"
+      },
+      "border": {
+        "syntax": "\u003cwidth\u003e || \u003cborder-style\u003e || \u003cpaint\u003e"
+      },
+      "border-bottom-left-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-bottom-right-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-color": {
+        "syntax": "\u003cpaint\u003e{1,4}"
+      },
+      "border-radius": {
+        "syntax": "\u003csize\u003e{1,4}"
+      },
+      "border-style": {
+        "syntax": "\u003cborder-style\u003e{1,4}"
+      },
+      "border-top-left-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-top-right-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-width": {
+        "syntax": "\u003clength\u003e{1,4}"
+      },
+      "height": {
+        "syntax": "\u003clength\u003e"
+      },
+      "left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "position": {
+        "syntax": "\u003csize\u003e"
+      },
+      "shape": {
+        "syntax": "ellipse | rectangle | arrow-button-left | arrow-button-right"
+      },
+      "size": {
+        "syntax": "\u003csize\u003e"
+      },
+      "top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "width": {
+        "syntax": "\u003clength\u003e"
+      }
+    }
+  },
+  "CheckedTextView.icon-right": {
+    "elementName": "icon-right",
+    "properties": {
+      "background-color": {
+        "syntax": "\u003cpaint\u003e"
+      },
+      "background-image": {
+        "syntax": "\u003curl\u003e"
+      },
+      "background-inset": {
+        "syntax": "\u003cinset\u003e"
+      },
+      "background-inset-bottom": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-right": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding": {
+        "syntax": "\u003cpadding\u003e"
+      },
+      "background-padding-bottom": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-right": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-size": {
+        "syntax": "\u003csize\u003e"
+      },
+      "border": {
+        "syntax": "\u003cwidth\u003e || \u003cborder-style\u003e || \u003cpaint\u003e"
+      },
+      "border-bottom-left-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-bottom-right-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-color": {
+        "syntax": "\u003cpaint\u003e{1,4}"
+      },
+      "border-radius": {
+        "syntax": "\u003csize\u003e{1,4}"
+      },
+      "border-style": {
+        "syntax": "\u003cborder-style\u003e{1,4}"
+      },
+      "border-top-left-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-top-right-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-width": {
+        "syntax": "\u003clength\u003e{1,4}"
+      },
+      "height": {
+        "syntax": "\u003clength\u003e"
+      },
+      "left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "position": {
+        "syntax": "\u003csize\u003e"
+      },
+      "shape": {
+        "syntax": "ellipse | rectangle | arrow-button-left | arrow-button-right"
+      },
+      "size": {
+        "syntax": "\u003csize\u003e"
+      },
+      "top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "width": {
+        "syntax": "\u003clength\u003e"
+      }
+    }
+  },
+  "CheckedTextView.icon-top": {
+    "elementName": "icon-top",
+    "properties": {
+      "background-color": {
+        "syntax": "\u003cpaint\u003e"
+      },
+      "background-image": {
+        "syntax": "\u003curl\u003e"
+      },
+      "background-inset": {
+        "syntax": "\u003cinset\u003e"
+      },
+      "background-inset-bottom": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-right": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding": {
+        "syntax": "\u003cpadding\u003e"
+      },
+      "background-padding-bottom": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-right": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-size": {
+        "syntax": "\u003csize\u003e"
+      },
+      "border": {
+        "syntax": "\u003cwidth\u003e || \u003cborder-style\u003e || \u003cpaint\u003e"
+      },
+      "border-bottom-left-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-bottom-right-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-color": {
+        "syntax": "\u003cpaint\u003e{1,4}"
+      },
+      "border-radius": {
+        "syntax": "\u003csize\u003e{1,4}"
+      },
+      "border-style": {
+        "syntax": "\u003cborder-style\u003e{1,4}"
+      },
+      "border-top-left-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-top-right-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-width": {
+        "syntax": "\u003clength\u003e{1,4}"
+      },
+      "height": {
+        "syntax": "\u003clength\u003e"
+      },
+      "left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "position": {
+        "syntax": "\u003csize\u003e"
+      },
+      "shape": {
+        "syntax": "ellipse | rectangle | arrow-button-left | arrow-button-right"
+      },
+      "size": {
+        "syntax": "\u003csize\u003e"
+      },
+      "top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "width": {
+        "syntax": "\u003clength\u003e"
+      }
+    }
+  },
+  "EditText": {
+    "elementName": "edit-text",
+    "properties": {
+      "android-fading-edge-length": {
+        "syntax": "\u003clength\u003e"
+      },
+      "android-horizontal-fading-edge": {
+        "syntax": "enabled | disabled"
+      },
+      "android-vertical-fading-edge": {
+        "syntax": "enabled | disabled"
+      },
+      "background-color": {
+        "syntax": "\u003cpaint\u003e"
+      },
+      "background-image": {
+        "syntax": "\u003curl\u003e"
+      },
+      "background-inset": {
+        "syntax": "\u003cinset\u003e"
+      },
+      "background-inset-bottom": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-right": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding": {
+        "syntax": "\u003cpadding\u003e"
+      },
+      "background-padding-bottom": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-right": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-size": {
+        "syntax": "\u003csize\u003e"
+      },
+      "border": {
+        "syntax": "\u003cwidth\u003e || \u003cborder-style\u003e || \u003cpaint\u003e"
+      },
+      "border-bottom-left-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-bottom-right-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-color": {
+        "syntax": "\u003cpaint\u003e{1,4}"
+      },
+      "border-radius": {
+        "syntax": "\u003csize\u003e{1,4}"
+      },
+      "border-style": {
+        "syntax": "\u003cborder-style\u003e{1,4}"
+      },
+      "border-top-left-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-top-right-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-width": {
+        "syntax": "\u003clength\u003e{1,4}"
+      },
+      "box-shadow": {
+        "syntax": "\u003cshadow\u003e [\",\" \u003cshadow\u003e]*"
+      },
+      "color": {
+        "syntax": "\u003ccolor\u003e"
+      },
+      "compound-padding": {
+        "syntax": "\u003clength\u003e"
+      },
+      "font-family": {
+        "syntax": "\u003cstring\u003e"
+      },
+      "font-size": {
+        "syntax": "\u003clength\u003e"
+      },
+      "font-style": {
+        "syntax": "normal | italic"
+      },
+      "font-weight": {
+        "syntax": "normal | bold"
+      },
+      "height": {
+        "syntax": "\u003clength\u003e"
+      },
+      "left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "opacity": {
+        "syntax": "\u003cnumber\u003e"
+      },
+      "position": {
+        "syntax": "\u003csize\u003e"
+      },
+      "shape": {
+        "syntax": "ellipse | rectangle | arrow-button-left | arrow-button-right"
+      },
+      "size": {
+        "syntax": "\u003csize\u003e"
+      },
+      "text": {
+        "syntax": "\u003cstring\u003e"
+      },
+      "text-overflow": {
+        "syntax": "word-wrap | character-wrap | ellipsis-head | ellipsis-tail | ellipsis-middle"
+      },
+      "text-shadow": {
+        "syntax": "\u003cshadow\u003e"
+      },
+      "text-transform": {
+        "syntax": "uppercase | lowercase"
+      },
+      "top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "width": {
+        "syntax": "\u003clength\u003e"
+      }
+    }
+  },
+  "EditText.icon-bottom": {
+    "elementName": "icon-bottom",
+    "properties": {
+      "background-color": {
+        "syntax": "\u003cpaint\u003e"
+      },
+      "background-image": {
+        "syntax": "\u003curl\u003e"
+      },
+      "background-inset": {
+        "syntax": "\u003cinset\u003e"
+      },
+      "background-inset-bottom": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-right": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding": {
+        "syntax": "\u003cpadding\u003e"
+      },
+      "background-padding-bottom": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-right": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-size": {
+        "syntax": "\u003csize\u003e"
+      },
+      "border": {
+        "syntax": "\u003cwidth\u003e || \u003cborder-style\u003e || \u003cpaint\u003e"
+      },
+      "border-bottom-left-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-bottom-right-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-color": {
+        "syntax": "\u003cpaint\u003e{1,4}"
+      },
+      "border-radius": {
+        "syntax": "\u003csize\u003e{1,4}"
+      },
+      "border-style": {
+        "syntax": "\u003cborder-style\u003e{1,4}"
+      },
+      "border-top-left-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-top-right-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-width": {
+        "syntax": "\u003clength\u003e{1,4}"
+      },
+      "height": {
+        "syntax": "\u003clength\u003e"
+      },
+      "left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "position": {
+        "syntax": "\u003csize\u003e"
+      },
+      "shape": {
+        "syntax": "ellipse | rectangle | arrow-button-left | arrow-button-right"
+      },
+      "size": {
+        "syntax": "\u003csize\u003e"
+      },
+      "top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "width": {
+        "syntax": "\u003clength\u003e"
+      }
+    }
+  },
+  "EditText.icon-left": {
+    "elementName": "icon-left",
+    "properties": {
+      "background-color": {
+        "syntax": "\u003cpaint\u003e"
+      },
+      "background-image": {
+        "syntax": "\u003curl\u003e"
+      },
+      "background-inset": {
+        "syntax": "\u003cinset\u003e"
+      },
+      "background-inset-bottom": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-right": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding": {
+        "syntax": "\u003cpadding\u003e"
+      },
+      "background-padding-bottom": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-right": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-size": {
+        "syntax": "\u003csize\u003e"
+      },
+      "border": {
+        "syntax": "\u003cwidth\u003e || \u003cborder-style\u003e || \u003cpaint\u003e"
+      },
+      "border-bottom-left-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-bottom-right-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-color": {
+        "syntax": "\u003cpaint\u003e{1,4}"
+      },
+      "border-radius": {
+        "syntax": "\u003csize\u003e{1,4}"
+      },
+      "border-style": {
+        "syntax": "\u003cborder-style\u003e{1,4}"
+      },
+      "border-top-left-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-top-right-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-width": {
+        "syntax": "\u003clength\u003e{1,4}"
+      },
+      "height": {
+        "syntax": "\u003clength\u003e"
+      },
+      "left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "position": {
+        "syntax": "\u003csize\u003e"
+      },
+      "shape": {
+        "syntax": "ellipse | rectangle | arrow-button-left | arrow-button-right"
+      },
+      "size": {
+        "syntax": "\u003csize\u003e"
+      },
+      "top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "width": {
+        "syntax": "\u003clength\u003e"
+      }
+    }
+  },
+  "EditText.icon-right": {
+    "elementName": "icon-right",
+    "properties": {
+      "background-color": {
+        "syntax": "\u003cpaint\u003e"
+      },
+      "background-image": {
+        "syntax": "\u003curl\u003e"
+      },
+      "background-inset": {
+        "syntax": "\u003cinset\u003e"
+      },
+      "background-inset-bottom": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-right": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding": {
+        "syntax": "\u003cpadding\u003e"
+      },
+      "background-padding-bottom": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-right": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-size": {
+        "syntax": "\u003csize\u003e"
+      },
+      "border": {
+        "syntax": "\u003cwidth\u003e || \u003cborder-style\u003e || \u003cpaint\u003e"
+      },
+      "border-bottom-left-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-bottom-right-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-color": {
+        "syntax": "\u003cpaint\u003e{1,4}"
+      },
+      "border-radius": {
+        "syntax": "\u003csize\u003e{1,4}"
+      },
+      "border-style": {
+        "syntax": "\u003cborder-style\u003e{1,4}"
+      },
+      "border-top-left-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-top-right-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-width": {
+        "syntax": "\u003clength\u003e{1,4}"
+      },
+      "height": {
+        "syntax": "\u003clength\u003e"
+      },
+      "left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "position": {
+        "syntax": "\u003csize\u003e"
+      },
+      "shape": {
+        "syntax": "ellipse | rectangle | arrow-button-left | arrow-button-right"
+      },
+      "size": {
+        "syntax": "\u003csize\u003e"
+      },
+      "top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "width": {
+        "syntax": "\u003clength\u003e"
+      }
+    }
+  },
+  "EditText.icon-top": {
+    "elementName": "icon-top",
+    "properties": {
+      "background-color": {
+        "syntax": "\u003cpaint\u003e"
+      },
+      "background-image": {
+        "syntax": "\u003curl\u003e"
+      },
+      "background-inset": {
+        "syntax": "\u003cinset\u003e"
+      },
+      "background-inset-bottom": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-right": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding": {
+        "syntax": "\u003cpadding\u003e"
+      },
+      "background-padding-bottom": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-right": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-size": {
+        "syntax": "\u003csize\u003e"
+      },
+      "border": {
+        "syntax": "\u003cwidth\u003e || \u003cborder-style\u003e || \u003cpaint\u003e"
+      },
+      "border-bottom-left-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-bottom-right-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-color": {
+        "syntax": "\u003cpaint\u003e{1,4}"
+      },
+      "border-radius": {
+        "syntax": "\u003csize\u003e{1,4}"
+      },
+      "border-style": {
+        "syntax": "\u003cborder-style\u003e{1,4}"
+      },
+      "border-top-left-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-top-right-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-width": {
+        "syntax": "\u003clength\u003e{1,4}"
+      },
+      "height": {
+        "syntax": "\u003clength\u003e"
+      },
+      "left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "position": {
+        "syntax": "\u003csize\u003e"
+      },
+      "shape": {
+        "syntax": "ellipse | rectangle | arrow-button-left | arrow-button-right"
+      },
+      "size": {
+        "syntax": "\u003csize\u003e"
+      },
+      "top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "width": {
+        "syntax": "\u003clength\u003e"
+      }
+    }
+  },
+  "GridView": {
+    "elementName": "grid-view",
+    "properties": {
+      "android-fading-edge-length": {
+        "syntax": "\u003clength\u003e"
+      },
+      "android-horizontal-fading-edge": {
+        "syntax": "enabled | disabled"
+      },
+      "android-vertical-fading-edge": {
+        "syntax": "enabled | disabled"
+      },
+      "background-color": {
+        "syntax": "\u003cpaint\u003e"
+      },
+      "background-image": {
+        "syntax": "\u003curl\u003e"
+      },
+      "background-inset": {
+        "syntax": "\u003cinset\u003e"
+      },
+      "background-inset-bottom": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-right": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding": {
+        "syntax": "\u003cpadding\u003e"
+      },
+      "background-padding-bottom": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-right": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-size": {
+        "syntax": "\u003csize\u003e"
+      },
+      "border": {
+        "syntax": "\u003cwidth\u003e || \u003cborder-style\u003e || \u003cpaint\u003e"
+      },
+      "border-bottom-left-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-bottom-right-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-color": {
+        "syntax": "\u003cpaint\u003e{1,4}"
+      },
+      "border-radius": {
+        "syntax": "\u003csize\u003e{1,4}"
+      },
+      "border-style": {
+        "syntax": "\u003cborder-style\u003e{1,4}"
+      },
+      "border-top-left-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-top-right-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-width": {
+        "syntax": "\u003clength\u003e{1,4}"
+      },
+      "box-shadow": {
+        "syntax": "\u003cshadow\u003e [\",\" \u003cshadow\u003e]*"
+      },
+      "column-count": {
+        "syntax": "\u003cnumber\u003e | auto"
+      },
+      "column-gap": {
+        "syntax": "\u003clength\u003e | normal"
+      },
+      "column-stretch-mode": {
+        "syntax": "none | spacing | spacing-uniform | column-width"
+      },
+      "column-width": {
+        "syntax": "\u003clength\u003e | auto"
+      },
+      "height": {
+        "syntax": "\u003clength\u003e"
+      },
+      "left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "opacity": {
+        "syntax": "\u003cnumber\u003e"
+      },
+      "position": {
+        "syntax": "\u003csize\u003e"
+      },
+      "row-gap": {
+        "syntax": "\u003clength\u003e | normal"
+      },
+      "shape": {
+        "syntax": "ellipse | rectangle | arrow-button-left | arrow-button-right"
+      },
+      "size": {
+        "syntax": "\u003csize\u003e"
+      },
+      "top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "width": {
+        "syntax": "\u003clength\u003e"
+      }
+    }
+  },
+  "GridView.selector": {
+    "elementName": "selector",
+    "properties": {
+      "background-color": {
+        "syntax": "\u003cpaint\u003e"
+      },
+      "background-image": {
+        "syntax": "\u003curl\u003e"
+      },
+      "background-inset": {
+        "syntax": "\u003cinset\u003e"
+      },
+      "background-inset-bottom": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-right": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding": {
+        "syntax": "\u003cpadding\u003e"
+      },
+      "background-padding-bottom": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-right": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-size": {
+        "syntax": "\u003csize\u003e"
+      },
+      "border": {
+        "syntax": "\u003cwidth\u003e || \u003cborder-style\u003e || \u003cpaint\u003e"
+      },
+      "border-bottom-left-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-bottom-right-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-color": {
+        "syntax": "\u003cpaint\u003e{1,4}"
+      },
+      "border-radius": {
+        "syntax": "\u003csize\u003e{1,4}"
+      },
+      "border-style": {
+        "syntax": "\u003cborder-style\u003e{1,4}"
+      },
+      "border-top-left-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-top-right-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-width": {
+        "syntax": "\u003clength\u003e{1,4}"
+      },
+      "height": {
+        "syntax": "\u003clength\u003e"
+      },
+      "left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "position": {
+        "syntax": "\u003csize\u003e"
+      },
+      "shape": {
+        "syntax": "ellipse | rectangle | arrow-button-left | arrow-button-right"
+      },
+      "size": {
+        "syntax": "\u003csize\u003e"
+      },
+      "top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "width": {
+        "syntax": "\u003clength\u003e"
+      }
+    }
+  },
+  "ImageButton": {
+    "elementName": "image-button",
+    "properties": {
+      "android-fading-edge-length": {
+        "syntax": "\u003clength\u003e"
+      },
+      "android-horizontal-fading-edge": {
+        "syntax": "enabled | disabled"
+      },
+      "android-vertical-fading-edge": {
+        "syntax": "enabled | disabled"
+      },
+      "background-color": {
+        "syntax": "\u003cpaint\u003e"
+      },
+      "background-image": {
+        "syntax": "\u003curl\u003e"
+      },
+      "background-inset": {
+        "syntax": "\u003cinset\u003e"
+      },
+      "background-inset-bottom": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-right": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding": {
+        "syntax": "\u003cpadding\u003e"
+      },
+      "background-padding-bottom": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-right": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-size": {
+        "syntax": "\u003csize\u003e"
+      },
+      "border": {
+        "syntax": "\u003cwidth\u003e || \u003cborder-style\u003e || \u003cpaint\u003e"
+      },
+      "border-bottom-left-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-bottom-right-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-color": {
+        "syntax": "\u003cpaint\u003e{1,4}"
+      },
+      "border-radius": {
+        "syntax": "\u003csize\u003e{1,4}"
+      },
+      "border-style": {
+        "syntax": "\u003cborder-style\u003e{1,4}"
+      },
+      "border-top-left-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-top-right-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-width": {
+        "syntax": "\u003clength\u003e{1,4}"
+      },
+      "box-shadow": {
+        "syntax": "\u003cshadow\u003e [\",\" \u003cshadow\u003e]*"
+      },
+      "height": {
+        "syntax": "\u003clength\u003e"
+      },
+      "left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "max-height": {
+        "syntax": "\u003clength\u003e"
+      },
+      "max-width": {
+        "syntax": "\u003clength\u003e"
+      },
+      "opacity": {
+        "syntax": "\u003cnumber\u003e"
+      },
+      "position": {
+        "syntax": "\u003csize\u003e"
+      },
+      "scale-type": {
+        "syntax": "center | center-crop | center-inside | fit-center | fit-end | fit-start | fit-xy | matrix"
+      },
+      "shape": {
+        "syntax": "ellipse | rectangle | arrow-button-left | arrow-button-right"
+      },
+      "size": {
+        "syntax": "\u003csize\u003e"
+      },
+      "tint": {
+        "syntax": "\u003ccolor\u003e"
+      },
+      "top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "view-bounds": {
+        "syntax": "adjust"
+      },
+      "width": {
+        "syntax": "\u003clength\u003e"
+      }
+    }
+  },
+  "ImageButton.image": {
+    "elementName": "image",
+    "properties": {
+      "background-color": {
+        "syntax": "\u003cpaint\u003e"
+      },
+      "background-image": {
+        "syntax": "\u003curl\u003e"
+      },
+      "background-inset": {
+        "syntax": "\u003cinset\u003e"
+      },
+      "background-inset-bottom": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-right": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding": {
+        "syntax": "\u003cpadding\u003e"
+      },
+      "background-padding-bottom": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-right": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-size": {
+        "syntax": "\u003csize\u003e"
+      },
+      "border": {
+        "syntax": "\u003cwidth\u003e || \u003cborder-style\u003e || \u003cpaint\u003e"
+      },
+      "border-bottom-left-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-bottom-right-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-color": {
+        "syntax": "\u003cpaint\u003e{1,4}"
+      },
+      "border-radius": {
+        "syntax": "\u003csize\u003e{1,4}"
+      },
+      "border-style": {
+        "syntax": "\u003cborder-style\u003e{1,4}"
+      },
+      "border-top-left-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-top-right-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-width": {
+        "syntax": "\u003clength\u003e{1,4}"
+      },
+      "height": {
+        "syntax": "\u003clength\u003e"
+      },
+      "left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "position": {
+        "syntax": "\u003csize\u003e"
+      },
+      "shape": {
+        "syntax": "ellipse | rectangle | arrow-button-left | arrow-button-right"
+      },
+      "size": {
+        "syntax": "\u003csize\u003e"
+      },
+      "top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "width": {
+        "syntax": "\u003clength\u003e"
+      }
+    }
+  },
+  "ImageView": {
+    "elementName": "image-view",
+    "properties": {
+      "android-fading-edge-length": {
+        "syntax": "\u003clength\u003e"
+      },
+      "android-horizontal-fading-edge": {
+        "syntax": "enabled | disabled"
+      },
+      "android-vertical-fading-edge": {
+        "syntax": "enabled | disabled"
+      },
+      "background-color": {
+        "syntax": "\u003cpaint\u003e"
+      },
+      "background-image": {
+        "syntax": "\u003curl\u003e"
+      },
+      "background-inset": {
+        "syntax": "\u003cinset\u003e"
+      },
+      "background-inset-bottom": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-right": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding": {
+        "syntax": "\u003cpadding\u003e"
+      },
+      "background-padding-bottom": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-right": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-size": {
+        "syntax": "\u003csize\u003e"
+      },
+      "border": {
+        "syntax": "\u003cwidth\u003e || \u003cborder-style\u003e || \u003cpaint\u003e"
+      },
+      "border-bottom-left-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-bottom-right-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-color": {
+        "syntax": "\u003cpaint\u003e{1,4}"
+      },
+      "border-radius": {
+        "syntax": "\u003csize\u003e{1,4}"
+      },
+      "border-style": {
+        "syntax": "\u003cborder-style\u003e{1,4}"
+      },
+      "border-top-left-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-top-right-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-width": {
+        "syntax": "\u003clength\u003e{1,4}"
+      },
+      "box-shadow": {
+        "syntax": "\u003cshadow\u003e [\",\" \u003cshadow\u003e]*"
+      },
+      "height": {
+        "syntax": "\u003clength\u003e"
+      },
+      "left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "max-height": {
+        "syntax": "\u003clength\u003e"
+      },
+      "max-width": {
+        "syntax": "\u003clength\u003e"
+      },
+      "opacity": {
+        "syntax": "\u003cnumber\u003e"
+      },
+      "position": {
+        "syntax": "\u003csize\u003e"
+      },
+      "scale-type": {
+        "syntax": "center | center-crop | center-inside | fit-center | fit-end | fit-start | fit-xy | matrix"
+      },
+      "shape": {
+        "syntax": "ellipse | rectangle | arrow-button-left | arrow-button-right"
+      },
+      "size": {
+        "syntax": "\u003csize\u003e"
+      },
+      "tint": {
+        "syntax": "\u003ccolor\u003e"
+      },
+      "top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "view-bounds": {
+        "syntax": "adjust"
+      },
+      "width": {
+        "syntax": "\u003clength\u003e"
+      }
+    }
+  },
+  "ImageView.image": {
+    "elementName": "image",
+    "properties": {
+      "background-color": {
+        "syntax": "\u003cpaint\u003e"
+      },
+      "background-image": {
+        "syntax": "\u003curl\u003e"
+      },
+      "background-inset": {
+        "syntax": "\u003cinset\u003e"
+      },
+      "background-inset-bottom": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-right": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding": {
+        "syntax": "\u003cpadding\u003e"
+      },
+      "background-padding-bottom": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-right": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-size": {
+        "syntax": "\u003csize\u003e"
+      },
+      "border": {
+        "syntax": "\u003cwidth\u003e || \u003cborder-style\u003e || \u003cpaint\u003e"
+      },
+      "border-bottom-left-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-bottom-right-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-color": {
+        "syntax": "\u003cpaint\u003e{1,4}"
+      },
+      "border-radius": {
+        "syntax": "\u003csize\u003e{1,4}"
+      },
+      "border-style": {
+        "syntax": "\u003cborder-style\u003e{1,4}"
+      },
+      "border-top-left-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-top-right-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-width": {
+        "syntax": "\u003clength\u003e{1,4}"
+      },
+      "height": {
+        "syntax": "\u003clength\u003e"
+      },
+      "left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "position": {
+        "syntax": "\u003csize\u003e"
+      },
+      "shape": {
+        "syntax": "ellipse | rectangle | arrow-button-left | arrow-button-right"
+      },
+      "size": {
+        "syntax": "\u003csize\u003e"
+      },
+      "top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "width": {
+        "syntax": "\u003clength\u003e"
+      }
+    }
+  },
+  "RadioButton": {
+    "elementName": "radio-button",
+    "properties": {
+      "android-fading-edge-length": {
+        "syntax": "\u003clength\u003e"
+      },
+      "android-horizontal-fading-edge": {
+        "syntax": "enabled | disabled"
+      },
+      "android-vertical-fading-edge": {
+        "syntax": "enabled | disabled"
+      },
+      "background-color": {
+        "syntax": "\u003cpaint\u003e"
+      },
+      "background-image": {
+        "syntax": "\u003curl\u003e"
+      },
+      "background-inset": {
+        "syntax": "\u003cinset\u003e"
+      },
+      "background-inset-bottom": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-right": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding": {
+        "syntax": "\u003cpadding\u003e"
+      },
+      "background-padding-bottom": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-right": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-size": {
+        "syntax": "\u003csize\u003e"
+      },
+      "border": {
+        "syntax": "\u003cwidth\u003e || \u003cborder-style\u003e || \u003cpaint\u003e"
+      },
+      "border-bottom-left-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-bottom-right-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-color": {
+        "syntax": "\u003cpaint\u003e{1,4}"
+      },
+      "border-radius": {
+        "syntax": "\u003csize\u003e{1,4}"
+      },
+      "border-style": {
+        "syntax": "\u003cborder-style\u003e{1,4}"
+      },
+      "border-top-left-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-top-right-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-width": {
+        "syntax": "\u003clength\u003e{1,4}"
+      },
+      "box-shadow": {
+        "syntax": "\u003cshadow\u003e [\",\" \u003cshadow\u003e]*"
+      },
+      "color": {
+        "syntax": "\u003ccolor\u003e"
+      },
+      "compound-padding": {
+        "syntax": "\u003clength\u003e"
+      },
+      "font-family": {
+        "syntax": "\u003cstring\u003e"
+      },
+      "font-size": {
+        "syntax": "\u003clength\u003e"
+      },
+      "font-style": {
+        "syntax": "normal | italic"
+      },
+      "font-weight": {
+        "syntax": "normal | bold"
+      },
+      "height": {
+        "syntax": "\u003clength\u003e"
+      },
+      "left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "opacity": {
+        "syntax": "\u003cnumber\u003e"
+      },
+      "position": {
+        "syntax": "\u003csize\u003e"
+      },
+      "shape": {
+        "syntax": "ellipse | rectangle | arrow-button-left | arrow-button-right"
+      },
+      "size": {
+        "syntax": "\u003csize\u003e"
+      },
+      "text": {
+        "syntax": "\u003cstring\u003e"
+      },
+      "text-overflow": {
+        "syntax": "word-wrap | character-wrap | ellipsis-head | ellipsis-tail | ellipsis-middle"
+      },
+      "text-shadow": {
+        "syntax": "\u003cshadow\u003e"
+      },
+      "text-transform": {
+        "syntax": "uppercase | lowercase"
+      },
+      "top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "width": {
+        "syntax": "\u003clength\u003e"
+      }
+    }
+  },
+  "RadioButton.icon": {
+    "elementName": "icon",
+    "properties": {
+      "background-color": {
+        "syntax": "\u003cpaint\u003e"
+      },
+      "background-image": {
+        "syntax": "\u003curl\u003e"
+      },
+      "background-inset": {
+        "syntax": "\u003cinset\u003e"
+      },
+      "background-inset-bottom": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-right": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding": {
+        "syntax": "\u003cpadding\u003e"
+      },
+      "background-padding-bottom": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-right": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-size": {
+        "syntax": "\u003csize\u003e"
+      },
+      "border": {
+        "syntax": "\u003cwidth\u003e || \u003cborder-style\u003e || \u003cpaint\u003e"
+      },
+      "border-bottom-left-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-bottom-right-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-color": {
+        "syntax": "\u003cpaint\u003e{1,4}"
+      },
+      "border-radius": {
+        "syntax": "\u003csize\u003e{1,4}"
+      },
+      "border-style": {
+        "syntax": "\u003cborder-style\u003e{1,4}"
+      },
+      "border-top-left-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-top-right-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-width": {
+        "syntax": "\u003clength\u003e{1,4}"
+      },
+      "height": {
+        "syntax": "\u003clength\u003e"
+      },
+      "left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "position": {
+        "syntax": "\u003csize\u003e"
+      },
+      "shape": {
+        "syntax": "ellipse | rectangle | arrow-button-left | arrow-button-right"
+      },
+      "size": {
+        "syntax": "\u003csize\u003e"
+      },
+      "top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "width": {
+        "syntax": "\u003clength\u003e"
+      }
+    }
+  },
+  "RadioButton.icon-bottom": {
+    "elementName": "icon-bottom",
+    "properties": {
+      "background-color": {
+        "syntax": "\u003cpaint\u003e"
+      },
+      "background-image": {
+        "syntax": "\u003curl\u003e"
+      },
+      "background-inset": {
+        "syntax": "\u003cinset\u003e"
+      },
+      "background-inset-bottom": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-right": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding": {
+        "syntax": "\u003cpadding\u003e"
+      },
+      "background-padding-bottom": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-right": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-size": {
+        "syntax": "\u003csize\u003e"
+      },
+      "border": {
+        "syntax": "\u003cwidth\u003e || \u003cborder-style\u003e || \u003cpaint\u003e"
+      },
+      "border-bottom-left-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-bottom-right-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-color": {
+        "syntax": "\u003cpaint\u003e{1,4}"
+      },
+      "border-radius": {
+        "syntax": "\u003csize\u003e{1,4}"
+      },
+      "border-style": {
+        "syntax": "\u003cborder-style\u003e{1,4}"
+      },
+      "border-top-left-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-top-right-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-width": {
+        "syntax": "\u003clength\u003e{1,4}"
+      },
+      "height": {
+        "syntax": "\u003clength\u003e"
+      },
+      "left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "position": {
+        "syntax": "\u003csize\u003e"
+      },
+      "shape": {
+        "syntax": "ellipse | rectangle | arrow-button-left | arrow-button-right"
+      },
+      "size": {
+        "syntax": "\u003csize\u003e"
+      },
+      "top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "width": {
+        "syntax": "\u003clength\u003e"
+      }
+    }
+  },
+  "RadioButton.icon-left": {
+    "elementName": "icon-left",
+    "properties": {
+      "background-color": {
+        "syntax": "\u003cpaint\u003e"
+      },
+      "background-image": {
+        "syntax": "\u003curl\u003e"
+      },
+      "background-inset": {
+        "syntax": "\u003cinset\u003e"
+      },
+      "background-inset-bottom": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-right": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding": {
+        "syntax": "\u003cpadding\u003e"
+      },
+      "background-padding-bottom": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-right": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-size": {
+        "syntax": "\u003csize\u003e"
+      },
+      "border": {
+        "syntax": "\u003cwidth\u003e || \u003cborder-style\u003e || \u003cpaint\u003e"
+      },
+      "border-bottom-left-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-bottom-right-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-color": {
+        "syntax": "\u003cpaint\u003e{1,4}"
+      },
+      "border-radius": {
+        "syntax": "\u003csize\u003e{1,4}"
+      },
+      "border-style": {
+        "syntax": "\u003cborder-style\u003e{1,4}"
+      },
+      "border-top-left-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-top-right-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-width": {
+        "syntax": "\u003clength\u003e{1,4}"
+      },
+      "height": {
+        "syntax": "\u003clength\u003e"
+      },
+      "left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "position": {
+        "syntax": "\u003csize\u003e"
+      },
+      "shape": {
+        "syntax": "ellipse | rectangle | arrow-button-left | arrow-button-right"
+      },
+      "size": {
+        "syntax": "\u003csize\u003e"
+      },
+      "top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "width": {
+        "syntax": "\u003clength\u003e"
+      }
+    }
+  },
+  "RadioButton.icon-right": {
+    "elementName": "icon-right",
+    "properties": {
+      "background-color": {
+        "syntax": "\u003cpaint\u003e"
+      },
+      "background-image": {
+        "syntax": "\u003curl\u003e"
+      },
+      "background-inset": {
+        "syntax": "\u003cinset\u003e"
+      },
+      "background-inset-bottom": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-right": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding": {
+        "syntax": "\u003cpadding\u003e"
+      },
+      "background-padding-bottom": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-right": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-size": {
+        "syntax": "\u003csize\u003e"
+      },
+      "border": {
+        "syntax": "\u003cwidth\u003e || \u003cborder-style\u003e || \u003cpaint\u003e"
+      },
+      "border-bottom-left-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-bottom-right-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-color": {
+        "syntax": "\u003cpaint\u003e{1,4}"
+      },
+      "border-radius": {
+        "syntax": "\u003csize\u003e{1,4}"
+      },
+      "border-style": {
+        "syntax": "\u003cborder-style\u003e{1,4}"
+      },
+      "border-top-left-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-top-right-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-width": {
+        "syntax": "\u003clength\u003e{1,4}"
+      },
+      "height": {
+        "syntax": "\u003clength\u003e"
+      },
+      "left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "position": {
+        "syntax": "\u003csize\u003e"
+      },
+      "shape": {
+        "syntax": "ellipse | rectangle | arrow-button-left | arrow-button-right"
+      },
+      "size": {
+        "syntax": "\u003csize\u003e"
+      },
+      "top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "width": {
+        "syntax": "\u003clength\u003e"
+      }
+    }
+  },
+  "RadioButton.icon-top": {
+    "elementName": "icon-top",
+    "properties": {
+      "background-color": {
+        "syntax": "\u003cpaint\u003e"
+      },
+      "background-image": {
+        "syntax": "\u003curl\u003e"
+      },
+      "background-inset": {
+        "syntax": "\u003cinset\u003e"
+      },
+      "background-inset-bottom": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-right": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding": {
+        "syntax": "\u003cpadding\u003e"
+      },
+      "background-padding-bottom": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-right": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-size": {
+        "syntax": "\u003csize\u003e"
+      },
+      "border": {
+        "syntax": "\u003cwidth\u003e || \u003cborder-style\u003e || \u003cpaint\u003e"
+      },
+      "border-bottom-left-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-bottom-right-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-color": {
+        "syntax": "\u003cpaint\u003e{1,4}"
+      },
+      "border-radius": {
+        "syntax": "\u003csize\u003e{1,4}"
+      },
+      "border-style": {
+        "syntax": "\u003cborder-style\u003e{1,4}"
+      },
+      "border-top-left-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-top-right-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-width": {
+        "syntax": "\u003clength\u003e{1,4}"
+      },
+      "height": {
+        "syntax": "\u003clength\u003e"
+      },
+      "left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "position": {
+        "syntax": "\u003csize\u003e"
+      },
+      "shape": {
+        "syntax": "ellipse | rectangle | arrow-button-left | arrow-button-right"
+      },
+      "size": {
+        "syntax": "\u003csize\u003e"
+      },
+      "top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "width": {
+        "syntax": "\u003clength\u003e"
+      }
+    }
+  },
+  "Spinner": {
+    "elementName": "spinner",
+    "properties": {
+      "android-fading-edge-length": {
+        "syntax": "\u003clength\u003e"
+      },
+      "android-horizontal-fading-edge": {
+        "syntax": "enabled | disabled"
+      },
+      "android-vertical-fading-edge": {
+        "syntax": "enabled | disabled"
+      },
+      "background-color": {
+        "syntax": "\u003cpaint\u003e"
+      },
+      "background-image": {
+        "syntax": "\u003curl\u003e"
+      },
+      "background-inset": {
+        "syntax": "\u003cinset\u003e"
+      },
+      "background-inset-bottom": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-right": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding": {
+        "syntax": "\u003cpadding\u003e"
+      },
+      "background-padding-bottom": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-right": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-size": {
+        "syntax": "\u003csize\u003e"
+      },
+      "border": {
+        "syntax": "\u003cwidth\u003e || \u003cborder-style\u003e || \u003cpaint\u003e"
+      },
+      "border-bottom-left-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-bottom-right-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-color": {
+        "syntax": "\u003cpaint\u003e{1,4}"
+      },
+      "border-radius": {
+        "syntax": "\u003csize\u003e{1,4}"
+      },
+      "border-style": {
+        "syntax": "\u003cborder-style\u003e{1,4}"
+      },
+      "border-top-left-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-top-right-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-width": {
+        "syntax": "\u003clength\u003e{1,4}"
+      },
+      "box-shadow": {
+        "syntax": "\u003cshadow\u003e [\",\" \u003cshadow\u003e]*"
+      },
+      "height": {
+        "syntax": "\u003clength\u003e"
+      },
+      "left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "opacity": {
+        "syntax": "\u003cnumber\u003e"
+      },
+      "position": {
+        "syntax": "\u003csize\u003e"
+      },
+      "shape": {
+        "syntax": "ellipse | rectangle | arrow-button-left | arrow-button-right"
+      },
+      "size": {
+        "syntax": "\u003csize\u003e"
+      },
+      "top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "width": {
+        "syntax": "\u003clength\u003e"
+      }
+    }
+  },
+  "Spinner.dropdown": {
+    "elementName": "dropdown",
+    "properties": {
+      "background-color": {
+        "syntax": "\u003cpaint\u003e"
+      },
+      "background-image": {
+        "syntax": "\u003curl\u003e"
+      },
+      "background-inset": {
+        "syntax": "\u003cinset\u003e"
+      },
+      "background-inset-bottom": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-right": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding": {
+        "syntax": "\u003cpadding\u003e"
+      },
+      "background-padding-bottom": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-right": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-size": {
+        "syntax": "\u003csize\u003e"
+      },
+      "horizontal-offset": {
+        "syntax": "\u003clength\u003e"
+      },
+      "vertical-offset": {
+        "syntax": "\u003clength\u003e"
+      },
+      "width": {
+        "syntax": "\u003clength\u003e"
+      }
+    }
+  },
+  "TabView": {
+    "elementName": "action-bar-tab",
+    "properties": {
+      "android-fading-edge-length": {
+        "syntax": "\u003clength\u003e"
+      },
+      "android-horizontal-fading-edge": {
+        "syntax": "enabled | disabled"
+      },
+      "android-vertical-fading-edge": {
+        "syntax": "enabled | disabled"
+      },
+      "background-color": {
+        "syntax": "\u003cpaint\u003e"
+      },
+      "background-image": {
+        "syntax": "\u003curl\u003e"
+      },
+      "background-inset": {
+        "syntax": "\u003cinset\u003e"
+      },
+      "background-inset-bottom": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-right": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding": {
+        "syntax": "\u003cpadding\u003e"
+      },
+      "background-padding-bottom": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-right": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-size": {
+        "syntax": "\u003csize\u003e"
+      },
+      "border": {
+        "syntax": "\u003cwidth\u003e || \u003cborder-style\u003e || \u003cpaint\u003e"
+      },
+      "border-bottom-left-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-bottom-right-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-color": {
+        "syntax": "\u003cpaint\u003e{1,4}"
+      },
+      "border-radius": {
+        "syntax": "\u003csize\u003e{1,4}"
+      },
+      "border-style": {
+        "syntax": "\u003cborder-style\u003e{1,4}"
+      },
+      "border-top-left-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-top-right-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-width": {
+        "syntax": "\u003clength\u003e{1,4}"
+      },
+      "box-shadow": {
+        "syntax": "\u003cshadow\u003e [\",\" \u003cshadow\u003e]*"
+      },
+      "height": {
+        "syntax": "\u003clength\u003e"
+      },
+      "left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "opacity": {
+        "syntax": "\u003cnumber\u003e"
+      },
+      "position": {
+        "syntax": "\u003csize\u003e"
+      },
+      "shape": {
+        "syntax": "ellipse | rectangle | arrow-button-left | arrow-button-right"
+      },
+      "size": {
+        "syntax": "\u003csize\u003e"
+      },
+      "top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "width": {
+        "syntax": "\u003clength\u003e"
+      }
+    }
+  },
+  "TabView.icon": {
+    "elementName": "icon",
+    "properties": {
+      "background-color": {
+        "syntax": "\u003cpaint\u003e"
+      },
+      "background-image": {
+        "syntax": "\u003curl\u003e"
+      },
+      "background-inset": {
+        "syntax": "\u003cinset\u003e"
+      },
+      "background-inset-bottom": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-right": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding": {
+        "syntax": "\u003cpadding\u003e"
+      },
+      "background-padding-bottom": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-right": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-size": {
+        "syntax": "\u003csize\u003e"
+      },
+      "border": {
+        "syntax": "\u003cwidth\u003e || \u003cborder-style\u003e || \u003cpaint\u003e"
+      },
+      "border-bottom-left-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-bottom-right-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-color": {
+        "syntax": "\u003cpaint\u003e{1,4}"
+      },
+      "border-radius": {
+        "syntax": "\u003csize\u003e{1,4}"
+      },
+      "border-style": {
+        "syntax": "\u003cborder-style\u003e{1,4}"
+      },
+      "border-top-left-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-top-right-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-width": {
+        "syntax": "\u003clength\u003e{1,4}"
+      },
+      "height": {
+        "syntax": "\u003clength\u003e"
+      },
+      "left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "position": {
+        "syntax": "\u003csize\u003e"
+      },
+      "shape": {
+        "syntax": "ellipse | rectangle | arrow-button-left | arrow-button-right"
+      },
+      "size": {
+        "syntax": "\u003csize\u003e"
+      },
+      "top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "width": {
+        "syntax": "\u003clength\u003e"
+      }
+    }
+  },
+  "TextView": {
+    "elementName": "text-view",
+    "properties": {
+      "android-fading-edge-length": {
+        "syntax": "\u003clength\u003e"
+      },
+      "android-horizontal-fading-edge": {
+        "syntax": "enabled | disabled"
+      },
+      "android-vertical-fading-edge": {
+        "syntax": "enabled | disabled"
+      },
+      "background-color": {
+        "syntax": "\u003cpaint\u003e"
+      },
+      "background-image": {
+        "syntax": "\u003curl\u003e"
+      },
+      "background-inset": {
+        "syntax": "\u003cinset\u003e"
+      },
+      "background-inset-bottom": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-right": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding": {
+        "syntax": "\u003cpadding\u003e"
+      },
+      "background-padding-bottom": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-right": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-size": {
+        "syntax": "\u003csize\u003e"
+      },
+      "border": {
+        "syntax": "\u003cwidth\u003e || \u003cborder-style\u003e || \u003cpaint\u003e"
+      },
+      "border-bottom-left-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-bottom-right-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-color": {
+        "syntax": "\u003cpaint\u003e{1,4}"
+      },
+      "border-radius": {
+        "syntax": "\u003csize\u003e{1,4}"
+      },
+      "border-style": {
+        "syntax": "\u003cborder-style\u003e{1,4}"
+      },
+      "border-top-left-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-top-right-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-width": {
+        "syntax": "\u003clength\u003e{1,4}"
+      },
+      "box-shadow": {
+        "syntax": "\u003cshadow\u003e [\",\" \u003cshadow\u003e]*"
+      },
+      "color": {
+        "syntax": "\u003ccolor\u003e"
+      },
+      "compound-padding": {
+        "syntax": "\u003clength\u003e"
+      },
+      "font-family": {
+        "syntax": "\u003cstring\u003e"
+      },
+      "font-size": {
+        "syntax": "\u003clength\u003e"
+      },
+      "font-style": {
+        "syntax": "normal | italic"
+      },
+      "font-weight": {
+        "syntax": "normal | bold"
+      },
+      "height": {
+        "syntax": "\u003clength\u003e"
+      },
+      "left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "opacity": {
+        "syntax": "\u003cnumber\u003e"
+      },
+      "position": {
+        "syntax": "\u003csize\u003e"
+      },
+      "shape": {
+        "syntax": "ellipse | rectangle | arrow-button-left | arrow-button-right"
+      },
+      "size": {
+        "syntax": "\u003csize\u003e"
+      },
+      "text": {
+        "syntax": "\u003cstring\u003e"
+      },
+      "text-overflow": {
+        "syntax": "word-wrap | character-wrap | ellipsis-head | ellipsis-tail | ellipsis-middle"
+      },
+      "text-shadow": {
+        "syntax": "\u003cshadow\u003e"
+      },
+      "text-transform": {
+        "syntax": "uppercase | lowercase"
+      },
+      "top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "width": {
+        "syntax": "\u003clength\u003e"
+      }
+    }
+  },
+  "TextView.icon-bottom": {
+    "elementName": "icon-bottom",
+    "properties": {
+      "background-color": {
+        "syntax": "\u003cpaint\u003e"
+      },
+      "background-image": {
+        "syntax": "\u003curl\u003e"
+      },
+      "background-inset": {
+        "syntax": "\u003cinset\u003e"
+      },
+      "background-inset-bottom": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-right": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding": {
+        "syntax": "\u003cpadding\u003e"
+      },
+      "background-padding-bottom": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-right": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-size": {
+        "syntax": "\u003csize\u003e"
+      },
+      "border": {
+        "syntax": "\u003cwidth\u003e || \u003cborder-style\u003e || \u003cpaint\u003e"
+      },
+      "border-bottom-left-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-bottom-right-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-color": {
+        "syntax": "\u003cpaint\u003e{1,4}"
+      },
+      "border-radius": {
+        "syntax": "\u003csize\u003e{1,4}"
+      },
+      "border-style": {
+        "syntax": "\u003cborder-style\u003e{1,4}"
+      },
+      "border-top-left-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-top-right-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-width": {
+        "syntax": "\u003clength\u003e{1,4}"
+      },
+      "height": {
+        "syntax": "\u003clength\u003e"
+      },
+      "left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "position": {
+        "syntax": "\u003csize\u003e"
+      },
+      "shape": {
+        "syntax": "ellipse | rectangle | arrow-button-left | arrow-button-right"
+      },
+      "size": {
+        "syntax": "\u003csize\u003e"
+      },
+      "top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "width": {
+        "syntax": "\u003clength\u003e"
+      }
+    }
+  },
+  "TextView.icon-left": {
+    "elementName": "icon-left",
+    "properties": {
+      "background-color": {
+        "syntax": "\u003cpaint\u003e"
+      },
+      "background-image": {
+        "syntax": "\u003curl\u003e"
+      },
+      "background-inset": {
+        "syntax": "\u003cinset\u003e"
+      },
+      "background-inset-bottom": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-right": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding": {
+        "syntax": "\u003cpadding\u003e"
+      },
+      "background-padding-bottom": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-right": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-size": {
+        "syntax": "\u003csize\u003e"
+      },
+      "border": {
+        "syntax": "\u003cwidth\u003e || \u003cborder-style\u003e || \u003cpaint\u003e"
+      },
+      "border-bottom-left-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-bottom-right-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-color": {
+        "syntax": "\u003cpaint\u003e{1,4}"
+      },
+      "border-radius": {
+        "syntax": "\u003csize\u003e{1,4}"
+      },
+      "border-style": {
+        "syntax": "\u003cborder-style\u003e{1,4}"
+      },
+      "border-top-left-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-top-right-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-width": {
+        "syntax": "\u003clength\u003e{1,4}"
+      },
+      "height": {
+        "syntax": "\u003clength\u003e"
+      },
+      "left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "position": {
+        "syntax": "\u003csize\u003e"
+      },
+      "shape": {
+        "syntax": "ellipse | rectangle | arrow-button-left | arrow-button-right"
+      },
+      "size": {
+        "syntax": "\u003csize\u003e"
+      },
+      "top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "width": {
+        "syntax": "\u003clength\u003e"
+      }
+    }
+  },
+  "TextView.icon-right": {
+    "elementName": "icon-right",
+    "properties": {
+      "background-color": {
+        "syntax": "\u003cpaint\u003e"
+      },
+      "background-image": {
+        "syntax": "\u003curl\u003e"
+      },
+      "background-inset": {
+        "syntax": "\u003cinset\u003e"
+      },
+      "background-inset-bottom": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-right": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding": {
+        "syntax": "\u003cpadding\u003e"
+      },
+      "background-padding-bottom": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-right": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-size": {
+        "syntax": "\u003csize\u003e"
+      },
+      "border": {
+        "syntax": "\u003cwidth\u003e || \u003cborder-style\u003e || \u003cpaint\u003e"
+      },
+      "border-bottom-left-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-bottom-right-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-color": {
+        "syntax": "\u003cpaint\u003e{1,4}"
+      },
+      "border-radius": {
+        "syntax": "\u003csize\u003e{1,4}"
+      },
+      "border-style": {
+        "syntax": "\u003cborder-style\u003e{1,4}"
+      },
+      "border-top-left-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-top-right-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-width": {
+        "syntax": "\u003clength\u003e{1,4}"
+      },
+      "height": {
+        "syntax": "\u003clength\u003e"
+      },
+      "left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "position": {
+        "syntax": "\u003csize\u003e"
+      },
+      "shape": {
+        "syntax": "ellipse | rectangle | arrow-button-left | arrow-button-right"
+      },
+      "size": {
+        "syntax": "\u003csize\u003e"
+      },
+      "top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "width": {
+        "syntax": "\u003clength\u003e"
+      }
+    }
+  },
+  "TextView.icon-top": {
+    "elementName": "icon-top",
+    "properties": {
+      "background-color": {
+        "syntax": "\u003cpaint\u003e"
+      },
+      "background-image": {
+        "syntax": "\u003curl\u003e"
+      },
+      "background-inset": {
+        "syntax": "\u003cinset\u003e"
+      },
+      "background-inset-bottom": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-right": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding": {
+        "syntax": "\u003cpadding\u003e"
+      },
+      "background-padding-bottom": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-right": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-size": {
+        "syntax": "\u003csize\u003e"
+      },
+      "border": {
+        "syntax": "\u003cwidth\u003e || \u003cborder-style\u003e || \u003cpaint\u003e"
+      },
+      "border-bottom-left-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-bottom-right-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-color": {
+        "syntax": "\u003cpaint\u003e{1,4}"
+      },
+      "border-radius": {
+        "syntax": "\u003csize\u003e{1,4}"
+      },
+      "border-style": {
+        "syntax": "\u003cborder-style\u003e{1,4}"
+      },
+      "border-top-left-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-top-right-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-width": {
+        "syntax": "\u003clength\u003e{1,4}"
+      },
+      "height": {
+        "syntax": "\u003clength\u003e"
+      },
+      "left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "position": {
+        "syntax": "\u003csize\u003e"
+      },
+      "shape": {
+        "syntax": "ellipse | rectangle | arrow-button-left | arrow-button-right"
+      },
+      "size": {
+        "syntax": "\u003csize\u003e"
+      },
+      "top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "width": {
+        "syntax": "\u003clength\u003e"
+      }
+    }
+  },
+  "ToggleButton": {
+    "elementName": "toggle-button",
+    "properties": {
+      "android-fading-edge-length": {
+        "syntax": "\u003clength\u003e"
+      },
+      "android-horizontal-fading-edge": {
+        "syntax": "enabled | disabled"
+      },
+      "android-vertical-fading-edge": {
+        "syntax": "enabled | disabled"
+      },
+      "background-color": {
+        "syntax": "\u003cpaint\u003e"
+      },
+      "background-image": {
+        "syntax": "\u003curl\u003e"
+      },
+      "background-inset": {
+        "syntax": "\u003cinset\u003e"
+      },
+      "background-inset-bottom": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-right": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding": {
+        "syntax": "\u003cpadding\u003e"
+      },
+      "background-padding-bottom": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-right": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-size": {
+        "syntax": "\u003csize\u003e"
+      },
+      "border": {
+        "syntax": "\u003cwidth\u003e || \u003cborder-style\u003e || \u003cpaint\u003e"
+      },
+      "border-bottom-left-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-bottom-right-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-color": {
+        "syntax": "\u003cpaint\u003e{1,4}"
+      },
+      "border-radius": {
+        "syntax": "\u003csize\u003e{1,4}"
+      },
+      "border-style": {
+        "syntax": "\u003cborder-style\u003e{1,4}"
+      },
+      "border-top-left-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-top-right-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-width": {
+        "syntax": "\u003clength\u003e{1,4}"
+      },
+      "box-shadow": {
+        "syntax": "\u003cshadow\u003e [\",\" \u003cshadow\u003e]*"
+      },
+      "color": {
+        "syntax": "\u003ccolor\u003e"
+      },
+      "compound-padding": {
+        "syntax": "\u003clength\u003e"
+      },
+      "font-family": {
+        "syntax": "\u003cstring\u003e"
+      },
+      "font-size": {
+        "syntax": "\u003clength\u003e"
+      },
+      "font-style": {
+        "syntax": "normal | italic"
+      },
+      "font-weight": {
+        "syntax": "normal | bold"
+      },
+      "height": {
+        "syntax": "\u003clength\u003e"
+      },
+      "left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "opacity": {
+        "syntax": "\u003cnumber\u003e"
+      },
+      "position": {
+        "syntax": "\u003csize\u003e"
+      },
+      "shape": {
+        "syntax": "ellipse | rectangle | arrow-button-left | arrow-button-right"
+      },
+      "size": {
+        "syntax": "\u003csize\u003e"
+      },
+      "text": {
+        "syntax": "\u003cstring\u003e"
+      },
+      "text-overflow": {
+        "syntax": "word-wrap | character-wrap | ellipsis-head | ellipsis-tail | ellipsis-middle"
+      },
+      "text-shadow": {
+        "syntax": "\u003cshadow\u003e"
+      },
+      "text-transform": {
+        "syntax": "uppercase | lowercase"
+      },
+      "top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "width": {
+        "syntax": "\u003clength\u003e"
+      }
+    }
+  },
+  "ToggleButton.icon-bottom": {
+    "elementName": "icon-bottom",
+    "properties": {
+      "background-color": {
+        "syntax": "\u003cpaint\u003e"
+      },
+      "background-image": {
+        "syntax": "\u003curl\u003e"
+      },
+      "background-inset": {
+        "syntax": "\u003cinset\u003e"
+      },
+      "background-inset-bottom": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-right": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding": {
+        "syntax": "\u003cpadding\u003e"
+      },
+      "background-padding-bottom": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-right": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-size": {
+        "syntax": "\u003csize\u003e"
+      },
+      "border": {
+        "syntax": "\u003cwidth\u003e || \u003cborder-style\u003e || \u003cpaint\u003e"
+      },
+      "border-bottom-left-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-bottom-right-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-color": {
+        "syntax": "\u003cpaint\u003e{1,4}"
+      },
+      "border-radius": {
+        "syntax": "\u003csize\u003e{1,4}"
+      },
+      "border-style": {
+        "syntax": "\u003cborder-style\u003e{1,4}"
+      },
+      "border-top-left-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-top-right-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-width": {
+        "syntax": "\u003clength\u003e{1,4}"
+      },
+      "height": {
+        "syntax": "\u003clength\u003e"
+      },
+      "left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "position": {
+        "syntax": "\u003csize\u003e"
+      },
+      "shape": {
+        "syntax": "ellipse | rectangle | arrow-button-left | arrow-button-right"
+      },
+      "size": {
+        "syntax": "\u003csize\u003e"
+      },
+      "top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "width": {
+        "syntax": "\u003clength\u003e"
+      }
+    }
+  },
+  "ToggleButton.icon-left": {
+    "elementName": "icon-left",
+    "properties": {
+      "background-color": {
+        "syntax": "\u003cpaint\u003e"
+      },
+      "background-image": {
+        "syntax": "\u003curl\u003e"
+      },
+      "background-inset": {
+        "syntax": "\u003cinset\u003e"
+      },
+      "background-inset-bottom": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-right": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding": {
+        "syntax": "\u003cpadding\u003e"
+      },
+      "background-padding-bottom": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-right": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-size": {
+        "syntax": "\u003csize\u003e"
+      },
+      "border": {
+        "syntax": "\u003cwidth\u003e || \u003cborder-style\u003e || \u003cpaint\u003e"
+      },
+      "border-bottom-left-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-bottom-right-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-color": {
+        "syntax": "\u003cpaint\u003e{1,4}"
+      },
+      "border-radius": {
+        "syntax": "\u003csize\u003e{1,4}"
+      },
+      "border-style": {
+        "syntax": "\u003cborder-style\u003e{1,4}"
+      },
+      "border-top-left-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-top-right-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-width": {
+        "syntax": "\u003clength\u003e{1,4}"
+      },
+      "height": {
+        "syntax": "\u003clength\u003e"
+      },
+      "left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "position": {
+        "syntax": "\u003csize\u003e"
+      },
+      "shape": {
+        "syntax": "ellipse | rectangle | arrow-button-left | arrow-button-right"
+      },
+      "size": {
+        "syntax": "\u003csize\u003e"
+      },
+      "top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "width": {
+        "syntax": "\u003clength\u003e"
+      }
+    }
+  },
+  "ToggleButton.icon-right": {
+    "elementName": "icon-right",
+    "properties": {
+      "background-color": {
+        "syntax": "\u003cpaint\u003e"
+      },
+      "background-image": {
+        "syntax": "\u003curl\u003e"
+      },
+      "background-inset": {
+        "syntax": "\u003cinset\u003e"
+      },
+      "background-inset-bottom": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-right": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding": {
+        "syntax": "\u003cpadding\u003e"
+      },
+      "background-padding-bottom": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-right": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-size": {
+        "syntax": "\u003csize\u003e"
+      },
+      "border": {
+        "syntax": "\u003cwidth\u003e || \u003cborder-style\u003e || \u003cpaint\u003e"
+      },
+      "border-bottom-left-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-bottom-right-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-color": {
+        "syntax": "\u003cpaint\u003e{1,4}"
+      },
+      "border-radius": {
+        "syntax": "\u003csize\u003e{1,4}"
+      },
+      "border-style": {
+        "syntax": "\u003cborder-style\u003e{1,4}"
+      },
+      "border-top-left-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-top-right-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-width": {
+        "syntax": "\u003clength\u003e{1,4}"
+      },
+      "height": {
+        "syntax": "\u003clength\u003e"
+      },
+      "left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "position": {
+        "syntax": "\u003csize\u003e"
+      },
+      "shape": {
+        "syntax": "ellipse | rectangle | arrow-button-left | arrow-button-right"
+      },
+      "size": {
+        "syntax": "\u003csize\u003e"
+      },
+      "top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "width": {
+        "syntax": "\u003clength\u003e"
+      }
+    }
+  },
+  "ToggleButton.icon-top": {
+    "elementName": "icon-top",
+    "properties": {
+      "background-color": {
+        "syntax": "\u003cpaint\u003e"
+      },
+      "background-image": {
+        "syntax": "\u003curl\u003e"
+      },
+      "background-inset": {
+        "syntax": "\u003cinset\u003e"
+      },
+      "background-inset-bottom": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-right": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding": {
+        "syntax": "\u003cpadding\u003e"
+      },
+      "background-padding-bottom": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-right": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-size": {
+        "syntax": "\u003csize\u003e"
+      },
+      "border": {
+        "syntax": "\u003cwidth\u003e || \u003cborder-style\u003e || \u003cpaint\u003e"
+      },
+      "border-bottom-left-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-bottom-right-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-color": {
+        "syntax": "\u003cpaint\u003e{1,4}"
+      },
+      "border-radius": {
+        "syntax": "\u003csize\u003e{1,4}"
+      },
+      "border-style": {
+        "syntax": "\u003cborder-style\u003e{1,4}"
+      },
+      "border-top-left-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-top-right-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-width": {
+        "syntax": "\u003clength\u003e{1,4}"
+      },
+      "height": {
+        "syntax": "\u003clength\u003e"
+      },
+      "left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "position": {
+        "syntax": "\u003csize\u003e"
+      },
+      "shape": {
+        "syntax": "ellipse | rectangle | arrow-button-left | arrow-button-right"
+      },
+      "size": {
+        "syntax": "\u003csize\u003e"
+      },
+      "top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "width": {
+        "syntax": "\u003clength\u003e"
+      }
+    }
+  },
+  "ToggleButton.toggle": {
+    "elementName": "toggle",
+    "properties": {
+      "background-color": {
+        "syntax": "\u003cpaint\u003e"
+      },
+      "background-image": {
+        "syntax": "\u003curl\u003e"
+      },
+      "background-inset": {
+        "syntax": "\u003cinset\u003e"
+      },
+      "background-inset-bottom": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-right": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-inset-top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding": {
+        "syntax": "\u003cpadding\u003e"
+      },
+      "background-padding-bottom": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-right": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-padding-top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "background-size": {
+        "syntax": "\u003csize\u003e"
+      },
+      "border": {
+        "syntax": "\u003cwidth\u003e || \u003cborder-style\u003e || \u003cpaint\u003e"
+      },
+      "border-bottom-left-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-bottom-right-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-color": {
+        "syntax": "\u003cpaint\u003e{1,4}"
+      },
+      "border-radius": {
+        "syntax": "\u003csize\u003e{1,4}"
+      },
+      "border-style": {
+        "syntax": "\u003cborder-style\u003e{1,4}"
+      },
+      "border-top-left-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-top-right-radius": {
+        "syntax": "\u003clength\u003e"
+      },
+      "border-width": {
+        "syntax": "\u003clength\u003e{1,4}"
+      },
+      "height": {
+        "syntax": "\u003clength\u003e"
+      },
+      "left": {
+        "syntax": "\u003clength\u003e"
+      },
+      "position": {
+        "syntax": "\u003csize\u003e"
+      },
+      "shape": {
+        "syntax": "ellipse | rectangle | arrow-button-left | arrow-button-right"
+      },
+      "size": {
+        "syntax": "\u003csize\u003e"
+      },
+      "top": {
+        "syntax": "\u003clength\u003e"
+      },
+      "width": {
+        "syntax": "\u003clength\u003e"
+      }
+    }
+  }
+}

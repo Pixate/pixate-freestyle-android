@@ -33,8 +33,15 @@
     <div class="container">
       <div class="row">
         <div class="col-md-3">
+          <div class="sidebar">
+            <ul role="navigation" class="nav side-nav">
+              <li><a href="#introduction">Introduction</a></li>
+              <li><a href="#styling">Styling</a></li>
+              <li><a href="#supported-views">Supported Views</a></li>
+            </ul>
+          </div>
         </div>
-        <div class="col-md-9"><h1 id="pixate-freestyle-for-android">Pixate Freestyle for Android</h1>
+        <div class="col-md-9"><a id="introduction"></a><h1 id="pixate-freestyle-for-android">Pixate Freestyle for Android</h1>
 <p>Pixate Freestyle is a free framework that lets you style your <strong>native</strong> Android views with stylesheets.</p>
 <p>Under the hood, Pixate is a powerful resolution-independent graphics engine which translates familiar CSS markup to scalable graphics and bitmap effects. It is designed to work with your existing assets, as well as with SVG (Scalable Vector Graphics) assets that can be applied to your views just like any other image.</p>
 <h2 id="integrating-pixate-freestyle">Integrating Pixate Freestyle</h2>
@@ -57,7 +64,7 @@ setContentView(R.layout.main);
 </li>
 <li>Create a <em>&#39;default.css&#39;</em> file in your assets directory. This file will hold the styling markup for your app.</li>
 </ol>
-<h2 id="styling">Styling</h2>
+<a id="styling"></a><h2 id="styling">Styling</h2>
 <p>Pixate enables you to style all Views of the same type by using the View&#39;s class name as an element name in the CSS, such as in this example:</p>
 <pre><code class="lang-css">Button {
   background-color: red;
@@ -68,7 +75,7 @@ setContentView(R.layout.main);
 }</code></pre>
 <p>The above example is a very simple one. Pixate also supports advanced styling instructions, like <em>nth-child</em> for Lists, matrix transformations and more.</p>
 <p>See the <a href="http://www.pixate.com/blog/2013-12-06-android-views-demo/index.html">Views Demo blog post</a> to get a taste of what&#39;s possible.</p>
-<h2 id="supported-views">Supported Views</h2>
+<a id="supported-views"></a><h2 id="supported-views">Supported Views</h2>
 <p>The Pixate Freestyle library is a work in progress. At the moment there are a few common views that we&#39;ve added extensive support to:</p>
 <ol>
 <li>View (generic attributes support for all views)</li>

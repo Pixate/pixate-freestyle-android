@@ -19,6 +19,8 @@ import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
 
+import com.pixate.freestyle.annotations.PXDocProperty;
+import com.pixate.freestyle.annotations.PXDocStyler;
 import com.pixate.freestyle.styling.PXDeclaration;
 
 // @formatter:off
@@ -30,7 +32,12 @@ import com.pixate.freestyle.styling.PXDeclaration;
  *  - font-stretch: normal | ultra-condensed | extra-condensed | condensed | semi-condensed | semi-expanded | expanded | extra-expanded | ultra-expanded
  */
 // @formatter:on
-
+@PXDocStyler(properties = {
+        @PXDocProperty(name = "font-family", syntax = "<string>"),
+        @PXDocProperty(name = "font-size", syntax = "<length>"),
+        @PXDocProperty(name = "font-style", syntax = "normal | italic"),
+        @PXDocProperty(name = "font-weight", syntax = "normal | bold"),
+        @PXDocProperty(hide=true, name = "font-stretch", syntax = "normal | ultra-condensed | extra-condensed | condensed | semi-condensed | semi-expanded | expanded | extra-expanded | ultra-expanded"), })
 public class PXFontStyler extends PXStylerBase {
 
     private Map<String, PXDeclarationHandler> declarationHandlers;
@@ -54,7 +61,8 @@ public class PXFontStyler extends PXStylerBase {
 
                 declarationHandlers.put("font-size", new PXDeclarationHandler() {
                     public void process(PXDeclaration declaration, PXStylerContext stylerContext) {
-                        stylerContext.setFontSize(declaration.getFloatValue(stylerContext.getDisplayMetrics()));
+                        stylerContext.setFontSize(declaration.getFloatValue(stylerContext
+                                .getDisplayMetrics()));
                     }
                 });
 
@@ -66,14 +74,16 @@ public class PXFontStyler extends PXStylerBase {
 
                 declarationHandlers.put("font-weight", new PXDeclarationHandler() {
                     public void process(PXDeclaration declaration, PXStylerContext stylerContext) {
-                        stylerContext.setFontWeight(declaration.getStringValue().toLowerCase(Locale.US));
+                        stylerContext.setFontWeight(declaration.getStringValue().toLowerCase(
+                                Locale.US));
                     }
                 });
 
                 // Note: this will go unused in Android
                 declarationHandlers.put("font-stretch", new PXDeclarationHandler() {
                     public void process(PXDeclaration declaration, PXStylerContext stylerContext) {
-                        stylerContext.setFontStretch(declaration.getStringValue().toLowerCase(Locale.US));
+                        stylerContext.setFontStretch(declaration.getStringValue().toLowerCase(
+                                Locale.US));
                     }
                 });
 

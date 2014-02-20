@@ -18,11 +18,14 @@ package com.pixate.freestyle.styling.stylers;
 import java.util.HashMap;
 import java.util.Map;
 
+import com.pixate.freestyle.annotations.PXDocProperty;
+import com.pixate.freestyle.annotations.PXDocStyler;
 import com.pixate.freestyle.styling.PXDeclaration;
 
 /**
  * - text: <string>
  */
+@PXDocStyler(properties={@PXDocProperty(name="text", syntax="<string>")})
 public class PXTextContentStyler extends PXStylerBase {
 
     private static Map<String, PXDeclarationHandler> declarationHandlers;

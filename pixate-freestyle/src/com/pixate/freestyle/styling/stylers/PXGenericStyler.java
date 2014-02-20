@@ -17,6 +17,9 @@ package com.pixate.freestyle.styling.stylers;
 
 import java.util.Map;
 
+import com.pixate.freestyle.annotations.PXDocStyler;
+
+@PXDocStyler(hide=true)
 public class PXGenericStyler extends PXStylerBase {
 
     private Map<String, PXDeclarationHandler> declarationHandlers;

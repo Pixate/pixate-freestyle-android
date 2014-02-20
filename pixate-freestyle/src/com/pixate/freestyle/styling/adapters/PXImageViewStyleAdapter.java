@@ -25,13 +25,15 @@ import android.graphics.Matrix;
 import android.widget.ImageView;
 import android.widget.ImageView.ScaleType;
 
+import com.pixate.freestyle.annotations.PXDocElement;
+import com.pixate.freestyle.annotations.PXDocProperty;
 import com.pixate.freestyle.cg.math.PXDimension;
 import com.pixate.freestyle.styling.PXDeclaration;
 import com.pixate.freestyle.styling.PXRuleSet;
 import com.pixate.freestyle.styling.stylers.PXGenericStyler;
 import com.pixate.freestyle.styling.stylers.PXStyler;
-import com.pixate.freestyle.styling.stylers.PXStylerContext;
 import com.pixate.freestyle.styling.stylers.PXStylerBase.PXDeclarationHandler;
+import com.pixate.freestyle.styling.stylers.PXStylerContext;
 import com.pixate.freestyle.styling.virtualAdapters.PXVirtualImageViewImageAdapter;
 import com.pixate.freestyle.styling.virtualStyleables.PXVirtualImageViewImage;
 import com.pixate.freestyle.util.PXLog;
@@ -76,6 +78,12 @@ import com.pixate.freestyle.util.PXLog;
  * 
  * @author Shalom Gibly
  */
+@PXDocElement(properties = {
+        @PXDocProperty(name = "scale-type", syntax = "center | center-crop | center-inside | fit-center | fit-end | fit-start | fit-xy | matrix"),
+        @PXDocProperty(name = "max-height", syntax = "<length>"),
+        @PXDocProperty(name = "max-width", syntax = "<length>"),
+        @PXDocProperty(name = "view-bounds", syntax = "adjust"),
+        @PXDocProperty(name = "tint", syntax = "<color>") })
 public class PXImageViewStyleAdapter extends PXViewStyleAdapter {
     private static String ELEMENT_NAME = "image-view";
     private static PXImageViewStyleAdapter instance;

@@ -28,6 +28,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewParent;
 
+import com.pixate.freestyle.annotations.PXDocElement;
 import com.pixate.freestyle.styling.PXRuleSet;
 import com.pixate.freestyle.styling.cache.PXStyleInfo;
 import com.pixate.freestyle.styling.stylers.PXAnimationStyler;
@@ -45,6 +46,7 @@ import com.pixate.freestyle.styling.stylers.PXStylerContext.FadingEdgeStyle;
 import com.pixate.freestyle.util.PXDrawableUtil;
 import com.pixate.freestyle.util.ViewUtil;
 
+@PXDocElement(hide=true)
 public class PXViewStyleAdapter extends PXStyleAdapter {
 
     private static PXViewStyleAdapter sInstance;

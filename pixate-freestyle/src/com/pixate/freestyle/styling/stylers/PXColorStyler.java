@@ -18,11 +18,14 @@ package com.pixate.freestyle.styling.stylers;
 import java.util.HashMap;
 import java.util.Map;
 
+import com.pixate.freestyle.annotations.PXDocProperty;
+import com.pixate.freestyle.annotations.PXDocStyler;
 import com.pixate.freestyle.styling.PXDeclaration;
 
 /**
  * - color: <color>
  */
+@PXDocStyler(properties = { @PXDocProperty(name = "color", syntax = "<color>") })
 public class PXColorStyler extends PXStylerBase {
 
     private static PXColorStyler instance;

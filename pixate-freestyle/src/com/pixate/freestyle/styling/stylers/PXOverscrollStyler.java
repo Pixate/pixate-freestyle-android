@@ -21,6 +21,8 @@ import java.util.Map;
 
 import android.widget.ListView;
 
+import com.pixate.freestyle.annotations.PXDocProperty;
+import com.pixate.freestyle.annotations.PXDocStyler;
 import com.pixate.freestyle.styling.PXDeclaration;
 import com.pixate.freestyle.styling.stylers.PXStylerContext.OverscrollStyle;
 import com.pixate.freestyle.util.PXDrawableUtil;
@@ -33,6 +35,9 @@ import com.pixate.freestyle.util.PXLog;
  * -footer: paint
  */
 // @formatter:on
+@PXDocStyler(properties = { @PXDocProperty(name = "distance", syntax = "<length>"),
+        @PXDocProperty(name = "header", syntax = "<paint>"),
+        @PXDocProperty(name = "footer", syntax = "<paint>"), })
 public class PXOverscrollStyler extends PXStylerBase {
 
     private static Map<String, PXDeclarationHandler> handlers;

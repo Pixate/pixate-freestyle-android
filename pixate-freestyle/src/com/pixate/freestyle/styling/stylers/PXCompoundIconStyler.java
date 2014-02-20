@@ -21,6 +21,7 @@ import java.util.Map;
 
 import android.widget.TextView;
 
+import com.pixate.freestyle.annotations.PXDocStyler;
 import com.pixate.freestyle.styling.stylers.PXStylerContext.IconPosition;
 
 /**
@@ -32,6 +33,7 @@ import com.pixate.freestyle.styling.stylers.PXStylerContext.IconPosition;
  * - background-size: &lt;size&gt; (default 32x32)
  * </pre>
  */
+@PXDocStyler(hide=true)
 public class PXCompoundIconStyler extends PXStylerBase {
 
     private static Map<IconPosition, PXCompoundIconStyler> instances = new HashMap<IconPosition, PXCompoundIconStyler>();

@@ -23,11 +23,14 @@ import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.view.View;
 
+import com.pixate.freestyle.annotations.PXDocProperty;
+import com.pixate.freestyle.annotations.PXDocStyler;
 import com.pixate.freestyle.styling.PXDeclaration;
 
 /**
  * - opacity: <number>
  */
+@PXDocStyler(properties = { @PXDocProperty(name = "opacity", syntax = "<number>") })
 public class PXOpacityStyler extends PXStylerBase {
 
     private static PXOpacityStyler instance;

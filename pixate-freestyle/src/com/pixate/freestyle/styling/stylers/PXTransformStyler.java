@@ -18,11 +18,13 @@ package com.pixate.freestyle.styling.stylers;
 import java.util.HashMap;
 import java.util.Map;
 
+import com.pixate.freestyle.annotations.PXDocStyler;
 import com.pixate.freestyle.styling.PXDeclaration;
 
 /**
  * - transform: <transform>+
  */
+@PXDocStyler(hide=true)
 public class PXTransformStyler extends PXStylerBase {
 
     private static PXTransformStyler instance;

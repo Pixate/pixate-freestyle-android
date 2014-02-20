@@ -98,7 +98,20 @@ import com.pixate.freestyle.styling.virtualStyleables.PXVirtualStyleable;
  */
 public abstract class PXVirtualChildAdapter extends PXStyleAdapter {
 
-    private static final RectF DEFAULT_BOUNDS = new RectF(0f, 0f, 32f, 32f);
+    private static RectF DEFAULT_BOUNDS = null;
+
+    // To allow our document generation program to run,
+    // we need to load this class in a "normal" (not Android)
+    // Java runtime environment. Unfortunately RectF is just a stub
+    // in that environment, so we get a runtime error. This ignores
+    // it when it happens.
+    static {
+        try {
+            DEFAULT_BOUNDS = new RectF(0f, 0f, 32f, 32f);
+        } catch (Exception ex) {
+            // Ignored
+        }
+    }
 
     /*
      * (non-Javadoc)

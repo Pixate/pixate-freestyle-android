@@ -20,6 +20,7 @@ import java.util.List;
 
 import android.widget.RadioButton;
 
+import com.pixate.freestyle.annotations.PXDocElement;
 import com.pixate.freestyle.styling.virtualStyleables.PXVirtualCompoundButtonIcon;
 
 /**
@@ -55,6 +56,7 @@ import com.pixate.freestyle.styling.virtualStyleables.PXVirtualCompoundButtonIco
  * 
  * @author Shalom Gibly
  */
+@PXDocElement
 public class PXRadioButtonStyleAdapter extends PXCompoundButtonStyleAdapter {
     private static String ELEMENT_NAME = "radio-button";
     private static PXRadioButtonStyleAdapter instance;

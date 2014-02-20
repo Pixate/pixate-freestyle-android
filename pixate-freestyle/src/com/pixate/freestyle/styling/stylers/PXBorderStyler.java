@@ -19,6 +19,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import com.pixate.freestyle.annotations.PXDocProperty;
+import com.pixate.freestyle.annotations.PXDocStyler;
 import com.pixate.freestyle.cg.math.PXOffsets;
 import com.pixate.freestyle.cg.paints.PXPaint;
 import com.pixate.freestyle.cg.shapes.PXBoxModel;
@@ -27,6 +29,32 @@ import com.pixate.freestyle.styling.infos.PXBorderInfo;
 import com.pixate.freestyle.styling.infos.PXBorderInfo.PXBorderStyle;
 import com.pixate.freestyle.util.Size;
 
+@PXDocStyler(properties = {
+        @PXDocProperty(name = "border", syntax = "<width> || <border-style> || <paint>"),
+        @PXDocProperty(hide = true, name = "border-top", syntax = "<width> || <border-style> || <paint>"),
+        @PXDocProperty(hide = true, name = "border-right", syntax = "<width> || <border-style> || <paint>"),
+        @PXDocProperty(hide = true, name = "border-bottom", syntax = "<width> || <border-style> || <paint>"),
+        @PXDocProperty(hide = true, name = "border-left", syntax = "<width> || <border-style> || <paint>"),
+        @PXDocProperty(name = "border-radius", syntax = "<size>{1,4}"),
+        @PXDocProperty(name = "border-top-left-radius", syntax = "<length>"),
+        @PXDocProperty(name = "border-top-right-radius", syntax = "<length>"),
+        @PXDocProperty(name = "border-bottom-right-radius", syntax = "<length>"),
+        @PXDocProperty(name = "border-bottom-left-radius", syntax = "<length>"),
+        @PXDocProperty(name = "border-width", syntax = "<length>{1,4}"),
+        @PXDocProperty(hide = true, name = "border-top-width", syntax = "<length>"),
+        @PXDocProperty(hide = true, name = "border-right-width", syntax = "<length>"),
+        @PXDocProperty(hide = true, name = "border-bottom-width", syntax = "<length>"),
+        @PXDocProperty(hide = true, name = "border-left-width", syntax = "<length>"),
+        @PXDocProperty(name = "border-color", syntax = "<paint>{1,4}"),
+        @PXDocProperty(hide = true, name = "border-top-color", syntax = "<paint>"),
+        @PXDocProperty(hide = true, name = "border-right-color", syntax = "<paint>"),
+        @PXDocProperty(hide = true, name = "border-bottom-color", syntax = "<paint>"),
+        @PXDocProperty(hide = true, name = "border-left-color", syntax = "<paint>"),
+        @PXDocProperty(name = "border-style", syntax = "<border-style>{1,4}"),
+        @PXDocProperty(hide = true, name = "border-top-style", syntax = "<border-style>"),
+        @PXDocProperty(hide = true, name = "border-right-style", syntax = "<border-style>"),
+        @PXDocProperty(hide = true, name = "border-bottom-style", syntax = "<border-style>"),
+        @PXDocProperty(hide = true, name = "border-left-style", syntax = "<border-style>"), })
 public class PXBorderStyler extends PXStylerBase {
     // @formatter:off
     // Comments copied from iOS:
@@ -83,7 +111,8 @@ public class PXBorderStyler extends PXStylerBase {
 
                 declarationHandlers.put("border", new PXDeclarationHandler() {
                     public void process(PXDeclaration declaration, PXStylerContext stylerContext) {
-                        PXBorderInfo settings = declaration.getBorderValue(stylerContext.getDisplayMetrics());
+                        PXBorderInfo settings = declaration.getBorderValue(stylerContext
+                                .getDisplayMetrics());
                         PXBoxModel boxModel = stylerContext.getBoxModel();
                         boxModel.setBorderWidth(settings.getWidth());
                         boxModel.setBorderStyle(settings.getStyle());
@@ -93,7 +122,8 @@ public class PXBorderStyler extends PXStylerBase {
 
                 declarationHandlers.put("border-top", new PXDeclarationHandler() {
                     public void process(PXDeclaration declaration, PXStylerContext stylerContext) {
-                        PXBorderInfo settings = declaration.getBorderValue(stylerContext.getDisplayMetrics());
+                        PXBorderInfo settings = declaration.getBorderValue(stylerContext
+                                .getDisplayMetrics());
                         PXBoxModel boxModel = stylerContext.getBoxModel();
                         boxModel.setBorderTopWidth(settings.getWidth());
                         boxModel.setBorderTopStyle(settings.getStyle());
@@ -103,7 +133,8 @@ public class PXBorderStyler extends PXStylerBase {
 
                 declarationHandlers.put("border-right", new PXDeclarationHandler() {
                     public void process(PXDeclaration declaration, PXStylerContext stylerContext) {
-                        PXBorderInfo settings = declaration.getBorderValue(stylerContext.getDisplayMetrics());
+                        PXBorderInfo settings = declaration.getBorderValue(stylerContext
+                                .getDisplayMetrics());
                         PXBoxModel boxModel = stylerContext.getBoxModel();
                         boxModel.setBorderRightWidth(settings.getWidth());
                         boxModel.setBorderRightStyle(settings.getStyle());
@@ -113,7 +144,8 @@ public class PXBorderStyler extends PXStylerBase {
 
                 declarationHandlers.put("border-bottom", new PXDeclarationHandler() {
                     public void process(PXDeclaration declaration, PXStylerContext stylerContext) {
-                        PXBorderInfo settings = declaration.getBorderValue(stylerContext.getDisplayMetrics());
+                        PXBorderInfo settings = declaration.getBorderValue(stylerContext
+                                .getDisplayMetrics());
                         PXBoxModel boxModel = stylerContext.getBoxModel();
                         boxModel.setBorderBottomWidth(settings.getWidth());
                         boxModel.setBorderBottomStyle(settings.getStyle());
@@ -123,7 +155,8 @@ public class PXBorderStyler extends PXStylerBase {
 
                 declarationHandlers.put("border-left", new PXDeclarationHandler() {
                     public void process(PXDeclaration declaration, PXStylerContext stylerContext) {
-                        PXBorderInfo settings = declaration.getBorderValue(stylerContext.getDisplayMetrics());
+                        PXBorderInfo settings = declaration.getBorderValue(stylerContext
+                                .getDisplayMetrics());
                         PXBoxModel boxModel = stylerContext.getBoxModel();
                         boxModel.setBorderLeftWidth(settings.getWidth());
                         boxModel.setBorderLeftStyle(settings.getStyle());
@@ -133,7 +166,8 @@ public class PXBorderStyler extends PXStylerBase {
 
                 declarationHandlers.put("border-radius", new PXDeclarationHandler() {
                     public void process(PXDeclaration declaration, PXStylerContext stylerContext) {
-                        List<Size> radii = declaration.getBorderRadiiList(stylerContext.getDisplayMetrics());
+                        List<Size> radii = declaration.getBorderRadiiList(stylerContext
+                                .getDisplayMetrics());
                         PXBoxModel boxModel = stylerContext.getBoxModel();
                         boxModel.setRadiusTopLeft(radii.get(0));
                         boxModel.setRadiusTopRight(radii.get(1));
@@ -144,31 +178,36 @@ public class PXBorderStyler extends PXStylerBase {
 
                 declarationHandlers.put("border-top-left-radius", new PXDeclarationHandler() {
                     public void process(PXDeclaration declaration, PXStylerContext stylerContext) {
-                        stylerContext.getBoxModel().setRadiusTopLeft(declaration.getSizeValue(stylerContext.getDisplayMetrics()));
+                        stylerContext.getBoxModel().setRadiusTopLeft(
+                                declaration.getSizeValue(stylerContext.getDisplayMetrics()));
                     }
                 });
 
                 declarationHandlers.put("border-top-right-radius", new PXDeclarationHandler() {
                     public void process(PXDeclaration declaration, PXStylerContext stylerContext) {
-                        stylerContext.getBoxModel().setRadiusTopRight(declaration.getSizeValue(stylerContext.getDisplayMetrics()));
+                        stylerContext.getBoxModel().setRadiusTopRight(
+                                declaration.getSizeValue(stylerContext.getDisplayMetrics()));
                     }
                 });
 
                 declarationHandlers.put("border-bottom-right-radius", new PXDeclarationHandler() {
                     public void process(PXDeclaration declaration, PXStylerContext stylerContext) {
-                        stylerContext.getBoxModel().setRadiusBottomRight(declaration.getSizeValue(stylerContext.getDisplayMetrics()));
+                        stylerContext.getBoxModel().setRadiusBottomRight(
+                                declaration.getSizeValue(stylerContext.getDisplayMetrics()));
                     }
                 });
 
                 declarationHandlers.put("border-bottom-left-radius", new PXDeclarationHandler() {
                     public void process(PXDeclaration declaration, PXStylerContext stylerContext) {
-                        stylerContext.getBoxModel().setRadiusBottomLeft(declaration.getSizeValue(stylerContext.getDisplayMetrics()));
+                        stylerContext.getBoxModel().setRadiusBottomLeft(
+                                declaration.getSizeValue(stylerContext.getDisplayMetrics()));
                     }
                 });
 
                 declarationHandlers.put("border-width", new PXDeclarationHandler() {
                     public void process(PXDeclaration declaration, PXStylerContext stylerContext) {
-                        PXOffsets widths = declaration.getOffsetsValue(stylerContext.getDisplayMetrics());
+                        PXOffsets widths = declaration.getOffsetsValue(stylerContext
+                                .getDisplayMetrics());
                         PXBoxModel boxModel = stylerContext.getBoxModel();
                         boxModel.setBorderTopWidth(widths.getTop());
                         boxModel.setBorderRightWidth(widths.getRight());
@@ -179,25 +218,29 @@ public class PXBorderStyler extends PXStylerBase {
 
                 declarationHandlers.put("border-top-width", new PXDeclarationHandler() {
                     public void process(PXDeclaration declaration, PXStylerContext stylerContext) {
-                        stylerContext.getBoxModel().setBorderTopWidth(declaration.getFloatValue(stylerContext.getDisplayMetrics()));
+                        stylerContext.getBoxModel().setBorderTopWidth(
+                                declaration.getFloatValue(stylerContext.getDisplayMetrics()));
                     }
                 });
 
                 declarationHandlers.put("border-right-width", new PXDeclarationHandler() {
                     public void process(PXDeclaration declaration, PXStylerContext stylerContext) {
-                        stylerContext.getBoxModel().setBorderRightWidth(declaration.getFloatValue(stylerContext.getDisplayMetrics()));
+                        stylerContext.getBoxModel().setBorderRightWidth(
+                                declaration.getFloatValue(stylerContext.getDisplayMetrics()));
                     }
                 });
 
                 declarationHandlers.put("border-bottom-width", new PXDeclarationHandler() {
                     public void process(PXDeclaration declaration, PXStylerContext stylerContext) {
-                        stylerContext.getBoxModel().setBorderBottomWidth(declaration.getFloatValue(stylerContext.getDisplayMetrics()));
+                        stylerContext.getBoxModel().setBorderBottomWidth(
+                                declaration.getFloatValue(stylerContext.getDisplayMetrics()));
                     }
                 });
 
                 declarationHandlers.put("border-left-width", new PXDeclarationHandler() {
                     public void process(PXDeclaration declaration, PXStylerContext stylerContext) {
-                        stylerContext.getBoxModel().setBorderLeftWidth(declaration.getFloatValue(stylerContext.getDisplayMetrics()));
+                        stylerContext.getBoxModel().setBorderLeftWidth(
+                                declaration.getFloatValue(stylerContext.getDisplayMetrics()));
                     }
                 });
 
@@ -220,13 +263,15 @@ public class PXBorderStyler extends PXStylerBase {
 
                 declarationHandlers.put("border-right-color", new PXDeclarationHandler() {
                     public void process(PXDeclaration declaration, PXStylerContext stylerContext) {
-                        stylerContext.getBoxModel().setBorderRightPaint(declaration.getPaintValue());
+                        stylerContext.getBoxModel()
+                                .setBorderRightPaint(declaration.getPaintValue());
                     }
                 });
 
                 declarationHandlers.put("border-bottom-color", new PXDeclarationHandler() {
                     public void process(PXDeclaration declaration, PXStylerContext stylerContext) {
-                        stylerContext.getBoxModel().setBorderBottomPaint(declaration.getPaintValue());
+                        stylerContext.getBoxModel().setBorderBottomPaint(
+                                declaration.getPaintValue());
                     }
                 });
 
@@ -249,25 +294,29 @@ public class PXBorderStyler extends PXStylerBase {
 
                 declarationHandlers.put("border-top-style", new PXDeclarationHandler() {
                     public void process(PXDeclaration declaration, PXStylerContext stylerContext) {
-                        stylerContext.getBoxModel().setBorderTopStyle(declaration.getBorderStyleValue());
+                        stylerContext.getBoxModel().setBorderTopStyle(
+                                declaration.getBorderStyleValue());
                     }
                 });
 
                 declarationHandlers.put("border-right-style", new PXDeclarationHandler() {
                     public void process(PXDeclaration declaration, PXStylerContext stylerContext) {
-                        stylerContext.getBoxModel().setBorderRightStyle(declaration.getBorderStyleValue());
+                        stylerContext.getBoxModel().setBorderRightStyle(
+                                declaration.getBorderStyleValue());
                     }
                 });
 
                 declarationHandlers.put("border-bottom-style", new PXDeclarationHandler() {
                     public void process(PXDeclaration declaration, PXStylerContext stylerContext) {
-                        stylerContext.getBoxModel().setBorderBottomStyle(declaration.getBorderStyleValue());
+                        stylerContext.getBoxModel().setBorderBottomStyle(
+                                declaration.getBorderStyleValue());
                     }
                 });
 
                 declarationHandlers.put("border-left-style", new PXDeclarationHandler() {
                     public void process(PXDeclaration declaration, PXStylerContext stylerContext) {
-                        stylerContext.getBoxModel().setBorderLeftStyle(declaration.getBorderStyleValue());
+                        stylerContext.getBoxModel().setBorderLeftStyle(
+                                declaration.getBorderStyleValue());
                     }
                 });
 

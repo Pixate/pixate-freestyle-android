@@ -20,15 +20,18 @@ import java.util.Map;
 
 import android.graphics.RectF;
 
+import com.pixate.freestyle.annotations.PXDocProperty;
+import com.pixate.freestyle.annotations.PXDocStyler;
 import com.pixate.freestyle.cg.shapes.PXArrowRectangle;
+import com.pixate.freestyle.cg.shapes.PXArrowRectangle.PXArrowRectangleDirection;
 import com.pixate.freestyle.cg.shapes.PXEllipse;
 import com.pixate.freestyle.cg.shapes.PXRectangle;
-import com.pixate.freestyle.cg.shapes.PXArrowRectangle.PXArrowRectangleDirection;
 import com.pixate.freestyle.styling.PXDeclaration;
 
 /**
  * - shape: ellipse | rectangle | arrow-button-left | arrow-button-right
  */
+@PXDocStyler(properties = { @PXDocProperty(name = "shape", syntax = "ellipse | rectangle | arrow-button-left | arrow-button-right") })
 public class PXShapeStyler extends PXStylerBase {
 
     private static PXShapeStyler instance;

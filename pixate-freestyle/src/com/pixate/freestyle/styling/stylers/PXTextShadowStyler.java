@@ -18,11 +18,14 @@ package com.pixate.freestyle.styling.stylers;
 import java.util.HashMap;
 import java.util.Map;
 
+import com.pixate.freestyle.annotations.PXDocProperty;
+import com.pixate.freestyle.annotations.PXDocStyler;
 import com.pixate.freestyle.styling.PXDeclaration;
 
 /**
  * - text-shadow: <shadow>
  */
+@PXDocStyler(properties = { @PXDocProperty(name = "text-shadow", syntax = "<shadow>") })
 public class PXTextShadowStyler extends PXStylerBase {
 
     private static PXTextShadowStyler instance;
@@ -51,7 +54,8 @@ public class PXTextShadowStyler extends PXStylerBase {
 
                 declarationHandlers.put("text-shadow", new PXDeclarationHandler() {
                     public void process(PXDeclaration declaration, PXStylerContext stylerContext) {
-                        stylerContext.setTextShadow(declaration.getShadowValue(stylerContext.getDisplayMetrics()));
+                        stylerContext.setTextShadow(declaration.getShadowValue(stylerContext
+                                .getDisplayMetrics()));
                     }
                 });
             }

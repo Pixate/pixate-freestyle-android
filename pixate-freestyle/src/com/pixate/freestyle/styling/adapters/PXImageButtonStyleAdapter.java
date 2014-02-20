@@ -21,6 +21,8 @@ import java.util.List;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 
+import com.pixate.freestyle.annotations.PXDocElement;
+
 /**
  * A style adapter for {@link ImageButton} widgets. This adapter supports the
  * regular view styling properties, plus a few special properties that are
@@ -66,6 +68,7 @@ import android.widget.ImageView;
  * 
  * @author Shalom Gibly
  */
+@PXDocElement
 public class PXImageButtonStyleAdapter extends PXImageViewStyleAdapter {
 
     private static String ELEMENT_NAME = "image-button";

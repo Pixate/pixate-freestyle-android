@@ -20,10 +20,12 @@ import java.util.Map;
 
 import android.view.View;
 
+import com.pixate.freestyle.annotations.PXDocProperty;
+import com.pixate.freestyle.annotations.PXDocStyler;
 import com.pixate.freestyle.styling.PXDeclaration;
 
 /**
- * - box-shadow: <shadow> (, <shadow>)*
+ * - box-shadow: <shadow> ["," <shadow>]*
  */
 
 /*
@@ -32,7 +34,7 @@ import com.pixate.freestyle.styling.PXDeclaration;
  * styled. It is important to know that if you provide a callback for you box
  * shadow styler, you are responsible for applying the outer shadows.
  */
-
+@PXDocStyler(properties = { @PXDocProperty(name = "box-shadow", syntax = "<shadow> [\",\" <shadow>]*") })
 public class PXBoxShadowStyler extends PXStylerBase {
     private static PXBoxShadowStyler instance;
     private static Map<String, PXDeclarationHandler> declarationHandlers;
@@ -57,7 +59,8 @@ public class PXBoxShadowStyler extends PXStylerBase {
 
                 declarationHandlers.put("box-shadow", new PXDeclarationHandler() {
                     public void process(PXDeclaration declaration, PXStylerContext stylerContext) {
-                        stylerContext.setShadow(declaration.getShadowValue(stylerContext.getDisplayMetrics()));
+                        stylerContext.setShadow(declaration.getShadowValue(stylerContext
+                                .getDisplayMetrics()));
                     }
                 });
             }

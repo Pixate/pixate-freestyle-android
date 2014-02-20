@@ -20,6 +20,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import com.pixate.freestyle.annotations.PXDocProperty;
+import com.pixate.freestyle.annotations.PXDocStyler;
 import com.pixate.freestyle.cg.math.PXOffsets;
 import com.pixate.freestyle.cg.paints.PXPaint;
 import com.pixate.freestyle.cg.paints.PXPaintGroup;
@@ -42,6 +44,19 @@ import com.pixate.freestyle.styling.PXDeclaration;
  *  - background-padding-left: <length>
  */
 // @formatter:on
+@PXDocStyler(properties = { @PXDocProperty(name = "background-color", syntax = "<paint>"),
+        @PXDocProperty(name = "background-image", syntax = "<url>"),
+        @PXDocProperty(name = "background-size", syntax = "<size>"),
+        @PXDocProperty(name = "background-inset", syntax = "<inset>"),
+        @PXDocProperty(name = "background-inset-top", syntax = "<length>"),
+        @PXDocProperty(name = "background-inset-right", syntax = "<length>"),
+        @PXDocProperty(name = "background-inset-bottom", syntax = "<length>"),
+        @PXDocProperty(name = "background-inset-left", syntax = "<length>"),
+        @PXDocProperty(name = "background-padding", syntax = "<padding>"),
+        @PXDocProperty(name = "background-padding-top", syntax = "<length>"),
+        @PXDocProperty(name = "background-padding-right", syntax = "<length>"),
+        @PXDocProperty(name = "background-padding-bottom", syntax = "<length>"),
+        @PXDocProperty(name = "background-padding-left", syntax = "<length>"), })
 public class PXFillStyler extends PXStylerBase {
 
     private static Map<String, PXDeclarationHandler> declarationHandlers;

@@ -20,6 +20,7 @@ import java.util.List;
 
 import android.widget.CheckBox;
 
+import com.pixate.freestyle.annotations.PXDocElement;
 import com.pixate.freestyle.styling.virtualStyleables.PXVirtualCheckboxIcon;
 
 /**
@@ -55,6 +56,7 @@ import com.pixate.freestyle.styling.virtualStyleables.PXVirtualCheckboxIcon;
  * 
  * @author Shalom Gibly
  */
+@PXDocElement
 public class PXCheckboxStyleAdapter extends PXCompoundButtonStyleAdapter {
     private static String ELEMENT_NAME = "checkbox";
     private static PXCheckboxStyleAdapter instance;

@@ -18,6 +18,8 @@ package com.pixate.freestyle.styling.stylers;
 import java.util.HashMap;
 import java.util.Map;
 
+import com.pixate.freestyle.annotations.PXDocProperty;
+import com.pixate.freestyle.annotations.PXDocStyler;
 import com.pixate.freestyle.styling.PXDeclaration;
 import com.pixate.freestyle.util.Size;
 
@@ -31,6 +33,12 @@ import com.pixate.freestyle.util.Size;
  *  - height: <length>
  */
 // @formatter:on
+@PXDocStyler(properties = { @PXDocProperty(name = "position", syntax = "<size>"),
+        @PXDocProperty(name = "top", syntax = "<length>"),
+        @PXDocProperty(name = "left", syntax = "<length>"),
+        @PXDocProperty(name = "size", syntax = "<size>"),
+        @PXDocProperty(name = "width", syntax = "<length>"),
+        @PXDocProperty(name = "height", syntax = "<length>"), })
 public class PXLayoutStyler extends PXStylerBase {
 
     private static PXLayoutStyler instance;
@@ -56,25 +64,29 @@ public class PXLayoutStyler extends PXStylerBase {
 
                 declarationHandlers.put("top", new PXDeclarationHandler() {
                     public void process(PXDeclaration declaration, PXStylerContext stylerContext) {
-                        stylerContext.setTop(declaration.getFloatValue(stylerContext.getDisplayMetrics()));
+                        stylerContext.setTop(declaration.getFloatValue(stylerContext
+                                .getDisplayMetrics()));
                     }
                 });
 
                 declarationHandlers.put("left", new PXDeclarationHandler() {
                     public void process(PXDeclaration declaration, PXStylerContext stylerContext) {
-                        stylerContext.setLeft(declaration.getFloatValue(stylerContext.getDisplayMetrics()));
+                        stylerContext.setLeft(declaration.getFloatValue(stylerContext
+                                .getDisplayMetrics()));
                     }
                 });
 
                 declarationHandlers.put("width", new PXDeclarationHandler() {
                     public void process(PXDeclaration declaration, PXStylerContext stylerContext) {
-                        stylerContext.setWidth(declaration.getFloatValue(stylerContext.getDisplayMetrics()));
+                        stylerContext.setWidth(declaration.getFloatValue(stylerContext
+                                .getDisplayMetrics()));
                     }
                 });
 
                 declarationHandlers.put("height", new PXDeclarationHandler() {
                     public void process(PXDeclaration declaration, PXStylerContext stylerContext) {
-                        stylerContext.setHeight(declaration.getFloatValue(stylerContext.getDisplayMetrics()));
+                        stylerContext.setHeight(declaration.getFloatValue(stylerContext
+                                .getDisplayMetrics()));
                     }
                 });
 

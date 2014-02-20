@@ -42,7 +42,7 @@ import com.pixate.freestyle.styling.infos.PXAnimationInfo.PXAnimationTimingFunct
  *  - animation-fill-mode: <fill-mode>+
  */
 // @formatter:on
-@PXAStyler(properties = { @PXAProperty(name = "animation", syntax = "<single-animation>#"),
+@PXAStyler(hide=true, properties = { @PXAProperty(name = "animation", syntax = "<single-animation>#"),
         @PXAProperty(name = "animation-name", syntax = "<name>#"),
         @PXAProperty(name = "animation-duration", syntax = "<time>#"),
         @PXAProperty(name = "animation-timing-function", syntax = "<timing-function>#"),

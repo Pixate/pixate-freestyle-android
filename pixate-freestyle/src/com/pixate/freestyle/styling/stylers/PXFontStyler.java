@@ -35,9 +35,9 @@ import com.pixate.freestyle.styling.PXDeclaration;
 @PXAStyler(properties = {
         @PXAProperty(name = "font-family", syntax = "<string>"),
         @PXAProperty(name = "font-size", syntax = "<length>"),
-        @PXAProperty(name = "font-style", syntax = "normal | italic | oblique"),
-        @PXAProperty(name = "font-weight", syntax = "normal | bold | black | heavy | extra-bold | ultra-bold | semi-bold | demi-bold | medium | light | extra-thin | ultra-thin | thin | 100 | 200 | 300 | 400 | 500 | 600 | 700 | 800 | 900"),
-        @PXAProperty(name = "font-stretch", syntax = "normal | ultra-condensed | extra-condensed | condensed | semi-condensed | semi-expanded | expanded | extra-expanded | ultra-expanded"), })
+        @PXAProperty(name = "font-style", syntax = "normal | italic"),
+        @PXAProperty(name = "font-weight", syntax = "normal | bold"),
+        @PXAProperty(hide=true, name = "font-stretch", syntax = "normal | ultra-condensed | extra-condensed | condensed | semi-condensed | semi-expanded | expanded | extra-expanded | ultra-expanded"), })
 public class PXFontStyler extends PXStylerBase {
 
     private Map<String, PXDeclarationHandler> declarationHandlers;

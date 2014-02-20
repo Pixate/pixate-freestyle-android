@@ -3,10 +3,14 @@ extends ../web/templates/with-left-nav.jade
 block head
   title Pixate Freestyle for Android
 
+block left-nav
+  mixin left-nav(navItems)
+
 block topnav
   mixin nav({url:'/', title:'Getting Started'})
 
 block content-column
+  a#introduction
   :markdown
     # Pixate Freestyle for Android
 
@@ -36,6 +40,8 @@ block content-column
        ```
     3. Create a _'default.css'_ file in your assets directory. This file will hold the styling markup for your app.
 
+  a#styling
+  :markdown
     ## Styling
 
     Pixate enables you to style all Views of the same type by using the View's class name as an element name in the CSS, such as in this example:
@@ -55,6 +61,8 @@ block content-column
 
     See the [Views Demo blog post](http://www.pixate.com/blog/2013-12-06-android-views-demo/index.html) to get a taste of what's possible.
 
+  a#supported-views
+  :markdown
     ## Supported Views
 
     The Pixate Freestyle library is a work in progress. At the moment there are a few common views that we've added extensive support to:

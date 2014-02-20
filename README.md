@@ -7,6 +7,10 @@ Pixate Freestyle is a free framework that lets you style your **native** Android
 
 Under the hood, Pixate is a powerful resolution-independent graphics engine which translates familiar CSS markup to scalable graphics and bitmap effects. It is designed to work with your existing assets, as well as with SVG (Scalable Vector Graphics) assets that can be applied to your views just like any other image.
 
+### Installing Pixate Freestyle
+
+You can either clone this repo or download the package directly from the [releases section](https://github.com/Pixate/pixate-freestyle-android/releases).
+
 ### Integrating Pixate Freestyle
 
 We've tried to make Pixate easy to integrate into any existing app, and there are a few simple steps that need to be done in order to have it integrated with your project.

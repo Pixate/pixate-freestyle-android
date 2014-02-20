@@ -1,6 +1,6 @@
 body {
   box-sizing: border-box;
-  font-family: "Whitney SSm A", "Whitney SSm B", Calibri, Lucida Grande, Arial, sans-serif;
+  font-family: "Open Sans", Calibri, Lucida Grande, Arial, sans-serif;
   font-size: 16px;
   line-height: 24px;
   font-weight: normal;
@@ -14,12 +14,13 @@ body strong {
 
 h1, h2, h3 {
   color: #303031;
-  font-family: "Gotham A", "Gotham B", Calibri, Lucida Grande, Arial, sans-serif; }
+  font-family: "Open Sans", Calibri, Lucida Grande, Arial, sans-serif; }
 
 h1 {
   font-weight: 300;
   font-size: 48px;
   line-height: 60px;
+  letter-spacing: -1px;
   padding-top: 60px;
   margin-top: -60px;
   margin-bottom: 12px; }
@@ -59,18 +60,14 @@ code strong {
 .pixate-logo-dark {
   display: inline-block;
   margin-top: 13px;
-  background: url("../img/pixate-dark.png");
+  background: url("../img/freestyle-logo.svg");
   background-size: 100%;
   background-repeat: no-repeat;
   text-indent: 100%;
   white-space: nowrap;
   overflow: hidden;
-  width: 63px;
-  height: 22px; }
-  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-    .pixate-logo-dark {
-      background: url("../img/pixate-dark@2x.png");
-      background-size: 63px 22px; } }
+  width: 200px;
+  height: 40px; }
 
 .logo-docs, .logo-docs:hover {
   color: black;
@@ -157,33 +154,6 @@ code strong {
 
 .side-nav {
   margin-top: 48px; }
-
-.sidebar:before {
-  content: "";
-  background: -webkit-linear-gradient(top, white 0%, rgba(255, 255, 255, 0) 100%);
-  position: fixed;
-  margin: 0;
-  padding: 0;
-  z-index: 1;
-  display: block;
-  width: 213px;
-  height: 48px; }
-  @media (min-width: 1200px) {
-    .sidebar:before {
-      width: 262px; } }
-
-.sidebar:after {
-  content: "";
-  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, white 100%);
-  position: fixed;
-  z-index: 1;
-  display: block;
-  width: 213px;
-  bottom: 0;
-  height: 48px; }
-  @media (min-width: 1200px) {
-    .sidebar:after {
-      width: 262px; } }
 
 .screenshot {
   max-width: 100%;

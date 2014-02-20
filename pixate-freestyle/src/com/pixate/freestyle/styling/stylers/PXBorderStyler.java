@@ -19,8 +19,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.pixate.freestyle.annotations.PXAProperty;
-import com.pixate.freestyle.annotations.PXAStyler;
+import com.pixate.freestyle.annotations.PXDocProperty;
+import com.pixate.freestyle.annotations.PXDocStyler;
 import com.pixate.freestyle.cg.math.PXOffsets;
 import com.pixate.freestyle.cg.paints.PXPaint;
 import com.pixate.freestyle.cg.shapes.PXBoxModel;
@@ -29,32 +29,32 @@ import com.pixate.freestyle.styling.infos.PXBorderInfo;
 import com.pixate.freestyle.styling.infos.PXBorderInfo.PXBorderStyle;
 import com.pixate.freestyle.util.Size;
 
-@PXAStyler(properties = {
-        @PXAProperty(name = "border", syntax = "<width> || <border-style> || <paint>"),
-        @PXAProperty(hide = true, name = "border-top", syntax = "<width> || <border-style> || <paint>"),
-        @PXAProperty(hide = true, name = "border-right", syntax = "<width> || <border-style> || <paint>"),
-        @PXAProperty(hide = true, name = "border-bottom", syntax = "<width> || <border-style> || <paint>"),
-        @PXAProperty(hide = true, name = "border-left", syntax = "<width> || <border-style> || <paint>"),
-        @PXAProperty(name = "border-radius", syntax = "<size>{1,4}"),
-        @PXAProperty(name = "border-top-left-radius", syntax = "<length>"),
-        @PXAProperty(name = "border-top-right-radius", syntax = "<length>"),
-        @PXAProperty(name = "border-bottom-right-radius", syntax = "<length>"),
-        @PXAProperty(name = "border-bottom-left-radius", syntax = "<length>"),
-        @PXAProperty(name = "border-width", syntax = "<length>{1,4}"),
-        @PXAProperty(hide = true, name = "border-top-width", syntax = "<length>"),
-        @PXAProperty(hide = true, name = "border-right-width", syntax = "<length>"),
-        @PXAProperty(hide = true, name = "border-bottom-width", syntax = "<length>"),
-        @PXAProperty(hide = true, name = "border-left-width", syntax = "<length>"),
-        @PXAProperty(name = "border-color", syntax = "<paint>{1,4}"),
-        @PXAProperty(hide = true, name = "border-top-color", syntax = "<paint>"),
-        @PXAProperty(hide = true, name = "border-right-color", syntax = "<paint>"),
-        @PXAProperty(hide = true, name = "border-bottom-color", syntax = "<paint>"),
-        @PXAProperty(hide = true, name = "border-left-color", syntax = "<paint>"),
-        @PXAProperty(name = "border-style", syntax = "<border-style>{1,4}"),
-        @PXAProperty(hide = true, name = "border-top-style", syntax = "<border-style>"),
-        @PXAProperty(hide = true, name = "border-right-style", syntax = "<border-style>"),
-        @PXAProperty(hide = true, name = "border-bottom-style", syntax = "<border-style>"),
-        @PXAProperty(hide = true, name = "border-left-style", syntax = "<border-style>"), })
+@PXDocStyler(properties = {
+        @PXDocProperty(name = "border", syntax = "<width> || <border-style> || <paint>"),
+        @PXDocProperty(hide = true, name = "border-top", syntax = "<width> || <border-style> || <paint>"),
+        @PXDocProperty(hide = true, name = "border-right", syntax = "<width> || <border-style> || <paint>"),
+        @PXDocProperty(hide = true, name = "border-bottom", syntax = "<width> || <border-style> || <paint>"),
+        @PXDocProperty(hide = true, name = "border-left", syntax = "<width> || <border-style> || <paint>"),
+        @PXDocProperty(name = "border-radius", syntax = "<size>{1,4}"),
+        @PXDocProperty(name = "border-top-left-radius", syntax = "<length>"),
+        @PXDocProperty(name = "border-top-right-radius", syntax = "<length>"),
+        @PXDocProperty(name = "border-bottom-right-radius", syntax = "<length>"),
+        @PXDocProperty(name = "border-bottom-left-radius", syntax = "<length>"),
+        @PXDocProperty(name = "border-width", syntax = "<length>{1,4}"),
+        @PXDocProperty(hide = true, name = "border-top-width", syntax = "<length>"),
+        @PXDocProperty(hide = true, name = "border-right-width", syntax = "<length>"),
+        @PXDocProperty(hide = true, name = "border-bottom-width", syntax = "<length>"),
+        @PXDocProperty(hide = true, name = "border-left-width", syntax = "<length>"),
+        @PXDocProperty(name = "border-color", syntax = "<paint>{1,4}"),
+        @PXDocProperty(hide = true, name = "border-top-color", syntax = "<paint>"),
+        @PXDocProperty(hide = true, name = "border-right-color", syntax = "<paint>"),
+        @PXDocProperty(hide = true, name = "border-bottom-color", syntax = "<paint>"),
+        @PXDocProperty(hide = true, name = "border-left-color", syntax = "<paint>"),
+        @PXDocProperty(name = "border-style", syntax = "<border-style>{1,4}"),
+        @PXDocProperty(hide = true, name = "border-top-style", syntax = "<border-style>"),
+        @PXDocProperty(hide = true, name = "border-right-style", syntax = "<border-style>"),
+        @PXDocProperty(hide = true, name = "border-bottom-style", syntax = "<border-style>"),
+        @PXDocProperty(hide = true, name = "border-left-style", syntax = "<border-style>"), })
 public class PXBorderStyler extends PXStylerBase {
     // @formatter:off
     // Comments copied from iOS:

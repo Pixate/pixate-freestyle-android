@@ -18,8 +18,8 @@ package com.pixate.freestyle.styling.stylers;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.pixate.freestyle.annotations.PXAProperty;
-import com.pixate.freestyle.annotations.PXAStyler;
+import com.pixate.freestyle.annotations.PXDocProperty;
+import com.pixate.freestyle.annotations.PXDocStyler;
 import com.pixate.freestyle.styling.PXDeclaration;
 import com.pixate.freestyle.util.Size;
 
@@ -33,12 +33,12 @@ import com.pixate.freestyle.util.Size;
  *  - height: <length>
  */
 // @formatter:on
-@PXAStyler(properties = { @PXAProperty(name = "position", syntax = "<size>"),
-        @PXAProperty(name = "top", syntax = "<length>"),
-        @PXAProperty(name = "left", syntax = "<length>"),
-        @PXAProperty(name = "size", syntax = "<size>"),
-        @PXAProperty(name = "width", syntax = "<length>"),
-        @PXAProperty(name = "height", syntax = "<length>"), })
+@PXDocStyler(properties = { @PXDocProperty(name = "position", syntax = "<size>"),
+        @PXDocProperty(name = "top", syntax = "<length>"),
+        @PXDocProperty(name = "left", syntax = "<length>"),
+        @PXDocProperty(name = "size", syntax = "<size>"),
+        @PXDocProperty(name = "width", syntax = "<length>"),
+        @PXDocProperty(name = "height", syntax = "<length>"), })
 public class PXLayoutStyler extends PXStylerBase {
 
     private static PXLayoutStyler instance;

@@ -20,7 +20,7 @@ import java.util.List;
 
 import android.widget.CompoundButton;
 
-import com.pixate.freestyle.annotations.PXAElement;
+import com.pixate.freestyle.annotations.PXDocElement;
 import com.pixate.freestyle.styling.virtualStyleables.PXVirtualCompoundButtonIcon;
 
 /**
@@ -29,7 +29,7 @@ import com.pixate.freestyle.styling.virtualStyleables.PXVirtualCompoundButtonIco
  * 
  * @author Shalom Gibly
  */
-@PXAElement(hide=true)
+@PXDocElement(hide=true)
 public class PXCompoundButtonStyleAdapter extends PXButtonStyleAdapter {
 
     private static String ELEMENT_NAME = "compound-button";

@@ -25,8 +25,8 @@ import android.graphics.Matrix;
 import android.widget.ImageView;
 import android.widget.ImageView.ScaleType;
 
-import com.pixate.freestyle.annotations.PXAElement;
-import com.pixate.freestyle.annotations.PXAProperty;
+import com.pixate.freestyle.annotations.PXDocElement;
+import com.pixate.freestyle.annotations.PXDocProperty;
 import com.pixate.freestyle.cg.math.PXDimension;
 import com.pixate.freestyle.styling.PXDeclaration;
 import com.pixate.freestyle.styling.PXRuleSet;
@@ -78,12 +78,12 @@ import com.pixate.freestyle.util.PXLog;
  * 
  * @author Shalom Gibly
  */
-@PXAElement(properties = {
-        @PXAProperty(name = "scale-type", syntax = "center | center-crop | center-inside | fit-center | fit-end | fit-start | fit-xy | matrix"),
-        @PXAProperty(name = "max-height", syntax = "<length>"),
-        @PXAProperty(name = "max-width", syntax = "<length>"),
-        @PXAProperty(name = "view-bounds", syntax = "adjust"),
-        @PXAProperty(name = "tint", syntax = "<color>") })
+@PXDocElement(properties = {
+        @PXDocProperty(name = "scale-type", syntax = "center | center-crop | center-inside | fit-center | fit-end | fit-start | fit-xy | matrix"),
+        @PXDocProperty(name = "max-height", syntax = "<length>"),
+        @PXDocProperty(name = "max-width", syntax = "<length>"),
+        @PXDocProperty(name = "view-bounds", syntax = "adjust"),
+        @PXDocProperty(name = "tint", syntax = "<color>") })
 public class PXImageViewStyleAdapter extends PXViewStyleAdapter {
     private static String ELEMENT_NAME = "image-view";
     private static PXImageViewStyleAdapter instance;

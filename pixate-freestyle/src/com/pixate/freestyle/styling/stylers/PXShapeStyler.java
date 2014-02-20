@@ -20,8 +20,8 @@ import java.util.Map;
 
 import android.graphics.RectF;
 
-import com.pixate.freestyle.annotations.PXAProperty;
-import com.pixate.freestyle.annotations.PXAStyler;
+import com.pixate.freestyle.annotations.PXDocProperty;
+import com.pixate.freestyle.annotations.PXDocStyler;
 import com.pixate.freestyle.cg.shapes.PXArrowRectangle;
 import com.pixate.freestyle.cg.shapes.PXArrowRectangle.PXArrowRectangleDirection;
 import com.pixate.freestyle.cg.shapes.PXEllipse;
@@ -31,7 +31,7 @@ import com.pixate.freestyle.styling.PXDeclaration;
 /**
  * - shape: ellipse | rectangle | arrow-button-left | arrow-button-right
  */
-@PXAStyler(properties = { @PXAProperty(name = "shape", syntax = "ellipse | rectangle | arrow-button-left | arrow-button-right") })
+@PXDocStyler(properties = { @PXDocProperty(name = "shape", syntax = "ellipse | rectangle | arrow-button-left | arrow-button-right") })
 public class PXShapeStyler extends PXStylerBase {
 
     private static PXShapeStyler instance;

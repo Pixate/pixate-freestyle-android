@@ -18,7 +18,7 @@ package com.pixate.freestyle.styling.adapters;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.pixate.freestyle.annotations.PXAElement;
+import com.pixate.freestyle.annotations.PXDocElement;
 
 import android.widget.EditText;
 
@@ -27,7 +27,7 @@ import android.widget.EditText;
  * 
  * @author Shalom Gibly
  */
-@PXAElement
+@PXDocElement
 public class PXEditTextStyleAdapter extends PXTextViewStyleAdapter {
 
     private static String ELEMENT_NAME = "edit-text";

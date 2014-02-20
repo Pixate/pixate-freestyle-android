@@ -22,7 +22,7 @@ import java.util.Map;
 import android.graphics.drawable.Drawable;
 import android.widget.ImageView;
 
-import com.pixate.freestyle.annotations.PXAElement;
+import com.pixate.freestyle.annotations.PXDocElement;
 import com.pixate.freestyle.styling.PXRuleSet;
 import com.pixate.freestyle.styling.adapters.PXImageViewStyleAdapter;
 import com.pixate.freestyle.styling.adapters.PXStyleAdapter;
@@ -50,7 +50,7 @@ import com.pixate.freestyle.util.PXDrawableUtil;
  * 
  * @author Shalom Gibly
  */
-@PXAElement
+@PXDocElement
 public class PXVirtualImageViewImageAdapter extends PXVirtualChildAdapter {
 
     private static String ELEMENT_NAME = "image";

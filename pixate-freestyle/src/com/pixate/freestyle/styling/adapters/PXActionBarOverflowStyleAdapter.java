@@ -21,7 +21,7 @@ import java.util.List;
 import android.app.ActionBar;
 import android.widget.ImageButton;
 
-import com.pixate.freestyle.annotations.PXAElement;
+import com.pixate.freestyle.annotations.PXDocElement;
 import com.pixate.freestyle.styling.virtualStyleables.PXVirtualActionBarOverflowImage;
 
 /**
@@ -66,7 +66,7 @@ import com.pixate.freestyle.styling.virtualStyleables.PXVirtualActionBarOverflow
  * 
  * @author Shalom Gibly
  */
-@PXAElement
+@PXDocElement
 public class PXActionBarOverflowStyleAdapter extends PXImageViewStyleAdapter {
 
     private static String ELEMENT_NAME = "action-bar-overflow";

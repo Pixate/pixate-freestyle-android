@@ -21,8 +21,8 @@ import java.util.Map;
 import android.view.View;
 import android.widget.ListView;
 
-import com.pixate.freestyle.annotations.PXAProperty;
-import com.pixate.freestyle.annotations.PXAStyler;
+import com.pixate.freestyle.annotations.PXDocProperty;
+import com.pixate.freestyle.annotations.PXDocStyler;
 import com.pixate.freestyle.styling.PXDeclaration;
 import com.pixate.freestyle.styling.adapters.PXStyleAdapter;
 import com.pixate.freestyle.util.PXDrawableUtil;
@@ -33,8 +33,8 @@ import com.pixate.freestyle.util.PXDrawableUtil;
  * - divider-height: <length>
  */
 //@formatter:on
-@PXAStyler(properties = { @PXAProperty(name = "divider", syntax = "<paint>"),
-        @PXAProperty(name = "divider-height", syntax = "<length>"), })
+@PXDocStyler(properties = { @PXDocProperty(name = "divider", syntax = "<paint>"),
+        @PXDocProperty(name = "divider-height", syntax = "<length>"), })
 public class PXDividerStyler extends PXStylerBase {
 
     private static PXDividerStyler instance;

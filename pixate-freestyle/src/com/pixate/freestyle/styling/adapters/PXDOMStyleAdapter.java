@@ -24,13 +24,13 @@ import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
-import com.pixate.freestyle.annotations.PXAElement;
+import com.pixate.freestyle.annotations.PXDocElement;
 import com.pixate.freestyle.styling.PXDeclaration;
 import com.pixate.freestyle.styling.PXRuleSet;
 import com.pixate.freestyle.styling.stylers.PXStyler;
 import com.pixate.freestyle.styling.stylers.PXStylerContext;
 
-@PXAElement(hide=true)
+@PXDocElement(hide=true)
 public class PXDOMStyleAdapter extends PXStyleAdapter {
     private static PXDOMStyleAdapter sInstance;
 

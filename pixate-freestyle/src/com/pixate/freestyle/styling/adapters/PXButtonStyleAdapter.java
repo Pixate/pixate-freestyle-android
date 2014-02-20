@@ -18,7 +18,7 @@ package com.pixate.freestyle.styling.adapters;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.pixate.freestyle.annotations.PXAElement;
+import com.pixate.freestyle.annotations.PXDocElement;
 
 import android.widget.Button;
 import android.widget.TextView;
@@ -31,7 +31,7 @@ import android.widget.TextView;
  * 
  * @author Shalom Gibly
  */
-@PXAElement
+@PXDocElement
 public class PXButtonStyleAdapter extends PXTextViewStyleAdapter {
 
     private static String ELEMENT_NAME = "button";

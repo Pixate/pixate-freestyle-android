@@ -18,14 +18,14 @@ package com.pixate.freestyle.styling.stylers;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.pixate.freestyle.annotations.PXAProperty;
-import com.pixate.freestyle.annotations.PXAStyler;
+import com.pixate.freestyle.annotations.PXDocProperty;
+import com.pixate.freestyle.annotations.PXDocStyler;
 import com.pixate.freestyle.styling.PXDeclaration;
 
 /**
  * - text-shadow: <shadow>
  */
-@PXAStyler(properties = { @PXAProperty(name = "text-shadow", syntax = "<shadow>") })
+@PXDocStyler(properties = { @PXDocProperty(name = "text-shadow", syntax = "<shadow>") })
 public class PXTextShadowStyler extends PXStylerBase {
 
     private static PXTextShadowStyler instance;

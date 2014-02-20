@@ -19,8 +19,8 @@ import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
 
-import com.pixate.freestyle.annotations.PXAProperty;
-import com.pixate.freestyle.annotations.PXAStyler;
+import com.pixate.freestyle.annotations.PXDocProperty;
+import com.pixate.freestyle.annotations.PXDocStyler;
 import com.pixate.freestyle.styling.PXDeclaration;
 
 // @formatter:off
@@ -32,12 +32,12 @@ import com.pixate.freestyle.styling.PXDeclaration;
  *  - font-stretch: normal | ultra-condensed | extra-condensed | condensed | semi-condensed | semi-expanded | expanded | extra-expanded | ultra-expanded
  */
 // @formatter:on
-@PXAStyler(properties = {
-        @PXAProperty(name = "font-family", syntax = "<string>"),
-        @PXAProperty(name = "font-size", syntax = "<length>"),
-        @PXAProperty(name = "font-style", syntax = "normal | italic"),
-        @PXAProperty(name = "font-weight", syntax = "normal | bold"),
-        @PXAProperty(hide=true, name = "font-stretch", syntax = "normal | ultra-condensed | extra-condensed | condensed | semi-condensed | semi-expanded | expanded | extra-expanded | ultra-expanded"), })
+@PXDocStyler(properties = {
+        @PXDocProperty(name = "font-family", syntax = "<string>"),
+        @PXDocProperty(name = "font-size", syntax = "<length>"),
+        @PXDocProperty(name = "font-style", syntax = "normal | italic"),
+        @PXDocProperty(name = "font-weight", syntax = "normal | bold"),
+        @PXDocProperty(hide=true, name = "font-stretch", syntax = "normal | ultra-condensed | extra-condensed | condensed | semi-condensed | semi-expanded | expanded | extra-expanded | ultra-expanded"), })
 public class PXFontStyler extends PXStylerBase {
 
     private Map<String, PXDeclarationHandler> declarationHandlers;

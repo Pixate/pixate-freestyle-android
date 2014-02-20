@@ -27,8 +27,8 @@ import android.graphics.Typeface;
 import android.text.TextUtils.TruncateAt;
 import android.widget.TextView;
 
-import com.pixate.freestyle.annotations.PXAElement;
-import com.pixate.freestyle.annotations.PXAProperty;
+import com.pixate.freestyle.annotations.PXDocElement;
+import com.pixate.freestyle.annotations.PXDocProperty;
 import com.pixate.freestyle.cg.shadow.PXShadow;
 import com.pixate.freestyle.cg.shadow.PXShadowPaint;
 import com.pixate.freestyle.styling.PXDeclaration;
@@ -52,10 +52,10 @@ import com.pixate.freestyle.styling.virtualStyleables.PXVirtualTopIcon;
 import com.pixate.freestyle.util.PXColorUtil;
 import com.pixate.freestyle.util.PXLog;
 
-@PXAElement(properties = {
-        @PXAProperty(name = "text-transform", syntax = "uppercase | lowercase"),
-        @PXAProperty(name = "text-overflow", syntax = "word-wrap | character-wrap | ellipsis-head | ellipsis-tail | ellipsis-middle"),
-        @PXAProperty(name = "compound-padding", syntax = "<length>") })
+@PXDocElement(properties = {
+        @PXDocProperty(name = "text-transform", syntax = "uppercase | lowercase"),
+        @PXDocProperty(name = "text-overflow", syntax = "word-wrap | character-wrap | ellipsis-head | ellipsis-tail | ellipsis-middle"),
+        @PXDocProperty(name = "compound-padding", syntax = "<length>") })
 public class PXTextViewStyleAdapter extends PXViewStyleAdapter {
 
     private static String COLOR_PROPERTY = "color";

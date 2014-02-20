@@ -21,9 +21,17 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 @Retention(RetentionPolicy.RUNTIME)
-@Target(ElementType.TYPE)
-public @interface PXAElement {
+@Target(ElementType.ANNOTATION_TYPE)
+
+public @interface PXDocProperty {
+    // No name is required when applying this to
+    // a declaration handler's "process" method,
+    // since we can retrieve the name from the handler.
+    String name() default "";
+
     String comment() default "";
+
+    String syntax();
+
     boolean hide() default false;
-    PXAProperty[] properties() default {};
 }

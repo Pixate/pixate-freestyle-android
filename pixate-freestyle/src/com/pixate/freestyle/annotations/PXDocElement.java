@@ -22,7 +22,8 @@ import java.lang.annotation.Target;
 
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.TYPE)
-public @interface PXAStyler {
-    PXAProperty[] properties() default {};
+public @interface PXDocElement {
+    String comment() default "";
     boolean hide() default false;
+    PXDocProperty[] properties() default {};
 }

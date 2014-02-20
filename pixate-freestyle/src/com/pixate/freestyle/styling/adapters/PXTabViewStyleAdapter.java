@@ -25,7 +25,7 @@ import android.app.ActionBar;
 import android.app.ActionBar.Tab;
 import android.widget.TextView;
 
-import com.pixate.freestyle.annotations.PXAElement;
+import com.pixate.freestyle.annotations.PXDocElement;
 import com.pixate.freestyle.styling.virtualStyleables.PXVirtualActionBarTabIcon;
 
 /**
@@ -82,7 +82,7 @@ import com.pixate.freestyle.styling.virtualStyleables.PXVirtualActionBarTabIcon;
  * 
  * @author Shalom Gibly
  */
-@PXAElement
+@PXDocElement
 public class PXTabViewStyleAdapter extends PXViewStyleAdapter {
 
     private static String ELEMENT_NAME = "action-bar-tab";

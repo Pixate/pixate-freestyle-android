@@ -9,4 +9,4 @@ All submissions are welcome. To submit a change, fork this repo, commit your cha
 
 ## Building the Docs
 
-Running grunt will build the docs locally in `/docs/build`. `cd` into the `/docs/build` directory and use the command`python -m SimpleHTTPServer`, to view the docs build in your browser.
+Running grunt will build the docs locally in `/docs/build`. `cd` into the `/docs/build` directory and use the command `python -m SimpleHTTPServer`, to view the docs build in your browser.

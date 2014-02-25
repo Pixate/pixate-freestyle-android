@@ -23,7 +23,6 @@ module.exports = function(grunt) {
 
   var documentedValues = {
     angle:true,
-    'blend-mode':true,
     color: true,
     inset:true,
     length:true,

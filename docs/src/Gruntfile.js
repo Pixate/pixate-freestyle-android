@@ -296,7 +296,7 @@ module.exports = function(grunt) {
       styleReferenceNavItems = grunt.file.readJSON('./docs_src/style-reference/nav.json').navItems;
       
       // We could search for the controls section in a loop, but this is faster, and will warn us if it breaks.
-      if (styleReferenceNavItems[2].title == 'iOS Native Controls')
+      if (styleReferenceNavItems[2].title == 'Android Native Controls')
         styleReferenceNavItems[2].children = controlsNavItems;
       else
         throw new Error('The controls section of the nav is not where we thought it was.');

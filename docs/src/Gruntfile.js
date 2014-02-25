@@ -5,9 +5,14 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-clean');
 
-  var buildPath = grunt.option('build-path') || '../../../pixate-freestyle-android-gh-pages' ;
+  var buildPath = grunt.option('build-path') || '../../docs/build' ;
 
-  var rootURL = grunt.option('root-url') || '/pixate-freestyle-android' ;
+  var rootURL = grunt.option('root-url') || 'relative' ;
+
+  if (grunt.option("gh-pages")) {
+    buildPath = '../../../pixate-freestyle-android-gh-pages' ;
+    rootURL = grunt.option('root-url') || '/pixate-freestyle-android' ;
+  }
 
   // Used by jade and validate-and-build-controls
   var controlsNavItems = [];
@@ -63,7 +68,7 @@ module.exports = function(grunt) {
               }
 
               //translate for relativeURLs
-              if (rootURL === '') {
+              if (rootURL === 'relative') {
                 locals.rootURL = getRelativeRoot(filePath);
               }
 

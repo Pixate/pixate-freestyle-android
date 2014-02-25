@@ -2,7 +2,7 @@
   "navItems": [
     {
       "url": "/style-reference/index.html#styling_with_freestyle",
-      "title": "App Styling with Freestyle for iOS",
+      "title": "App Styling with Freestyle for Android",
       "children": [
         {"url": "/style-reference/index.html#app_structure", "title": "Application Structure" },
         {"url": "/style-reference/index.html#specificity", "title": "Specificity" },
@@ -25,7 +25,7 @@
     },
     {
       "url": "/style-reference/controls.html",
-      "title": "iOS Native Controls",
+      "title": "Android Native Controls",
       "children": []
     },
     {
@@ -33,7 +33,6 @@
       "title": "Values",
       "children": [
         {"url": "/style-reference/values.html#angle", "title": "Angle" },
-        {"url": "/style-reference/values.html#blend_modes", "title": "Blend Modes" },
         {"url": "/style-reference/values.html#color", "title": "Color" },
         {"url": "/style-reference/values.html#inset", "title": "Inset" },
         {"url": "/style-reference/values.html#length", "title": "Length" },

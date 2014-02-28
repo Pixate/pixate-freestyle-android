@@ -1,3 +1,5 @@
+.DS_Store
+
 # built application files
 *.apk
 *.ap_
@@ -32,3 +34,8 @@ proguard/
 pixate-android-freestyle-*.zip
 
 .DS_Store
+
+# docs stuff
+docs/src/node_modules
+docs/src/.sass-cache
+docs/build

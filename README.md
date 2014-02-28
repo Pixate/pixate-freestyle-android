@@ -74,3 +74,7 @@ The Pixate Freestyle library is a work in progress. At the moment there are a fe
 
 You can find a few sample projects under this repo's _Samples_ folder. These projects use Pixate Freestyle to style various components, and demonstrate the current capabilities of the framework.
 
+## Docs
+
+You can find the latest Pixate Freestyle documentation [here](http://pixate.github.io/pixate-freestyle-android).
+

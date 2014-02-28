@@ -1,0 +1,7 @@
+{
+  "navItems": [
+    {"url": "#introduction", "title": "Introduction" },
+    {"url": "#styling", "title": "Styling" },
+    {"url": "#supported-views", "title": "Supported Views" }
+  ]
+}

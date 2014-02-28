@@ -19,39 +19,38 @@ import java.util.Collection;
 
 public class CollectionUtil {
 
-	/**
-	 * Returns a String representation of the given collection by separating the
-	 * elements with the given separator.
-	 * 
-	 * @param collection
-	 * @param separator
-	 * @return
-	 */
-	public static String toString(Collection<String> collection,
-			String separator) {
-		if (collection == null || collection.isEmpty()) {
-			return "";
-		}
-		StringBuilder builder = new StringBuilder();
-		int count = collection.size();
-		for (String str : collection) {
-			builder.append(str);
-			if (--count > 0) {
-				builder.append(separator);
-			}
-		}
-		return builder.toString();
-	}
+    /**
+     * Returns a String representation of the given collection by separating the
+     * elements with the given separator.
+     * 
+     * @param collection
+     * @param separator
+     * @return
+     */
+    public static String toString(Collection<? extends Object> collection, String separator) {
+        if (collection == null || collection.isEmpty()) {
+            return "";
+        }
+        StringBuilder builder = new StringBuilder();
+        int count = collection.size();
+        for (Object obj : collection) {
+            builder.append(obj);
+            if (--count > 0) {
+                builder.append(separator);
+            }
+        }
+        return builder.toString();
+    }
 
-	/**
-	 * Returns <code>true</code> if the given collection is <code>null</code> or
-	 * empty.
-	 * 
-	 * @param collection
-	 * @return <code>true</code> if the given collection is <code>null</code> or
-	 *         empty; <code>false</code> otherwise.
-	 */
-	public static boolean isEmpty(Collection<?> collection) {
-		return collection == null || collection.isEmpty();
-	}
+    /**
+     * Returns <code>true</code> if the given collection is <code>null</code> or
+     * empty.
+     * 
+     * @param collection
+     * @return <code>true</code> if the given collection is <code>null</code> or
+     *         empty; <code>false</code> otherwise.
+     */
+    public static boolean isEmpty(Collection<?> collection) {
+        return collection == null || collection.isEmpty();
+    }
 }

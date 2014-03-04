@@ -33,6 +33,12 @@ protected void onCreate(Bundle savedInstanceState) {
    ```
 3. Create a _'default.css'_ file in your assets directory. This file will hold the styling markup for your app.
 
+### Xamarin.Android
+
+A module is also available (with source code) for using Pixate Freestyle on Xamarin.Android:
+
+* [Xamarin Freestyle Module](https://github.com/Pixate/Xamarin-PixateFreestyle)
+
 ### Styling
 
 Pixate enables you to style all Views of the same type by using the View's class name as an element name in the CSS, such as in this example:

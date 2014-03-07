@@ -43,7 +43,7 @@ A module is also available (with source code) for using Pixate Freestyle on Xama
 
 Pixate enables you to style all Views of the same type by using the View's class name as an element name in the CSS, such as in this example:
 ```css
-Button {
+button {
   background-color: red;
 }
 ```

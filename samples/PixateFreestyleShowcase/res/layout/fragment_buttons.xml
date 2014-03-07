@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.pixate.freestyle"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFffffff"
+    android:orientation="vertical" >
+
+    	<!-- Title bar layout -->
+    	<RelativeLayout 
+    	    android:layout_width="match_parent"
+    	    android:layout_height="@dimen/title_area_height"
+    	    android:background="@color/title_bgcolor"
+    	    android:paddingLeft="@dimen/forms_buttons_title_padding"
+    	    android:paddingRight="@dimen/forms_buttons_title_padding">
+    	    	
+    	    	<TextView 
+    	    	    android:layout_width="wrap_content"
+    	    	    android:layout_height="wrap_content"
+    	    	    style="@style/TextTitleNav"
+    	    	    android:layout_centerVertical="true"
+    	    	    android:layout_alignParentLeft="true"
+    	    	    android:text="@string/left"
+    	    	    android:id="@+id/txtLeft"/>
+    	    	
+    	    	<TextView 
+    	    	    android:layout_width="wrap_content"
+    	    	    android:layout_height="wrap_content"
+    	    	    style="@style/TextTitle"
+    	    	    android:layout_centerInParent="true"
+    	    	    android:text="@string/formsbuttons" />
+    	    	
+    	    	<TextView 
+    	    	    android:layout_width="wrap_content"
+    	    	    android:layout_height="wrap_content"
+    	    	    style="@style/TextTitleNav"
+    	    	    android:layout_centerVertical="true"
+    	    	    android:layout_alignParentRight="true"
+    	    	    android:text="@string/right"
+    	    	    android:id="@+id/txtRight"/>
+    	    	
+    	</RelativeLayout>
+    	
+    	<ScrollView
+    	    android:layout_width="match_parent"
+    	    android:layout_height="0dp"
+    	    android:layout_weight="1">
+    	    
+    	    	<LinearLayout 
+	    		    android:layout_width="match_parent"
+	    		    android:layout_height="wrap_content"
+	    		    android:padding="10dp"
+	    		    android:orientation="vertical">
+	    		    
+    	    	    	<!-- Edit texts with different size -->
+    	    	    	<TextView 
+	    		    	    android:layout_width="wrap_content"
+	    		    	    android:layout_height="wrap_content"
+	    		    	    android:layout_marginBottom="5dip"
+	    		    	    android:textSize="@dimen/forms_buttons_title_desc"
+	    		    	    android:textColor="@android:color/black"
+	    		    	    android:text="@string/formsbuttons" />	
+    	    	    
+    	    	    	<TextView 
+	    		    	    android:layout_width="wrap_content"
+	    		    	    android:layout_height="wrap_content"
+	    		    	    android:layout_marginBottom="5dip"
+	    		    	    android:textSize="@dimen/forms_buttons_title_sub"
+	    		    	    android:textColor="@android:color/black"
+	    		    	    android:text="@string/edits" />
+    	    	    	
+    	    	    	<EditText 
+    	    	    	    android:layout_width="match_parent"
+    	    	    	    android:layout_height="wrap_content"
+    	    	    	    android:layout_marginTop="10dp"
+    	    	    	    android:textSize="@dimen/forms_buttons_edit_large"
+    	    	    	    android:textColor="@android:color/black"
+    	    	    	    android:hint="@string/edit_hint_large"
+    	    	    	    android:background="@drawable/edit_text_background"/>
+    	    	    	
+    	    	    	<EditText 
+    	    	    	    android:layout_width="match_parent"
+    	    	    	    android:layout_height="wrap_content"
+    	    	    	    android:layout_marginTop="10dp"
+    	    	    	    android:textSize="@dimen/forms_buttons_edit_medium"
+    	    	    	    android:textColor="@android:color/black"
+    	    	    	    android:hint="@string/edit_hint_medium"
+    	    	    	    android:background="@drawable/edit_text_background"/>
+    	    	    	
+    	    	    	<EditText 
+    	    	    	    android:layout_width="match_parent"
+    	    	    	    android:layout_height="wrap_content"
+    	    	    	    android:layout_marginTop="10dp"
+    	    	    	    android:textSize="@dimen/forms_buttons_edit_small"
+    	    	    	    android:textColor="@android:color/black"
+    	    	    	    android:hint="@string/edit_hint_small"
+    	    	    	    android:background="@drawable/edit_text_background"/>
+    	    	    	
+    	    	    	<EditText 
+    	    	    	    android:layout_width="match_parent"
+    	    	    	    android:layout_height="100dp"
+    	    	    	    android:layout_marginTop="10dp"
+    	    	    	    android:padding="5dp"
+    	    	    	    android:textSize="@dimen/forms_buttons_edit_normal"
+    	    	    	    android:textColor="@android:color/black"
+    	    	    	    android:gravity="left|top"
+    	    	    	    android:hint="@string/edit_text"
+    	    	    	    android:background="@color/edit_text_background"/>
+    	    	    	
+    	    	    	<!-- Segmented radio buttons -->
+    	    	    	<LinearLayout 
+    	    	    	    android:layout_width="match_parent"
+    	    	    	    android:layout_height="wrap_content"
+    	    	    	    android:layout_marginTop="15dp"
+    	    	    	    android:orientation="horizontal"
+    	    	    	    android:gravity="center_vertical">
+    	    	    	    
+    	    	    			<TextView 
+			    		    	    android:layout_width="wrap_content"
+			    		    	    android:layout_height="wrap_content"
+			    		    	    android:gravity="center"
+			    		    	    android:textSize="@dimen/forms_buttons_title_sub_small"
+			    		    	    android:textColor="@android:color/black"
+			    		    	    android:text="@string/segmentedradio" />
+    	    	    			    
+    	    	    			<RadioGroup 
+		    	    	    	    android:layout_width="0dp"
+		    	    	    	    android:layout_height="wrap_content"
+		    	    	    	    android:layout_weight="1"
+		    	    	    	    android:orientation="horizontal"
+		    	    	    	    android:gravity="right"
+		    	    	    	    android:checkedButton="@+id/radioNormalLeft">
+		    	    	    	    			
+		    	    	    	    	<RadioButton 
+		    	    	    	    	    android:layout_width="wrap_content"
+		    	    	    	    	    android:layout_height="wrap_content"
+		    	    	    	    	    android:layout_marginRight="10dp"
+		    	    	    	    	    android:text="@string/a"
+		    	    	    	    	    android:textColor="@android:color/black"
+		    	    	    	    	    android:id="@+id/radioNormalLeft" />
+		    	    	    	    	
+		    	    	    	    	<RadioButton 
+		    	    	    	    	    android:layout_width="wrap_content"
+		    	    	    	    	    android:layout_height="wrap_content"
+		    	    	    	    	    android:text="@string/b"
+		    	    	    	    	    android:textColor="@android:color/black"
+		    	    	    	    	    android:id="@+id/radioNormalRight" />
+		    	    	    	    	
+		    	    	    	</RadioGroup>
+		    	    	    	
+    	    	    	</LinearLayout>
+    	    	    	
+    	    	    				    
+		    	    	    	
+    	    	    			<!-- 			// Original customized switch button
+    	    	    			<RadioGroup 
+		    	    	    	    android:layout_width="match_parent"
+		    	    	    	    android:layout_height="wrap_content"
+		    	    	    	    android:orientation="horizontal"
+		    	    	    	    android:checkedButton="@+id/radioLeft">
+		    	    	    	    
+		    	    	    	    	<RadioButton 
+		    	    	    	    	    android:layout_width="0dp"
+		    	    	    	    	    android:layout_height="wrap_content"
+		    	    	    	    	    android:layout_weight="1"
+		    	    	    	    	    android:button="@null"
+		    	    	    	    	    android:background="@drawable/enable_button_left"
+		    	    	    	    	    android:text="@string/a"
+		    	    	    	    	    android:textColor="@drawable/buttons_segmented_color"
+		    	    	    	    	    android:gravity="center"
+		    	    	    	    	    android:id="@+id/radioLeft" />
+		    	    	    	    	
+		    	    	    	    	
+		    	    	    	    	<RadioButton 
+		    	    	    	    	    android:layout_width="0dp"
+		    	    	    	    	    android:layout_height="wrap_content"
+		    	    	    	    	    android:layout_weight="1"
+		    	    	    	    	    android:button="@null"
+		    	    	    	    	    android:background="@drawable/enable_button_right"
+		    	    	    	    	    android:text="@string/b"
+		    	    	    	    	    android:textColor="@drawable/buttons_segmented_color"
+		    	    	    	    	    android:gravity="center"
+		    	    	    	    	    android:id="@+id/radioRight" />
+		    	    	    	    	
+		    	    	    	</RadioGroup> -->
+		
+    	    	    	
+    	    	    	<!-- Switch on/off check box -->
+    	    	    	<LinearLayout 
+    	    	    	    android:layout_width="match_parent"
+    	    	    	    android:layout_height="wrap_content"
+    	    	    	    android:orientation="horizontal"
+    	    	    	    android:layout_marginTop="15dp"
+    	    	    	    android:gravity="center_vertical">
+    	    	    	    
+    	    	    	    	<TextView 
+			    		    	    android:layout_width="0dp"
+			    		    	    android:layout_height="wrap_content"
+			    		    	    android:layout_weight="1"
+			    		    	    android:textSize="@dimen/forms_buttons_title_sub_small"
+			    		    	    android:textColor="@android:color/black"
+			    		    	    android:text="@string/onoff" />
+    	    	    	    	
+    	    	    	    	<com.pixate.freestyle.views.Switch
+								    android:layout_width="@dimen/form_buttons_switch_width"
+								    android:layout_height="wrap_content"
+								    android:layout_gravity="center"
+								    app:textLeft="@string/on"
+								    app:textRight="@string/off"
+								    android:id="@+id/btn_on_off" />
+								    
+							    	
+    	    	    	    	<!-- 	  // Toggle buttons  	    	
+    	    	    	    	<ToggleButton 
+								    android:layout_width="wrap_content"
+								    android:layout_height="wrap_content"
+    	    	    	    	    android:layout_marginRight="20dp"
+								    android:textOn="@string/on"
+								    android:textOff="@string/off"
+								    android:id="@+id/togglebutton" />
+    	    	    	    	--> 
+    	    	    	    	
+    	    	    	    	<!--	  // Customized original switch box 
+    	    	    	    	<CheckBox 
+    	    	    	    	    android:layout_width="wrap_content"
+    	    	    	    	    android:layout_height="wrap_content"
+    	    	    	    	    android:background="@drawable/switch_button"
+    	    	    	    	    android:button="@drawable/switch_button" />
+    	    	    	    	 -->
+    	    	    	    	 
+    	    	    	</LinearLayout>
+    	    	    	 
+    	    	    	<!-- Seekbar control -->
+    	    	    	<TextView 
+	    		    	    android:layout_width="match_parent"
+	    		    	    android:layout_height="wrap_content"
+	    		    	    android:layout_marginTop="15dp"
+	    		    	    android:textSize="@dimen/forms_buttons_title_sub_small"
+	    		    	    android:textColor="@android:color/black"
+	    		    	    android:text="@string/seekbar" />
+    	    	    	
+    	    	    	<LinearLayout 
+    	    	    	    android:layout_width="match_parent"
+    	    	    	    android:layout_height="wrap_content"
+    	    	    	    android:paddingLeft="10dp"
+    	    	    	    android:paddingRight="10dp"
+    	    	    	    android:orientation="vertical">
+
+    	    	    	    	<SeekBar
+									android:layout_width="match_parent"
+								    android:layout_height="wrap_content"
+								    android:layout_marginTop="5dp"
+								    android:layout_marginBottom="5dp"
+									android:thumbOffset="0px"
+									android:id="@+id/seekVolum1" /> 
+									
+    	    	    	    	<!--		// Original customized seekbar 
+		    	    	    	<SeekBar
+									android:layout_width="match_parent"
+								    android:layout_height="wrap_content"
+									android:thumb="@drawable/buttons_progress_control"
+									android:progressDrawable="@drawable/progress_draw"
+									android:thumbOffset="0px"
+									android:id="@+id/seekVolum2" /> 
+								-->
+								
+						</LinearLayout>
+    	    	    	
+    	    	    	<!-- EditText for each validation state -->
+    	    	    	<TextView 
+		    		    	    android:layout_width="match_parent"
+		    		    	    android:layout_height="wrap_content"
+		    		    	    android:layout_marginTop="20dp"
+		    		    	    android:textSize="@dimen/forms_buttons_title_sub_small"
+		    		    	    android:textColor="@android:color/black"
+		    		    	    android:text="@string/validation" />
+    	    	    	
+    	    	    	<EditText 
+    	    	    	    android:layout_width="match_parent"
+    	    	    	    android:layout_height="wrap_content"
+    	    	    	    android:layout_marginTop="15dp"
+    	    	    	    android:background="@android:color/transparent"
+    	    	    	    android:textSize="@dimen/forms_buttons_edit_normal"
+    	    	    	    android:textColor="@android:color/black"
+    	    	    	    android:hint="@string/success" />
+    	    	    	
+    	    	    	<LinearLayout 
+    	    	    	    android:layout_width="match_parent"
+    	    	    	    android:layout_height="@dimen/single_line_height"
+    	    	    	    android:layout_marginTop="3dp"
+    	    	    	    android:background="@color/validation_state_success" />
+    	    	    	
+    	    	    	<EditText 
+    	    	    	    android:layout_width="match_parent"
+    	    	    	    android:layout_height="wrap_content"
+    	    	    	    android:layout_marginTop="15dp"
+    	    	    	    android:background="@android:color/transparent"
+    	    	    	    android:textSize="@dimen/forms_buttons_edit_normal"
+    	    	    	    android:textColor="@android:color/black"
+    	    	    	    android:hint="@string/warning" />
+    	    	    	
+    	    	    	<LinearLayout 
+    	    	    	    android:layout_width="match_parent"
+    	    	    	    android:layout_height="@dimen/single_line_height"
+    	    	    	    android:layout_marginTop="3dp"
+    	    	    	    android:background="@color/validation_state_warning" />
+    	    	    	
+    	    	    	<EditText 
+    	    	    	    android:layout_width="match_parent"
+    	    	    	    android:layout_height="wrap_content"
+    	    	    	    android:layout_marginTop="15dp"
+    	    	    	    android:background="@android:color/transparent"
+    	    	    	    android:textSize="@dimen/forms_buttons_edit_normal"
+    	    	    	    android:textColor="@android:color/black"
+    	    	    	    android:hint="@string/error" />
+    	    	    	
+    	    	    	<LinearLayout 
+    	    	    	    android:layout_width="match_parent"
+    	    	    	    android:layout_height="@dimen/single_line_height"
+    	    	    	    android:layout_marginTop="3dp"
+    	    	    	    android:background="@color/validation_state_error" />
+    	    	    	
+    	    	    	<!-- Buttons with different size -->
+    	    	    	<TextView 
+	    		    	    android:layout_width="wrap_content"
+	    		    	    android:layout_height="wrap_content"
+	    		    	    android:layout_marginTop="20dip"
+	    		    	    android:textSize="@dimen/forms_buttons_title_sub"
+	    		    	    android:textColor="@android:color/black"
+	    		    	    android:text="@string/buttons" />
+    	    	    	
+    	    	    	<LinearLayout 
+    	    	    	    android:layout_width="match_parent"
+    	    	    	    android:layout_height="wrap_content"
+    	    	    	    android:orientation="vertical"
+    	    	    	    android:gravity="center_horizontal">
+		    	    	    	
+    	    	    	    	<LinearLayout 
+    	    	    	    	    android:layout_width="match_parent"
+    	    	    	    	    android:layout_height="wrap_content"
+    	    	    	    	    android:layout_marginTop="10dp"
+    	    	    	    	    android:gravity="center">
+    	    	    	    			
+    	    	    	    	    <Button 
+			    	    	    	    android:layout_width="match_parent"
+			    	    	    	    android:layout_height="@dimen/forms_buttons_button_large"
+			    	    	    	    android:background="@drawable/button_blue"
+			    	    	    	    android:padding="0dp"
+			    	    	    	    android:textColor="@android:color/white"
+			    	    	    	    android:textSize="@dimen/forms_buttons_edit_large"
+			    	    	    	    android:text="@string/large"
+			    	    	    	    android:gravity="center"/>
+    	    	    	    	    
+    	    	    	    	</LinearLayout>
+		    	    	    	
+    	    	    	    	<LinearLayout 
+    	    	    	    	    android:layout_width="match_parent"
+    	    	    	    	    android:layout_height="wrap_content"
+    	    	    	    	    android:layout_marginTop="10dp"
+    	    	    	    	    android:weightSum="2"
+    	    	    	    	    android:gravity="center">
+		    	    	    	
+			    	    	    	<Button 
+			    	    	    	    android:layout_width="0dp"
+			    	    	    	    android:layout_height="@dimen/forms_buttons_button_medium"
+			    	    	    	    android:layout_weight="1"
+			    	    	    	    android:padding="0dp"
+			    	    	    	    android:background="@drawable/button_blue"
+			    	    	    	    android:textColor="@android:color/white"
+			    	    	    	    android:textSize="@dimen/forms_buttons_edit_medium"
+			    	    	    	    android:text="@string/defau"
+			    	    	    	    android:gravity="center"/>
+		    	    	    	
+			    	    	    </LinearLayout>
+			    	    	    
+    	    	    	    	<LinearLayout 
+    	    	    	    	    android:layout_width="match_parent"
+    	    	    	    	    android:layout_height="wrap_content"
+    	    	    	    	    android:layout_marginTop="10dp"
+    	    	    	    	    android:weightSum="4"
+    	    	    	    	    android:gravity="center">
+			    	    	    	
+		    	    	    	<Button 
+		    	    	    	    android:layout_width="0dp"
+		    	    	    	    android:layout_height="@dimen/forms_buttons_button_small"
+		    	    	    	    android:layout_weight="1"
+		    	    	    	    android:padding="0dp"
+		    	    	    	    android:background="@drawable/button_blue"
+		    	    	    	    android:textColor="@android:color/white"
+		    	    	    	    android:textSize="@dimen/forms_buttons_edit_small"
+		    	    	    	    android:text="@string/small"
+		    	    	    	    android:gravity="center"/>
+		    	    	    	
+		    	    	    	</LinearLayout>
+		    	    	    	
+    	    	    	</LinearLayout>
+    	    	    	
+    	    	</LinearLayout>
+    	    	
+    	</ScrollView>
+    	    
+</LinearLayout>

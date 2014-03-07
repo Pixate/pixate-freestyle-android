@@ -1,0 +1,64 @@
+<resources>
+
+    <string name="app_name">FreeStyle</string>
+    <string name="title_activity_main">MainActivity</string>
+	
+    <!-- Strings that will display in typography screen -->
+    <string name="typography">Typography</string>
+    <string name="labels">Labels</string>
+    <string name="h1text">h1. Heading text</string>
+    <string name="h2text">h2. Heading text</string>
+    <string name="h3text">h3. Heading text</string>
+    <string name="h4text">h4. Heading text</string>
+    <string name="h5text">h5. Heading text</string>
+    <string name="h6text">h6. Heading text</string>
+    
+    <string name="paragraph">Paragraph</string>
+    <string name="paragraph1_desc">Vestibulum consequat bibendum dui, nec vehicula magna mattis ut. Nam augue mi, eleifend a mauris sed, adipiscing egestas mi. Integer justo risus, euismod vel adipiscing consequat, rhoncus at felis.</string>
+    <string name="paragraph2_desc">Maecenas non quam ut purus iaculis dignissim sit amet a purus. Maecenas gravida vulputate risus vestibulum aliquet.</string>
+    
+    <string name="alignment">Alignment</string>
+    <string name="leftaligned">Left aligned.</string>
+    <string name="centeraligned">Center aligned.</string>
+    <string name="rightaligned">Right aligned.</string>
+    
+    <!-- String for icon screen -->
+    <string name="icons">Icons</string>
+    
+    <!-- String for grid view screen -->
+    <string name="gridview">Grid View</string>
+    
+    <!-- String for list view screen -->
+    <string name="listview">List View</string>
+    <string name="lorem">LOREM</string>
+    <string name="ipsum">IPSUM</string>
+    <string name="dolor">DOLOR</string>
+    <string name="listdetail">List Detail</string>
+    
+    <!-- Strings for Forms&Buttons screen -->
+    <string name="left">Left</string>
+    <string name="right">Right</string>
+    <string name="formsbuttons">Forms &amp; Buttons</string>
+    <string name="forms">Forms</string>
+    <string name="edits">Edit Texts</string>
+    <string name="edit_hint_large">Edit Text Large</string>
+    <string name="edit_hint_medium">Edit Text Medium</string>
+    <string name="edit_hint_small">Edit Text Small</string>    
+    <string name="edit_text">Edit Text</string>
+    <string name="onoff">Switch control</string>
+    <string name="seekbar">SeekBar</string>
+    <string name="validation">Validation states</string>
+    <string name="on">ON</string>
+    <string name="off">OFF</string>
+    <string name="segmentedradio">Segmented Control</string>
+    <string name="a">A</string>
+    <string name="b">B</string>
+    
+    <string name="success">Success</string>
+    <string name="warning">Warning</string>
+    <string name="error">Error</string>
+    <string name="buttons">Buttons</string>
+    <string name="large">LARGE</string>
+    <string name="defau">DEFAULT</string>
+    <string name="small">SMALL</string>
+</resources>

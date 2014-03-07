@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical" >
+
+    	<!-- Title bar layout -->
+    	<LinearLayout 
+    	    android:layout_width="match_parent"
+    	    android:layout_height="@dimen/title_area_height"
+    	    android:background="@color/title_bgcolor"
+    	    android:gravity="center">
+    	    
+    	    	<TextView 
+    	    	    android:layout_width="wrap_content"
+    	    	    android:layout_height="wrap_content"
+    	    	    style="@style/TextTitle"
+    	    	    android:text="@string/icons"/>
+    	</LinearLayout>
+    	
+    	<!-- Grid view for all icon items -->
+    	<GridView 
+    	    android:id="@+id/gridicon"
+    	    android:layout_width="match_parent"
+    	    android:layout_height="0dp"
+    	    android:layout_weight="1"
+    	    android:padding="@dimen/icons_grid_view_padding"
+    	    android:verticalSpacing="@dimen/icons_grid_view_vspacing"
+    	    android:horizontalSpacing="@dimen/icons_grid_view_hspacing"
+    	    android:numColumns="@integer/grid_col_icon_count"
+    	    android:columnWidth="@dimen/icons_grid_view_colwidth"
+    	    android:stretchMode="spacingWidth"
+    	    android:gravity="center">
+    	    
+    	</GridView>
+    	
+</LinearLayout>

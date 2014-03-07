@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical" >
+
+    	<!-- Title bar layout -->
+    	<RelativeLayout 
+    	    android:layout_width="match_parent"
+    	    android:layout_height="@dimen/title_area_height"
+    	    android:background="@color/title_bgcolor"
+    	    android:paddingLeft="5dp">
+    	    	
+    	    	<Button
+    	    	    android:layout_width="wrap_content"
+    	    	    android:layout_height="wrap_content"
+    	    	    android:background="@drawable/top_nav_btn_prev"
+    	    	    android:layout_centerVertical="true"
+    	    	    android:id="@+id/btnPrev" />
+    	    	
+    	    	<TextView 
+    	    	    android:layout_width="wrap_content"
+    	    	    android:layout_height="wrap_content"
+    	    	    style="@style/TextTitle"
+    	    	    android:layout_centerInParent="true"
+    	    	    android:text="@string/listdetail" />
+    	    	
+    	</RelativeLayout>
+    	
+    	<TextView 
+    	    android:layout_width="match_parent"
+    	    android:layout_height="0dp"
+    	    android:layout_weight="1"
+    	    android:gravity="center"
+    	    android:textColor="@android:color/black"
+    	    android:textSize="@dimen/list_view_detail_text"
+    	    android:id="@+id/txtDetail" />
+    	
+</LinearLayout>

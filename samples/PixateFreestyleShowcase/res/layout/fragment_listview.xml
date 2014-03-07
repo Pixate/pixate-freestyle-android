@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical" >
+
+    	<!-- Title bar layout -->
+    	<LinearLayout 
+    	    android:layout_width="match_parent"
+    	    android:layout_height="@dimen/title_area_height"
+    	    android:background="@color/title_bgcolor"
+    	    android:gravity="center">
+    	    
+    	    	<TextView 
+    	    	    android:layout_width="wrap_content"
+    	    	    android:layout_height="wrap_content"
+    	    	    style="@style/TextTitle"
+    	    	    android:text="@string/listview"/>
+    	</LinearLayout>
+    	
+    	<!-- Three list views -->
+    	<ScrollView 
+    	    android:layout_width="match_parent"
+    	    android:layout_height="0dp"
+    	    android:layout_weight="1">
+    	
+    	    	<LinearLayout 
+    	    	    android:layout_width="match_parent"
+    	    	    android:layout_height="wrap_content"
+    	    	    android:orientation="vertical">
+    	    	    
+    	    		<TextView 
+	    	    	    android:layout_width="match_parent"
+	    	    	    android:layout_height="wrap_content"
+	    	    	    android:background="@color/list_category_back"
+	    	    	    android:paddingLeft="@dimen/list_view_item_side_padding"
+	    	    	    android:paddingTop="@dimen/list_view_category_padding"
+	    	    	    android:paddingBottom="@dimen/list_view_category_padding"
+	    	    	    android:textColor="@android:color/white"
+	    	    	    android:textSize="@dimen/list_view_category_text"
+	    	    	    android:text="@string/lorem" />
+	    	    	    
+    	    	    <LinearLayout 
+    	    	        android:layout_width="fill_parent"
+    	    	        android:layout_height="wrap_content"
+    	    	        android:orientation="vertical"
+    	    	        android:id="@+id/layoutListLorem">
+    	    	        
+    	    	    </LinearLayout>
+    	    	    
+    	    	    <TextView 
+	    	    	    android:layout_width="match_parent"
+	    	    	    android:layout_height="wrap_content"
+	    	    	    android:background="@color/list_category_back"
+	    	    	    android:paddingLeft="@dimen/list_view_item_side_padding"
+	    	    	    android:paddingTop="@dimen/list_view_category_padding"
+	    	    	    android:paddingBottom="@dimen/list_view_category_padding"
+	    	    	    android:textColor="@android:color/white"
+	    	    	    android:textSize="@dimen/list_view_category_text"
+	    	    	    android:text="@string/ipsum" />
+	    	    	    
+    	    	    <LinearLayout 
+    	    	        android:layout_width="fill_parent"
+    	    	        android:layout_height="wrap_content"
+    	    	        android:orientation="vertical"
+    	    	        android:id="@+id/layoutListIpsum">
+    	    	        
+    	    	    </LinearLayout>
+    	    	    
+    	    	    <TextView 
+	    	    	    android:layout_width="match_parent"
+	    	    	    android:layout_height="wrap_content"
+	    	    	    android:background="@color/list_category_back"
+	    	    	    android:paddingLeft="@dimen/list_view_item_side_padding"
+	    	    	    android:paddingTop="@dimen/list_view_category_padding"
+	    	    	    android:paddingBottom="@dimen/list_view_category_padding"
+	    	    	    android:textColor="@android:color/white"
+	    	    	    android:textSize="@dimen/list_view_category_text"
+	    	    	    android:text="@string/dolor" />
+	    	    	    
+    	    	    <LinearLayout 
+    	    	        android:layout_width="fill_parent"
+    	    	        android:layout_height="wrap_content"
+    	    	        android:orientation="vertical"
+    	    	        android:id="@+id/layoutListDolor">
+    	    	        
+    	    	    </LinearLayout>
+    	    	    
+    	    	</LinearLayout>
+    	    	
+    	</ScrollView>
+    	
+</LinearLayout>

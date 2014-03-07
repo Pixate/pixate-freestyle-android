@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="main_bgcolor">#FFf7f7f7</color>
+    <color name="title_bgcolor">#FF0096d7</color>
+    
+    <color name="list_back_normal_one">#FFffffff</color>
+    <color name="list_back_normal_two">#FFf3f3f3</color>
+    <color name="list_back_select">#FFe2dfdf</color>
+    
+    <color name="list_category_back">#FF0070a3</color>
+    <color name="list_text_color">#FF53555a</color>
+    
+    <color name="top_nav_text_select">#FFc7c7c7</color>
+    
+    <color name="edit_text_background">#FFd8d8d8</color>
+    
+    <color name="radio_box_unchecked">#FF878787</color>
+    
+    <color name="validation_state_success">#FF00d705</color>
+    <color name="validation_state_warning">#FFd7d400</color>
+    <color name="validation_state_error">#FFd70000</color>
+</resources>

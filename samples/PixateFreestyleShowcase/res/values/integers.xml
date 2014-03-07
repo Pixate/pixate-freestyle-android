@@ -1,0 +1,4 @@
+<resources>
+    <integer name="grid_col_count">2</integer>
+    <integer name="grid_col_icon_count">3</integer>
+</resources>

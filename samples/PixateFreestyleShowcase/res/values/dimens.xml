@@ -1,0 +1,68 @@
+<resources>
+
+    <!-- Title description area height -->
+    <dimen name="title_area_height">50dp</dimen>
+    <dimen name="title_area_textize">24dp</dimen>
+    
+    <!-- Commonly used line height in each screen -->
+    <dimen name="single_line_height">0.5dp</dimen>
+	<dimen name="title_area_nav_textize">18dp</dimen>
+    
+    <!-- Text font size in Typography screen -->
+    <dimen name="typography_top_desc">28dp</dimen>
+    <dimen name="typography_part_text">26dp</dimen>
+    <dimen name="typography_text_h1">30dp</dimen>
+    <dimen name="typography_text_h2">26dp</dimen>
+    <dimen name="typography_text_h3">22dp</dimen>
+    <dimen name="typography_text_h4">18dp</dimen>
+    <dimen name="typography_text_h5">14dp</dimen>
+    <dimen name="typography_text_h6">10dp</dimen>
+    
+    <dimen name="typography_paragraph1">16dp</dimen>
+    <dimen name="typography_paragraph2">12dp</dimen>
+    
+    <dimen name="typography_alignment_label">18dp</dimen>
+    
+    <!-- Icon view size on icons screen -->
+    <dimen name="icons_grid_item_width">80dp</dimen>
+    <dimen name="icons_grid_item_height">80dp</dimen>
+    <dimen name="icons_grid_icon_text_margin">10dp</dimen>
+    <dimen name="icons_grid_item_margin">15dp</dimen>
+    <dimen name="icons_grid_icon_width">30dp</dimen>
+    <dimen name="icons_grid_icon_height">30dp</dimen>
+    <dimen name="icons_grid_item_text">10dp</dimen>
+    
+    <dimen name="icons_grid_view_padding">10dp</dimen>
+    <dimen name="icons_grid_view_vspacing">30dp</dimen>
+    <dimen name="icons_grid_view_hspacing">20dp</dimen>
+    <dimen name="icons_grid_view_colwidth">80dp</dimen>
+    
+    <!-- Grid view example for tab -->
+    <dimen name="grid_item_spacing">6dp</dimen>
+    
+    <!-- Layout and text size in List View -->
+    <dimen name="list_view_item_height">50dp</dimen>
+    <dimen name="list_view_item_text">18dp</dimen>
+    <dimen name="list_view_category_text">15dp</dimen>
+    <dimen name="list_view_category_padding">3dp</dimen>
+    <dimen name="list_view_item_side_padding">15dp</dimen>
+    <dimen name="list_view_item_line">0.5dp</dimen>
+    <dimen name="list_view_detail_text">24dp</dimen>
+    
+    <!-- Text size for Forms&Buttons screen -->
+    <dimen name="forms_buttons_title_padding">5dp</dimen>
+    <dimen name="forms_buttons_title_desc">28dp</dimen>
+    <dimen name="forms_buttons_title_sub">24dp</dimen>
+    <dimen name="forms_buttons_title_sub_small">20dp</dimen>
+    
+    <dimen name="forms_buttons_edit_large">22dp</dimen>
+    <dimen name="forms_buttons_edit_medium">18dp</dimen>
+    <dimen name="forms_buttons_edit_small">14dp</dimen>
+    <dimen name="forms_buttons_edit_normal">16dp</dimen>
+    
+    <dimen name="forms_buttons_button_large">50dp</dimen>
+    <dimen name="forms_buttons_button_medium">40dp</dimen>
+    <dimen name="forms_buttons_button_small">30dp</dimen>
+    
+    <dimen name="form_buttons_switch_width">60dp</dimen>
+</resources>

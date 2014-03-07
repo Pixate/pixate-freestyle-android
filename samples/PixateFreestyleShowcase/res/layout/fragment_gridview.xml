@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical" >
+
+    	<!-- Title bar layout -->
+    	<LinearLayout 
+    	    android:layout_width="match_parent"
+    	    android:layout_height="@dimen/title_area_height"
+    	    android:background="@color/title_bgcolor"
+    	    android:gravity="center">
+    	    
+    	    	<TextView 
+    	    	    android:layout_width="wrap_content"
+    	    	    android:layout_height="wrap_content"
+    	    	    style="@style/TextTitle"
+    	    	    android:text="@string/gridview"/>
+    	</LinearLayout>
+    	
+    	<!-- Grid view for example view -->
+    	<GridView
+	        android:id="@+id/gridview"
+	        android:layout_width="fill_parent"
+	        android:layout_height="0dp"
+	        android:layout_weight="1"
+			android:gravity="center"
+			android:horizontalSpacing="@dimen/grid_item_spacing"
+			android:verticalSpacing="@dimen/grid_item_spacing"
+		    android:numColumns="@integer/grid_col_count" />
+			 
+</LinearLayout>

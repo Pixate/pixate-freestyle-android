@@ -1,0 +1,43 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="AppTheme" parent="android:Theme.Light" />
+
+    <!-- Title text style -->
+    <style name="TextTitle">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">@dimen/title_area_textize</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    
+    <style name="TextTitleNav">
+        <item name="android:textColor">@drawable/title_nav_text_color</item>
+        <item name="android:textSize">@dimen/title_area_nav_textize</item>
+    </style>
+    
+    <!-- Styles for Switch button -->
+	<style name="AppThemeDark" parent="@android:style/Theme.DeviceDefault">
+		<item name="com.pixate.freestyle:switchStyle">@style/switch_dark</item>
+	</style>
+
+    <style name="AppThemeLight" parent="@android:style/Theme.NoTitleBar">
+		<item name="com.pixate.freestyle:switchStyle">@style/switch_light</item>
+	</style>
+	
+	<style name="switch_dark">
+	    <item name="@attr/colorChecked">#FFFFFF</item>
+	    <item name="@attr/colorUnChecked">#808080</item>
+	    <item name="@attr/backgroundDrawable">@drawable/switch_bg_holo_dark</item>
+	    <item name="@attr/switchDrawable">@drawable/switch_thumb_activated_holo_dark</item>
+	    <item name="@attr/switchDrawableOff">@drawable/switch_bg_holo_dark</item>
+	</style>
+
+	<style name="switch_light">
+	    <item name="@attr/colorChecked">#FFFFFF</item>
+	    <item name="@attr/colorUnChecked">#181818</item>
+	    <item name="@attr/backgroundDrawable">@drawable/switch_bg_holo_light</item>
+	    <item name="@attr/switchDrawable">@drawable/switch_thumb_activated_holo_light</item>
+	    <item name="@attr/switchDrawableOff">@drawable/switch_thumb_activated_holo_light_off</item>
+	</style>
+	
+	
+</resources>

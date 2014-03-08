@@ -344,12 +344,10 @@
     	    	    	    	    <Button 
 			    	    	    	    android:layout_width="match_parent"
 			    	    	    	    android:layout_height="@dimen/forms_buttons_button_large"
-			    	    	    	    android:background="@drawable/button_blue"
 			    	    	    	    android:padding="0dp"
-			    	    	    	    android:textColor="@android:color/white"
-			    	    	    	    android:textSize="@dimen/forms_buttons_edit_large"
 			    	    	    	    android:text="@string/large"
-			    	    	    	    android:gravity="center"/>
+			    	    	    	    android:gravity="center"
+			    	    	    	    class="button"/>
     	    	    	    	    
     	    	    	    	</LinearLayout>
 		    	    	    	
@@ -361,16 +359,17 @@
     	    	    	    	    android:gravity="center">
 		    	    	    	
 			    	    	    	<Button 
+			    	    	    	    class="paul"
 			    	    	    	    android:layout_width="0dp"
 			    	    	    	    android:layout_height="@dimen/forms_buttons_button_medium"
 			    	    	    	    android:layout_weight="1"
 			    	    	    	    android:padding="0dp"
-			    	    	    	    android:background="@drawable/button_blue"
-			    	    	    	    android:textColor="@android:color/white"
-			    	    	    	    android:textSize="@dimen/forms_buttons_edit_medium"
 			    	    	    	    android:text="@string/defau"
-			    	    	    	    android:gravity="center"/>
-		    	    	    	
+			    	    	    	    android:gravity="center"
+										 />		    	    	    	
+			    	    	    	    	    	    
+			    	    	    	
+			    	    	    	
 			    	    	    </LinearLayout>
 			    	    	    
     	    	    	    	<LinearLayout 
@@ -385,11 +384,9 @@
 		    	    	    	    android:layout_height="@dimen/forms_buttons_button_small"
 		    	    	    	    android:layout_weight="1"
 		    	    	    	    android:padding="0dp"
-		    	    	    	    android:background="@drawable/button_blue"
-		    	    	    	    android:textColor="@android:color/white"
-		    	    	    	    android:textSize="@dimen/forms_buttons_edit_small"
 		    	    	    	    android:text="@string/small"
-		    	    	    	    android:gravity="center"/>
+		    	    	    	    android:gravity="center"
+		    	    	    	    class="button"/>
 		    	    	    	
 		    	    	    	</LinearLayout>
 		    	    	    	

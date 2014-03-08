@@ -55,6 +55,7 @@ public class MainFrameActivity extends FragmentActivity implements OnTabChangeLi
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        
         /** Set this theme for default switch box */
         setTheme(R.style.AppThemeLight);
 
@@ -62,6 +63,8 @@ public class MainFrameActivity extends FragmentActivity implements OnTabChangeLi
         setContentView(R.layout.activity_main);
 
         initTabs();
+
+        com.pixate.freestyle.PixateFreestyle.init(this);
     }
 
     @SuppressLint("NewApi")

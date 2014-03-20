@@ -16,7 +16,11 @@
 package com.pixate.freestyle.cg.paints;
 
 import java.io.InputStream;
+import java.net.URL;
+import java.util.Arrays;
+import java.util.HashSet;
 import java.util.Locale;
+import java.util.Set;
 
 import android.graphics.Canvas;
 import android.graphics.Paint;
@@ -27,6 +31,7 @@ import android.graphics.RectF;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.NinePatchDrawable;
 import android.net.Uri;
+import android.os.AsyncTask;
 
 import com.pixate.freestyle.cg.parsing.PXSVGLoader;
 import com.pixate.freestyle.cg.shapes.PXShapeDocument;
@@ -35,7 +40,9 @@ import com.pixate.freestyle.util.StringUtil;
 import com.pixate.freestyle.util.UrlStreamOpener;
 
 public class PXImagePaint extends BasePXPaint {
-    private static final String TAG = "PXImagePaint";
+    private static final String TAG = PXImagePaint.class.getSimpleName();
+    private static final Set<String> SUPPORTED_REMOTE_SCHEMES = new HashSet<String>(Arrays.asList(
+            "http", "https", "ftp"));
 
     public enum PXImageRepeatType {
         REPEAT,
@@ -45,9 +52,29 @@ public class PXImagePaint extends BasePXPaint {
     };
 
     private Uri imageURL;
+    private AsyncTask<Uri, Void, Drawable> remoteImageLoader;
 
     public PXImagePaint(Uri imageURL) {
         this.imageURL = imageURL;
+        String scheme = imageURL.getScheme();
+        if (scheme != null && SUPPORTED_REMOTE_SCHEMES.contains(scheme.toLowerCase(Locale.US))) {
+            // Start a FutureTask to load that image.
+            // Note that this requires INTERNET permissions in the manifest.
+            // <uses-permission android:name="android.permission.INTERNET" />
+            remoteImageLoader = new AsyncTask<Uri, Void, Drawable>() {
+                @Override
+                protected Drawable doInBackground(Uri... params) {
+                    try {
+                        return NinePatchDrawable.createFromStream(
+                                new URL(params[0].toString()).openStream(), null);
+                    } catch (Exception e) {
+                        PXLog.e(TAG, e, "Error while loading a remote image");
+                    }
+                    return null;
+                }
+            };
+            remoteImageLoader.execute(imageURL);
+        }
     }
 
     /*
@@ -99,14 +126,20 @@ public class PXImagePaint extends BasePXPaint {
 
                     InputStream inputStream = null;
                     try {
-                        inputStream = UrlStreamOpener.open(imageURL);
-                        // Try to load this data as a NinePatchDrawable. The
-                        // fallback here, in case the bitmap is not nine-patch,
-                        // is BitmapDrawable. Also, when the png is loaded from
-                        // the assets directory, we need to compile/encode it
-                        // via the "aapt" tool first! Otherwise, it will not
-                        // load the nine-patch chunk data.
-                        Drawable d = NinePatchDrawable.createFromStream(inputStream, null);
+                        Drawable d = null;
+                        if (remoteImageLoader != null) {
+                            d = remoteImageLoader.get();
+                        } else {
+                            inputStream = UrlStreamOpener.open(imageURL);
+                            // Try to load this data as a NinePatchDrawable. The
+                            // fallback here, in case the bitmap is not
+                            // nine-patch, is BitmapDrawable. Also, when the png
+                            // is loaded from the assets directory, we need to
+                            // compile/encode it via the "aapt" tool first!
+                            // Otherwise, it will not load the nine-patch chunk
+                            // data.
+                            d = NinePatchDrawable.createFromStream(inputStream, null);
+                        }
                         d.setBounds(bounds);
                         d.draw(canvas);
                     } finally {

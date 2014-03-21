@@ -23,8 +23,8 @@ import java.io.InputStreamReader;
 public class IOUtil {
 
     private static final String UTF8 = "UTF-8";
-    public static final String UTF8_BOM = "\uFEFF";
-    
+    public static final String BOM = "\uFEFF";
+
     public static String read(String filePath) throws IOException {
         return read(filePath, UTF8);
     }
@@ -48,13 +48,13 @@ public class IOUtil {
                 builder.append(readBuffer, 0, read);
             }
             String s = builder.toString();
-            
-            if (s.startsWith(UTF8_BOM)) {
+
+            if (s.startsWith(BOM)) {
                 s = s.substring(1);
             }
-            
+
             return s;
-            
+
         } finally {
             if (reader != null) {
                 reader.close();

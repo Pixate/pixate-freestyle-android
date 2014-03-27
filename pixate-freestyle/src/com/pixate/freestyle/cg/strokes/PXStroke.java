@@ -56,7 +56,7 @@ public class PXStroke implements PXStrokeRenderer {
      */
     public PXStroke() {
         this.type = PXStrokeType.CENTER;
-        this.width = 0.0f;
+        this.width = 1.0f;
         this.dashOffset = 0;
         this.lineCap = Cap.BUTT;
         this.lineJoin = Join.MITER;
@@ -99,7 +99,7 @@ public class PXStroke implements PXStrokeRenderer {
     }
 
     public void applyStrokeToPath(Path path, Paint paint, Canvas context) {
-        if (color != null && width >= 0) {
+        if (color != null && width > 0) {
             // stroke and possibly dash incoming path
             boolean paintCreated = false;
             if (paint == null) {

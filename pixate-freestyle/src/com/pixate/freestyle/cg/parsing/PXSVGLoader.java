@@ -52,11 +52,11 @@ import android.graphics.drawable.shapes.Shape;
 import android.net.Uri;
 
 import com.pixate.freestyle.cg.paints.PXGradient;
+import com.pixate.freestyle.cg.paints.PXGradient.PXGradientUnits;
 import com.pixate.freestyle.cg.paints.PXLinearGradient;
 import com.pixate.freestyle.cg.paints.PXPaint;
 import com.pixate.freestyle.cg.paints.PXRadialGradient;
 import com.pixate.freestyle.cg.paints.PXSolidPaint;
-import com.pixate.freestyle.cg.paints.PXGradient.PXGradientUnits;
 import com.pixate.freestyle.cg.shapes.PXArc;
 import com.pixate.freestyle.cg.shapes.PXCircle;
 import com.pixate.freestyle.cg.shapes.PXEllipse;
@@ -68,9 +68,9 @@ import com.pixate.freestyle.cg.shapes.PXRectangle;
 import com.pixate.freestyle.cg.shapes.PXShape;
 import com.pixate.freestyle.cg.shapes.PXShapeDocument;
 import com.pixate.freestyle.cg.shapes.PXShapeGroup;
-import com.pixate.freestyle.cg.shapes.PXText;
 import com.pixate.freestyle.cg.shapes.PXShapeGroup.AlignViewPortType;
 import com.pixate.freestyle.cg.shapes.PXShapeGroup.CropType;
+import com.pixate.freestyle.cg.shapes.PXText;
 import com.pixate.freestyle.cg.strokes.PXStroke;
 import com.pixate.freestyle.cg.strokes.PXStroke.PXStrokeType;
 import com.pixate.freestyle.styling.parsing.PXValueParser;
@@ -551,7 +551,7 @@ public class PXSVGLoader {
 
             stroke.setColor(paintFromString(attributes.getValue("stroke"),
                     attributes.getValue("stroke-opacity"), gradients));
-            stroke.setWidth(numberFromString(attributes.getValue("stroke-width")));
+            stroke.setWidth(numberFromString(attributes.getValue("stroke-width"), 1f));
 
             if (strokeDashArray != null) {
                 stroke.setDashArray(numberArrayFromString(strokeDashArray));

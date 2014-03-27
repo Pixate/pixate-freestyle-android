@@ -99,7 +99,7 @@ public class PXStroke implements PXStrokeRenderer {
     }
 
     public void applyStrokeToPath(Path path, Paint paint, Canvas context) {
-        if (color != null && width > 0) {
+        if (color != null && width >= 0) {
             // stroke and possibly dash incoming path
             boolean paintCreated = false;
             if (paint == null) {

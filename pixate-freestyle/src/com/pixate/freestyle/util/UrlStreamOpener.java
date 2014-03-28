@@ -22,6 +22,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.URI;
+import java.net.URL;
 import java.net.URLDecoder;
 import java.util.regex.Pattern;
 
@@ -90,7 +91,8 @@ public class UrlStreamOpener {
 
     private static InputStream openDocumentScheme(String urlString, boolean suppressErrorLog) {
         try {
-            return PixateFreestyle.getAppContext().openFileInput(urlString.substring(DOCUMENTS_SCHEME.length()));
+            return PixateFreestyle.getAppContext().openFileInput(
+                    urlString.substring(DOCUMENTS_SCHEME.length()));
         } catch (Exception e) {
             if (!suppressErrorLog) {
                 PXLog.e(TAG, e, "Unable to load the document at this url: " + urlString);
@@ -155,7 +157,8 @@ public class UrlStreamOpener {
         String fileName = urlString.substring(TMP_SCHEME.length());
 
         try {
-            return new FileInputStream(context.getCacheDir().getAbsolutePath() + File.separator + fileName);
+            return new FileInputStream(context.getCacheDir().getAbsolutePath() + File.separator
+                    + fileName);
         } catch (FileNotFoundException e) {
             PXLog.e(TAG, e, "Unable to open temp file " + fileName);
             return null;
@@ -176,7 +179,19 @@ public class UrlStreamOpener {
         }
 
         if (stream == null) {
-            PXLog.w(TAG, "Neither a document nor a bundle entry with url '" + urlString + "' could be opened.");
+            // last try, open as a regular URL.
+            // Note that this is a networking call, and cannot be made from the
+            // main thread.
+            try {
+                URL url = new URL(urlString);
+                stream = url.openStream();
+            } catch (Exception e) {
+                PXLog.w(TAG, e, "Failed to open '%s' as URL", urlString);
+            }
+        }
+        if (stream == null) {
+            PXLog.w(TAG, "Neither a document nor a bundle entry with url '%s' could be opened.",
+                    urlString);
         }
 
         return stream;
@@ -191,11 +206,12 @@ public class UrlStreamOpener {
                 break;
             }
         }
-        
+
         if (result == 0) {
             // Try built-in (system) resources
             for (int i = 0; i < RESOURCE_TYPES.length; i++) {
-                result = Resources.getSystem().getIdentifier(resourceName, RESOURCE_TYPES[i], "android");
+                result = Resources.getSystem().getIdentifier(resourceName, RESOURCE_TYPES[i],
+                        "android");
                 if (result != 0) {
                     break;
                 }
@@ -230,7 +246,8 @@ public class UrlStreamOpener {
                 encoding = header.substring(charsetpos + 9);
             }
             try {
-                return new ByteArrayInputStream(URLDecoder.decode(data, encoding).getBytes(encoding));
+                return new ByteArrayInputStream(URLDecoder.decode(data, encoding)
+                        .getBytes(encoding));
             } catch (Exception e) {
                 PXLog.e(TAG, e, "Unable to decode data uri contents: " + uri);
             }

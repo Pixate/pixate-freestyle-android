@@ -52,21 +52,29 @@ public class PXImagePaint extends BasePXPaint {
     };
 
     private Uri imageURL;
-    private AsyncTask<Uri, Void, Drawable> remoteImageLoader;
+    private AsyncTask<Uri, Void, Object> remoteImageLoader;
 
     public PXImagePaint(Uri imageURL) {
         this.imageURL = imageURL;
         String scheme = imageURL.getScheme();
         if (scheme != null && SUPPORTED_REMOTE_SCHEMES.contains(scheme.toLowerCase(Locale.US))) {
             // Start a FutureTask to load that image.
-            // Note that this requires INTERNET permissions in the manifest.
+            // Note that this may require INTERNET permissions in the manifest.
             // <uses-permission android:name="android.permission.INTERNET" />
-            remoteImageLoader = new AsyncTask<Uri, Void, Drawable>() {
+            // The returned value can be a Drawable, in case that the url is for
+            // an image, and a PXShapeDocument in case the url represents a path
+            // to an SVG resource.
+            remoteImageLoader = new AsyncTask<Uri, Void, Object>() {
                 @Override
-                protected Drawable doInBackground(Uri... params) {
+                protected Object doInBackground(Uri... params) {
                     try {
-                        return NinePatchDrawable.createFromStream(
-                                new URL(params[0].toString()).openStream(), null);
+                        if (hasSVGImageURL()) {
+                            return PXSVGLoader.loadFromStream(UrlStreamOpener.open(params[0]
+                                    .toString()));
+                        } else {
+                            return NinePatchDrawable.createFromStream(
+                                    new URL(params[0].toString()).openStream(), null);
+                        }
                     } catch (Exception e) {
                         PXLog.e(TAG, e, "Error while loading a remote image");
                     }
@@ -112,12 +120,14 @@ public class PXImagePaint extends BasePXPaint {
                 Canvas canvas = image.beginRecording(bounds.width(), bounds.height());
                 if (hasSVGImageURL()) {
                     // for android, instead of using the PXShapeView (which
-                    // requires
-                    // a Context), we directly load the scene with
+                    // requires a Context), we directly load the scene with
                     // PXSVGLoader.loadFromURL(URL)
-
-                    PXShapeDocument document = PXSVGLoader.loadFromStream(UrlStreamOpener
-                            .open(imageURL));
+                    PXShapeDocument document;
+                    if (remoteImageLoader != null) {
+                        document = (PXShapeDocument) remoteImageLoader.get();
+                    } else {
+                        document = PXSVGLoader.loadFromStream(UrlStreamOpener.open(imageURL));
+                    }
                     document.setBounds(new RectF(bounds));
                     document.render(canvas);
 
@@ -126,9 +136,9 @@ public class PXImagePaint extends BasePXPaint {
 
                     InputStream inputStream = null;
                     try {
-                        Drawable d = null;
+                        Drawable d;
                         if (remoteImageLoader != null) {
-                            d = remoteImageLoader.get();
+                            d = (Drawable) remoteImageLoader.get();
                         } else {
                             inputStream = UrlStreamOpener.open(imageURL);
                             // Try to load this data as a NinePatchDrawable. The

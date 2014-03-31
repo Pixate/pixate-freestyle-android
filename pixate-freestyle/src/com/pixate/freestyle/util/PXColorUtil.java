@@ -367,6 +367,38 @@ public class PXColorUtil {
     }
 
     /**
+     * Sets the color for a view with a colored background. In case the view's
+     * background is not a {@link ColorDrawable}, or does not contain a
+     * color-drawable in one of its layers, nothing happens.
+     * 
+     * @param view
+     * @param color
+     */
+    public static void setColor(View view, int color) {
+        ColorDrawable colorDrawable = getColorDrawableBackground(view);
+        if (colorDrawable != null) {
+            colorDrawable.setColor(color);
+        }
+    }
+
+    /**
+     * Returns the background color value for a View that have a
+     * {@link ColorDrawable} background, or a {@link LayerDrawable} background
+     * that contains one.
+     * 
+     * @param view
+     * @return The view's background color. -1 in case the view does not have a
+     *         ColorDrawable background.
+     */
+    public static int getColor(View view) {
+        ColorDrawable colorDrawable = getColorDrawableBackground(view);
+        if (colorDrawable != null) {
+            return colorDrawable.getColor();
+        }
+        return -1;
+    }
+
+    /**
      * Returns the View's {@link ColorDrawable} background in case it has one.
      * The {@link ColorDrawable} may be set directly as the View's background,
      * or nested within a {@link LayerDrawable}. In case of a

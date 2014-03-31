@@ -304,7 +304,6 @@ public class PXColorUtil {
             float[] hsl = new float[3];
             PXColorUtil.colorToHsl(color, hsl);
             colorDrawable.setColor(PXColorUtil.hslToColor(Color.alpha(color), hue, hsl[1], hsl[2]));
-            colorDrawable.invalidateSelf();
         }
     }
 
@@ -324,7 +323,6 @@ public class PXColorUtil {
             PXColorUtil.colorToHsl(color, hsl);
             colorDrawable.setColor(PXColorUtil.hslToColor(Color.alpha(color), hsl[0], saturation,
                     hsl[2]));
-            colorDrawable.invalidateSelf();
         }
     }
 
@@ -344,7 +342,6 @@ public class PXColorUtil {
             PXColorUtil.colorToHsl(color, hsl);
             colorDrawable.setColor(PXColorUtil.hslToColor(Color.alpha(color), hsl[0], hsl[1],
                     brightness));
-            colorDrawable.invalidateSelf();
         }
     }
 

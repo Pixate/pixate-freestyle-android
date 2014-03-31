@@ -20,6 +20,10 @@ import java.util.Map;
 
 import android.content.res.ColorStateList;
 import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
+import android.graphics.drawable.Drawable;
+import android.graphics.drawable.LayerDrawable;
+import android.view.View;
 
 import com.pixate.freestyle.styling.cache.PXStyleInfo;
 
@@ -283,5 +287,111 @@ public class PXColorUtil {
         }
         return Color.argb((int) (alpha * 255), Color.red(color), Color.green(color),
                 Color.blue(color));
+    }
+
+    /**
+     * Sets the Hue value on a view that has a colored background. In case the
+     * view's background is not a {@link ColorDrawable}, or does not contain one
+     * in a {@link LayerDrawable}, nothing will be applied.
+     * 
+     * @param view
+     * @param hue
+     */
+    public static void setHue(View view, float hue) {
+        ColorDrawable colorDrawable = getColorDrawableBackground(view);
+        if (colorDrawable != null) {
+            int color = colorDrawable.getColor();
+            float[] hsl = new float[3];
+            PXColorUtil.colorToHsl(color, hsl);
+            colorDrawable.setColor(PXColorUtil.hslToColor(Color.alpha(color), hue, hsl[1], hsl[2]));
+        }
+    }
+
+    /**
+     * Sets the Saturation value on a view that has a colored background. In
+     * case the view's background is not a {@link ColorDrawable}, or does not
+     * contain one in a {@link LayerDrawable}, nothing will be applied.
+     * 
+     * @param view
+     * @param saturation
+     */
+    public static void setSaturation(View view, float saturation) {
+        ColorDrawable colorDrawable = getColorDrawableBackground(view);
+        if (colorDrawable != null) {
+            int color = colorDrawable.getColor();
+            float[] hsl = new float[3];
+            PXColorUtil.colorToHsl(color, hsl);
+            colorDrawable.setColor(PXColorUtil.hslToColor(Color.alpha(color), hsl[0], saturation,
+                    hsl[2]));
+        }
+    }
+
+    /**
+     * Sets the Brightness value on a view that has a colored background. In
+     * case the view's background is not a {@link ColorDrawable}, or does not
+     * contain one in a {@link LayerDrawable}, nothing will be applied.
+     * 
+     * @param view
+     * @param brightness
+     */
+    public static void setBrightness(View view, float brightness) {
+        ColorDrawable colorDrawable = getColorDrawableBackground(view);
+        if (colorDrawable != null) {
+            int color = colorDrawable.getColor();
+            float[] hsl = new float[3];
+            PXColorUtil.colorToHsl(color, hsl);
+            colorDrawable.setColor(PXColorUtil.hslToColor(Color.alpha(color), hsl[0], hsl[1],
+                    brightness));
+        }
+    }
+
+    /**
+     * Returns the HSL value of a view that has a colored background. In case
+     * the view's background is not a {@link ColorDrawable}, or does not contain
+     * a color-drawable in one of its layers, the return value is
+     * <code>null</code>
+     * 
+     * @param view
+     * @return The hue value (<code>null</code> in case the background is not a
+     *         {@link ColorDrawable})
+     */
+    public static float[] getHSL(View view) {
+        ColorDrawable colorDrawable = getColorDrawableBackground(view);
+        if (colorDrawable != null) {
+            int color = colorDrawable.getColor();
+            float[] hsl = new float[3];
+            PXColorUtil.colorToHsl(color, hsl);
+            return hsl;
+        }
+        return null;
+    }
+
+    /**
+     * Returns the View's {@link ColorDrawable} background in case it has one.
+     * The {@link ColorDrawable} may be set directly as the View's background,
+     * or nested within a {@link LayerDrawable}. In case of a
+     * {@link LayerDrawable}, the method will return the first color-drawable it
+     * finds.
+     * 
+     * @param view
+     * @return A {@link ColorDrawable}, or <code>null</code> in case not found.
+     */
+    private static ColorDrawable getColorDrawableBackground(View view) {
+        if (view != null) {
+            Drawable background = view.getBackground();
+            if (background instanceof ColorDrawable) {
+                return (ColorDrawable) background;
+            }
+            if (background instanceof LayerDrawable) {
+                LayerDrawable layeredBG = (LayerDrawable) background;
+                int numberOfLayers = layeredBG.getNumberOfLayers();
+                for (int i = 0; i < numberOfLayers; i++) {
+                    if (layeredBG.getDrawable(i) instanceof ColorDrawable) {
+                        return (ColorDrawable) layeredBG.getDrawable(i);
+                    }
+                }
+            }
+        }
+        return null;
     }
 }

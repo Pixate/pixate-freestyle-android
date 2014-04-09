@@ -45,10 +45,7 @@ public class PXImagePaint extends BasePXPaint {
             "http", "https", "ftp"));
 
     public enum PXImageRepeatType {
-        REPEAT,
-        SPACE,
-        ROUND,
-        NOREPEAT
+        REPEAT, SPACE, ROUND, NOREPEAT
     };
 
     private Uri imageURL;
@@ -130,10 +127,8 @@ public class PXImagePaint extends BasePXPaint {
                     }
                     document.setBounds(new RectF(bounds));
                     document.render(canvas);
-
                 } else {
                     // read the data as a bitmap image
-
                     InputStream inputStream = null;
                     try {
                         Drawable d;
@@ -150,8 +145,10 @@ public class PXImagePaint extends BasePXPaint {
                             // data.
                             d = NinePatchDrawable.createFromStream(inputStream, null);
                         }
-                        d.setBounds(bounds);
-                        d.draw(canvas);
+                        if (d != null) {
+                            d.setBounds(bounds);
+                            d.draw(canvas);
+                        }
                     } finally {
                         if (inputStream != null) {
                             inputStream.close();

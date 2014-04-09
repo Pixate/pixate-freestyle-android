@@ -65,7 +65,9 @@ The Pixate Freestyle library is a work in progress. At the moment there are a fe
 1. View (generic attributes support for all views)
 2. ImageView
 3. TextView
+4. CheckedTextView
 4. Button
+5. CompoundButton
 5. ImageButton
 6. ToggleButton
 7. RadioButton

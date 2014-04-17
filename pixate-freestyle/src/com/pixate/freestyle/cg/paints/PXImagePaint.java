@@ -73,7 +73,7 @@ public class PXImagePaint extends BasePXPaint {
                                     new URL(params[0].toString()).openStream(), null);
                         }
                     } catch (Exception e) {
-                        PXLog.e(TAG, e, "Error while loading a remote image");
+                        PXLog.e(TAG, e, "Error while loading remote image " + params[0]);
                     }
                     return null;
                 }

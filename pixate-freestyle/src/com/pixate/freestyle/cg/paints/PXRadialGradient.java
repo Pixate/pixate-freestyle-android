@@ -39,6 +39,8 @@ import com.pixate.freestyle.util.PXLog;
  */
 public class PXRadialGradient extends PXGradient {
 
+    private static String TAG = PXRadialGradient.class.getSimpleName();
+
     protected PointF center;
     protected float radius;
 
@@ -89,8 +91,8 @@ public class PXRadialGradient extends PXGradient {
     /*
      * (non-Javadoc)
      * @see
-     * com.pixate.freestyle.pxengine.cg.PXPaint#applyFillToPath(android.graphics.Path,
-     * android.graphics.Paint, android.graphics.Canvas)
+     * com.pixate.freestyle.pxengine.cg.PXPaint#applyFillToPath(android.graphics
+     * .Path, android.graphics.Paint, android.graphics.Canvas)
      */
     public void applyFillToPath(Path path, Paint paint, Canvas context) {
         context.save();
@@ -211,8 +213,7 @@ public class PXRadialGradient extends PXGradient {
             return gradient;
         } catch (Exception e) {
             if (PXLog.isLogging()) {
-                PXLog.e(PXRadialGradient.class.getSimpleName(), e,
-                        "Error while instantiating a RadialGradient");
+                PXLog.e(TAG, e, "Error while instantiating a RadialGradient");
             }
             return null;
         }

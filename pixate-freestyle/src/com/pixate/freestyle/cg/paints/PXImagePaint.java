@@ -156,7 +156,7 @@ public class PXImagePaint extends BasePXPaint {
                     }
                 }
             } catch (Exception e) {
-                PXLog.e(TAG, e, "Error loading a PXImagePaint");
+                PXLog.e(TAG, e, "Error loading a PXImagePaint from " + imageURL);
             } finally {
                 image.endRecording();
             }

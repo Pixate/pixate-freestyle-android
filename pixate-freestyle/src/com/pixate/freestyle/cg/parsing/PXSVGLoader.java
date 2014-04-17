@@ -140,7 +140,7 @@ public class PXSVGLoader {
         PXShapeGroup result = parser.parse(inputStream);
         PXShapeDocument scene = parser.getDocument();
         if (result == null) {
-            PXLog.e(TAG, "Error parsing document!");
+            PXLog.e(TAG, "Error parsing document from input stream");
         } else {
             scene.setShape(result);
         }
@@ -614,7 +614,7 @@ public class PXSVGLoader {
                             PXLog.e(TAG, "Unrecognized crop type: " + cropString);
                         }
                     } else {
-                        PXLog.e(TAG, "Unrecognized preserveAspectRatio value:" + par);
+                        PXLog.e(TAG, "Unrecognized preserveAspectRatio value: " + par);
                     }
                 }
 

@@ -40,6 +40,7 @@ import com.pixate.freestyle.util.PXLog;
  */
 public class PXVirtualCompoundButtonIconAdapter extends PXVirtualChildAdapter {
 
+    private static String TAG = PXVirtualCompoundButtonIconAdapter.class.getSimpleName();
     private static String ELEMENT_NAME = "icon";
     private static PXVirtualCompoundButtonIconAdapter instance;
 
@@ -173,8 +174,7 @@ public class PXVirtualCompoundButtonIconAdapter extends PXVirtualChildAdapter {
             field.setAccessible(true);
             return (Drawable) field.get(view);
         } catch (Exception e) {
-            PXLog.e(PXDrawableUtil.class.getSimpleName(), e,
-                    "Error getting the mButtonDrawable value.");
+            PXLog.e(TAG, e, "Error getting the mButtonDrawable value.");
         }
         return null;
     }

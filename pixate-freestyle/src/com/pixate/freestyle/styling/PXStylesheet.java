@@ -44,6 +44,8 @@ public class PXStylesheet {
     }
     // @formatter:on
 
+    private static String TAG = PXStylesheet.class.getSimpleName();
+
     // TODO: Use a parser pool since this is not thread safe now
     private static PXStylesheetParser PARSER = new PXStylesheetParser();
 
@@ -86,8 +88,7 @@ public class PXStylesheet {
             String source = IOUtil.read(context.getAssets().open(aFilePath));
             return getStyleSheetFromSource(source, origin, aFilePath);
         } catch (IOException e) {
-            PXLog.e(PXStylesheet.class.getSimpleName(), "Error reading stylesheet from "
-                    + aFilePath);
+            PXLog.e(TAG, "Error reading stylesheet from " + aFilePath);
         }
         return null;
     }

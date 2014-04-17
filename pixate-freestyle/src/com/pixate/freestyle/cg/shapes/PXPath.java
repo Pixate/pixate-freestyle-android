@@ -32,6 +32,8 @@ import com.pixate.freestyle.util.PXLog;
  */
 public class PXPath extends PXShape {
 
+    private static String TAG = PXPath.class.getSimpleName();
+
     private Path pathPath;
     private PointF lastPoint;
 
@@ -380,12 +382,12 @@ public class PXPath extends PXShape {
                 default:
                     // report error
                     // [Pixate.configuration sendParseMessage:message];
-                    PXLog.e(PXPath.class.getSimpleName(),
-                            "Unrecognized or missing path command at offset: %d", helper.pos);
+                    PXLog.e(TAG, "Unrecognized or missing path command at offset: %d", helper.pos);
                     int start = Math.max(0, helper.pos - 10);
                     int end = Math.min(length, start + 30);
-                    PXLog.e(PXPath.class.getSimpleName(), data.substring(start, helper.pos)
-                            + " >>>" + data.substring(helper.pos, end));
+                    PXLog.e(TAG,
+                            data.substring(start, helper.pos) + " >>> "
+                                    + data.substring(helper.pos, end));
                     // stop scanning
                     helper.pos = length;
                     break;

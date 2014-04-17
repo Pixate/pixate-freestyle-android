@@ -85,6 +85,8 @@ import com.pixate.freestyle.util.PXLog;
         @PXDocProperty(name = "view-bounds", syntax = "adjust"),
         @PXDocProperty(name = "tint", syntax = "<color>") })
 public class PXImageViewStyleAdapter extends PXViewStyleAdapter {
+
+    private static String TAG = PXVirtualImageViewImageAdapter.class.getSimpleName();
     private static String ELEMENT_NAME = "image-view";
     private static PXImageViewStyleAdapter instance;
 
@@ -122,8 +124,7 @@ public class PXImageViewStyleAdapter extends PXViewStyleAdapter {
                         ImageView view = (ImageView) stylerContext.getStyleable();
                         view.setScaleType(type);
                     } else {
-                        PXLog.e(PXVirtualImageViewImageAdapter.class.getSimpleName(),
-                                "Unknown ImageView scale-type '%s'", value);
+                        PXLog.e(TAG, "Unknown ImageView scale-type '%s'", value);
                     }
                 }
             }
@@ -137,8 +138,7 @@ public class PXImageViewStyleAdapter extends PXViewStyleAdapter {
                     ImageView view = (ImageView) stylerContext.getStyleable();
                     view.setMaxHeight((int) Math.ceil(height.getNumber()));
                 } else {
-                    PXLog.e(PXVirtualImageViewImageAdapter.class.getSimpleName(),
-                            "Unknown ImageView max-height '%s'", declaration.getStringValue());
+                    PXLog.e(TAG, "Unknown ImageView max-height '%s'", declaration.getStringValue());
                 }
             }
         });
@@ -151,8 +151,7 @@ public class PXImageViewStyleAdapter extends PXViewStyleAdapter {
                     ImageView view = (ImageView) stylerContext.getStyleable();
                     view.setMaxWidth((int) Math.ceil(width.getNumber()));
                 } else {
-                    PXLog.e(PXVirtualImageViewImageAdapter.class.getSimpleName(),
-                            "Unknown ImageView max-width '%s'", declaration.getStringValue());
+                    PXLog.e(TAG, "Unknown ImageView max-width '%s'", declaration.getStringValue());
                 }
             }
         });
@@ -165,8 +164,7 @@ public class PXImageViewStyleAdapter extends PXViewStyleAdapter {
                     ImageView view = (ImageView) stylerContext.getStyleable();
                     view.setAdjustViewBounds("adjust".equals(viewBounds));
                 } else {
-                    PXLog.e(PXVirtualImageViewImageAdapter.class.getSimpleName(),
-                            "Unknown ImageView view-bounds '%s'", viewBounds);
+                    PXLog.e(TAG, "Unknown ImageView view-bounds '%s'", viewBounds);
                 }
             }
         });
@@ -179,8 +177,7 @@ public class PXImageViewStyleAdapter extends PXViewStyleAdapter {
                     ImageView view = (ImageView) stylerContext.getStyleable();
                     view.setColorFilter(colorValue);
                 } else {
-                    PXLog.e(PXVirtualImageViewImageAdapter.class.getSimpleName(),
-                            "Unknown ImageView tint '%s'", declaration.getStringValue());
+                    PXLog.e(TAG, "Unknown ImageView tint '%s'", declaration.getStringValue());
                 }
             }
         });

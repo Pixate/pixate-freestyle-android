@@ -33,6 +33,8 @@ import com.pixate.freestyle.util.PXLog;
  */
 public class PXFontRegistry {
 
+    private static String TAG = PXFontRegistry.class.getSimpleName();
+
     /**
      * A map that hold {@link Typeface} instances that are mapped by a font
      * "key. A key is defined as "font-family:weight:style" string.
@@ -85,7 +87,7 @@ public class PXFontRegistry {
         if (typeface != null) {
             FONT_BY_URL.put(path, typeface);
         } else {
-            PXLog.e(PXFontRegistry.class.getSimpleName(), "Could not load a Typeface from " + path);
+            PXLog.e(TAG, "Could not load a Typeface from " + path);
         }
         return typeface;
     }

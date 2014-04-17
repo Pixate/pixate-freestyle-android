@@ -39,7 +39,6 @@ import com.pixate.freestyle.cg.paints.PXPaint;
 import com.pixate.freestyle.cg.shapes.PXRectangle;
 import com.pixate.freestyle.styling.PXRuleSet;
 import com.pixate.freestyle.styling.adapters.PXStyleAdapter;
-import com.pixate.freestyle.styling.adapters.PXViewStyleAdapter;
 import com.pixate.freestyle.styling.cache.PXStyleInfo;
 import com.pixate.freestyle.styling.stylers.PXStylerContext;
 
@@ -49,6 +48,8 @@ import com.pixate.freestyle.styling.stylers.PXStylerContext;
  * @author Shalom Gibly
  */
 public class PXDrawableUtil {
+
+    private static String TAG = PXDrawableUtil.class.getSimpleName();
 
     // Holds all the possible Android Drawable state names and values. Note that
     // the keys that are used in this map will omit the "state_" prefix that
@@ -207,7 +208,7 @@ public class PXDrawableUtil {
                     }
                 }
             } catch (Exception e) {
-                PXLog.e(PXViewStyleAdapter.class.getSimpleName(), e, "Error getting the state set");
+                PXLog.e(TAG, e, "Error getting the state set");
             }
         }
         return map;

@@ -41,20 +41,11 @@ import com.pixate.freestyle.util.PXLog;
 public class PXLinearGradient extends PXGradient {
 
     public enum PXLinearGradientDirection {
-        TO_TOP,
-        TO_TOP_RIGHT,
-        TO_RIGHT,
-        TO_BOTTOM_RIGHT,
-        TO_BOTTOM,
-        TO_BOTTOM_LEFT,
-        TO_LEFT,
-        TO_TOP_LEFT
+        TO_TOP, TO_TOP_RIGHT, TO_RIGHT, TO_BOTTOM_RIGHT, TO_BOTTOM, TO_BOTTOM_LEFT, TO_LEFT, TO_TOP_LEFT
     };
 
     public enum PXAngleType {
-        ANGLE,
-        POINTS,
-        DIRECTION
+        ANGLE, POINTS, DIRECTION
     };
 
     private static final String TAG = "PXLinearGradient";
@@ -436,8 +427,7 @@ public class PXLinearGradient extends PXGradient {
             return gradient;
         } catch (Exception e) {
             if (PXLog.isLogging()) {
-                PXLog.e(PXLinearGradient.class.getSimpleName(), e,
-                        "Error while instantiating a LinearGradient");
+                PXLog.e(TAG, e, "Error while instantiating a LinearGradient");
             }
             return null;
         }

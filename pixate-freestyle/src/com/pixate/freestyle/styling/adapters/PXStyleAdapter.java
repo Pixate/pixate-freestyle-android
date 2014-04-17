@@ -322,14 +322,13 @@ public abstract class PXStyleAdapter {
             List<PXStylerContext> contexts) {
         if (ruleSets == null || contexts == null) {
             if (PXLog.isLogging()) {
-                PXLog.e(PXViewStyleAdapter.class.getSimpleName(), "Rule sets or contexts were null");
+                PXLog.e(TAG, "Rule sets or contexts were null");
             }
             return false;
         }
         if (ruleSets.size() != contexts.size()) {
             if (PXLog.isLogging()) {
-                PXLog.e(PXViewStyleAdapter.class.getSimpleName(),
-                        "Rule sets or contexts size did not match");
+                PXLog.e(TAG, "Rule sets or contexts size did not match");
             }
             return false;
         }

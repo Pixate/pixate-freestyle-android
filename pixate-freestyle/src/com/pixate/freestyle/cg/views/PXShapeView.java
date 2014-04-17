@@ -38,11 +38,14 @@ import com.pixate.freestyle.util.PXLog;
 
 public class PXShapeView extends View {
 
+    private static String TAG = PXShapeView.class.getSimpleName();
+
     private static final String SVG_RESOURCE_TYPE = "svg";
     private PXShapeDocument document;
 
     @SuppressWarnings("unused")
-    private String resourcePath; // We set but never access this. Consider deletion.
+    private String resourcePath; // We set but never access this. Consider
+                                 // deletion.
 
     private PointF shapeCenter;
     private PointF shapeTranslation;
@@ -173,7 +176,7 @@ public class PXShapeView extends View {
         try {
             document = PXSVGLoader.loadFromStream(getContext().getAssets().open(resourcePath));
         } catch (IOException e) {
-            PXLog.e(getClass().getSimpleName(), e, "Error loading the document");
+            PXLog.e(TAG, e, "Error loading the document at " + resourcePath);
         }
     }
 
@@ -181,7 +184,7 @@ public class PXShapeView extends View {
         try {
             document = PXSVGLoader.loadFromURL(Uri.parse(url));
         } catch (IOException e) {
-            PXLog.e(getClass().getSimpleName(), e, "Error loading the document");
+            PXLog.e(TAG, e, "Error loading the document at " + url);
         }
     }
 
@@ -226,7 +229,7 @@ public class PXShapeView extends View {
                 Canvas c = image.beginRecording(bounds.width(), bounds.height());
                 document.render(c);
             } catch (Exception ioe) {
-                PXLog.e(getClass().getSimpleName(), ioe, "Error rendering to image");
+                PXLog.e(TAG, ioe, "Error rendering to image");
             } finally {
                 image.endRecording();
             }

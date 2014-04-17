@@ -65,6 +65,7 @@ import com.pixate.freestyle.util.StringUtil;
  */
 public class PXStylesheetParser extends PXParserBase<PXStylesheetTokenType> {
 
+    private static String TAG = PXStylesheetParser.class.getSimpleName();
     private static EnumSet<PXStylesheetTokenType> SELECTOR_SEQUENCE_SET;
     private static EnumSet<PXStylesheetTokenType> SELECTOR_OPERATOR_SET;
     private static EnumSet<PXStylesheetTokenType> SELECTOR_SET;
@@ -415,7 +416,7 @@ public class PXStylesheetParser extends PXParserBase<PXStylesheetTokenType> {
                 try {
                     source = IOUtil.read(context.getAssets().open(path));
                 } catch (IOException e) {
-                    PXLog.e(PXStylesheetParser.class.getSimpleName(), e, e.getMessage());
+                    PXLog.e(TAG, e, e.getMessage());
                 }
 
                 if (!StringUtil.isEmpty(source)) {
@@ -1556,8 +1557,7 @@ public class PXStylesheetParser extends PXParserBase<PXStylesheetTokenType> {
         if (activeImports.size() > 0) {
             activeImports.pop();
         } else {
-            PXLog.e(PXStylesheetParser.class.getSimpleName(),
-                    "Tried to pop an empty activeImports array");
+            PXLog.e(TAG, "Tried to pop an empty activeImports array");
         }
     }
 

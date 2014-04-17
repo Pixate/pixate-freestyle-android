@@ -58,6 +58,7 @@ import com.pixate.freestyle.util.PXLog;
         @PXDocProperty(name = "compound-padding", syntax = "<length>") })
 public class PXTextViewStyleAdapter extends PXViewStyleAdapter {
 
+    private static String TAG = PXTextViewStyleAdapter.class.getSimpleName();
     private static String COLOR_PROPERTY = "color";
     private static String ELEMENT_NAME = "text-view";
     private static PXTextViewStyleAdapter sInstance;
@@ -346,7 +347,7 @@ public class PXTextViewStyleAdapter extends PXViewStyleAdapter {
                     }
                 }
             } catch (Exception e) {
-                PXLog.e(PXViewStyleAdapter.class.getSimpleName(), e, "Error getting the state set");
+                PXLog.e(TAG, e, "Error getting the state set");
             } finally {
             }
         }

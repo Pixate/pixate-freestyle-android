@@ -22,6 +22,7 @@ import android.graphics.RectF;
 import android.util.AttributeSet;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.ViewGroup.LayoutParams;
 
 import com.pixate.freestyle.PXHierarchyListener;
 import com.pixate.freestyle.styling.PXStyleUtils;
@@ -209,5 +210,43 @@ public class ViewUtil {
             return new RectF(r);
         }
         return null;
+    }
+
+    /**
+     * Returns the View's width. In case the {@link View#getWidth()} returns
+     * zero, we try to get the width via the layout params.
+     * 
+     * @param view
+     * @return the View's width
+     */
+    public static int getWidth(View view) {
+        int w = view.getWidth();
+        if (w == 0) {
+            // try to get it from the layout
+            LayoutParams layoutParams = view.getLayoutParams();
+            if (layoutParams != null) {
+                w = layoutParams.width;
+            }
+        }
+        return w;
+    }
+
+    /**
+     * Returns the View's height. In case the {@link View#getHeight()} returns
+     * zero, we try to get the height via the layout params.
+     * 
+     * @param view
+     * @return the View's height
+     */
+    public static int getHeight(View view) {
+        int h = view.getHeight();
+        if (h == 0) {
+            // try to get it from the layout
+            LayoutParams layoutParams = view.getLayoutParams();
+            if (layoutParams != null) {
+                h = layoutParams.height;
+            }
+        }
+        return h;
     }
 }

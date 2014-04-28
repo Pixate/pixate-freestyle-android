@@ -28,6 +28,7 @@ import android.app.Application.ActivityLifecycleCallbacks;
 import android.app.Fragment;
 import android.content.Context;
 import android.os.Build;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Adapter;
@@ -117,7 +118,12 @@ public class PixateFreestyle {
      * @param context
      */
     public static void init(Context context) {
-        mAppContext = context.getApplicationContext();
+        if (mAppContext == null) {
+            mAppContext = context.getApplicationContext();
+            // log a version
+            Log.i(TAG, String.format("Pixate Freestyle version %s (API version %d)", getVersion(),
+                    getApiVersion()));
+        }
 
         if (!cssLoaded.getAndSet(true)) {
             // try to load the default CSS ones.
@@ -163,7 +169,7 @@ public class PixateFreestyle {
     }
 
     public static void init(View view, String cssId, String cssClass, String cssStyle) {
-            ViewUtil.initView(view, cssId, cssClass, cssStyle);
+        ViewUtil.initView(view, cssId, cssClass, cssStyle);
     }
 
     /**

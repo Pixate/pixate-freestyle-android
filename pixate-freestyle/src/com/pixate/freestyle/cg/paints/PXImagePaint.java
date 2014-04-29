@@ -16,26 +16,30 @@
 package com.pixate.freestyle.cg.paints;
 
 import java.io.InputStream;
-import java.net.URL;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Locale;
 import java.util.Set;
 
+import android.graphics.Bitmap;
 import android.graphics.Canvas;
+import android.graphics.NinePatch;
 import android.graphics.Paint;
 import android.graphics.Path;
 import android.graphics.Picture;
 import android.graphics.Rect;
 import android.graphics.RectF;
+import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.NinePatchDrawable;
 import android.net.Uri;
 import android.os.AsyncTask;
 
+import com.pixate.freestyle.PixateFreestyle;
 import com.pixate.freestyle.cg.parsing.PXSVGLoader;
 import com.pixate.freestyle.cg.shapes.PXShapeDocument;
 import com.pixate.freestyle.util.PXLog;
+import com.pixate.freestyle.util.PXURLBitmapLoader;
 import com.pixate.freestyle.util.StringUtil;
 import com.pixate.freestyle.util.UrlStreamOpener;
 
@@ -45,7 +49,10 @@ public class PXImagePaint extends BasePXPaint {
             "http", "https", "ftp"));
 
     public enum PXImageRepeatType {
-        REPEAT, SPACE, ROUND, NOREPEAT
+        REPEAT,
+        SPACE,
+        ROUND,
+        NOREPEAT
     };
 
     private Uri imageURL;
@@ -66,11 +73,23 @@ public class PXImagePaint extends BasePXPaint {
                 protected Object doInBackground(Uri... params) {
                     try {
                         if (hasSVGImageURL()) {
+                            // load SVG
                             return PXSVGLoader.loadFromStream(UrlStreamOpener.open(params[0]
                                     .toString()));
                         } else {
-                            return NinePatchDrawable.createFromStream(
-                                    new URL(params[0].toString()).openStream(), null);
+                            // load bitmap
+                            Bitmap bitmap = PXURLBitmapLoader.loadBitmap(params[0]);
+                            if (bitmap != null) {
+                                byte[] chunk = bitmap.getNinePatchChunk();
+                                boolean isNinePatch = NinePatch.isNinePatchChunk(chunk);
+                                if (isNinePatch) {
+                                    return new NinePatchDrawable(PixateFreestyle.getAppContext()
+                                            .getResources(), bitmap, chunk, new Rect(), null);
+                                } else {
+                                    return new BitmapDrawable(PixateFreestyle.getAppContext()
+                                            .getResources(), bitmap);
+                                }
+                            }
                         }
                     } catch (Exception e) {
                         PXLog.e(TAG, e, "Error while loading remote image " + params[0]);

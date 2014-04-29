@@ -1,7 +1,5 @@
 package com.pixate.freestyle.util;
 
-import java.io.IOException;
-
 import android.graphics.Bitmap;
 import android.net.Uri;
 
@@ -16,9 +14,16 @@ public interface PXBitmapDownloader {
     /**
      * Returns the {@link Bitmap} downloaded from the given {@link Uri}.
      * 
-     * @param uri
-     * @return A {@link Bitmap}. <code>null</code> in case of a problem.
-     * @throws IOException
+     * @param uri The bitmap {@link Uri}
+     * @param width The desired width of the {@link Bitmap}, or smaller than 0
+     *            to not scale the bitmap.
+     * @param height The desired height of the {@link Bitmap}, or smaller than 0
+     *            to not scale the bitmap.
+     * @param callback A callback that will be informed when the bitmap is
+     *            loaded, or when an error occured.
+     * @param synchronous In case <code>true</code>, this call will block until
+     *            the download is completed (or an error occured).
      */
-    public Bitmap getBitmap(Uri uri) throws IOException;
+    public void downloadBitmap(Uri uri, int width, int height, PXBitmapDownloaderCallback callback,
+            boolean synchronous);
 }

@@ -38,6 +38,7 @@ import android.os.AsyncTask;
 import com.pixate.freestyle.PixateFreestyle;
 import com.pixate.freestyle.cg.parsing.PXSVGLoader;
 import com.pixate.freestyle.cg.shapes.PXShapeDocument;
+import com.pixate.freestyle.util.PXBitmapDownloaderCallback;
 import com.pixate.freestyle.util.PXLog;
 import com.pixate.freestyle.util.PXURLBitmapLoader;
 import com.pixate.freestyle.util.StringUtil;
@@ -60,45 +61,6 @@ public class PXImagePaint extends BasePXPaint {
 
     public PXImagePaint(Uri imageURL) {
         this.imageURL = imageURL;
-        String scheme = imageURL.getScheme();
-        if (scheme != null && SUPPORTED_REMOTE_SCHEMES.contains(scheme.toLowerCase(Locale.US))) {
-            // Start a FutureTask to load that image.
-            // Note that this may require INTERNET permissions in the manifest.
-            // <uses-permission android:name="android.permission.INTERNET" />
-            // The returned value can be a Drawable, in case that the url is for
-            // an image, and a PXShapeDocument in case the url represents a path
-            // to an SVG resource.
-            remoteImageLoader = new AsyncTask<Uri, Void, Object>() {
-                @Override
-                protected Object doInBackground(Uri... params) {
-                    try {
-                        if (hasSVGImageURL()) {
-                            // load SVG
-                            return PXSVGLoader.loadFromStream(UrlStreamOpener.open(params[0]
-                                    .toString()));
-                        } else {
-                            // load bitmap
-                            Bitmap bitmap = PXURLBitmapLoader.loadBitmap(params[0]);
-                            if (bitmap != null) {
-                                byte[] chunk = bitmap.getNinePatchChunk();
-                                boolean isNinePatch = NinePatch.isNinePatchChunk(chunk);
-                                if (isNinePatch) {
-                                    return new NinePatchDrawable(PixateFreestyle.getAppContext()
-                                            .getResources(), bitmap, chunk, new Rect(), null);
-                                } else {
-                                    return new BitmapDrawable(PixateFreestyle.getAppContext()
-                                            .getResources(), bitmap);
-                                }
-                            }
-                        }
-                    } catch (Exception e) {
-                        PXLog.e(TAG, e, "Error while loading remote image " + params[0]);
-                    }
-                    return null;
-                }
-            };
-            remoteImageLoader.execute(imageURL);
-        }
     }
 
     /*
@@ -127,7 +89,15 @@ public class PXImagePaint extends BasePXPaint {
         return imageURL;
     }
 
+    /**
+     * Returns a {@link Picture} instance with the loaded {@link Bitmap} or SVG
+     * graphics in it.
+     * 
+     * @param bounds
+     * @return A {@link Picture}
+     */
     public Picture imageForBounds(Rect bounds) {
+        initRemoteLoader(bounds);
         Picture image = null;
         if (imageURL != null) {
             // create image
@@ -179,19 +149,84 @@ public class PXImagePaint extends BasePXPaint {
             } finally {
                 image.endRecording();
             }
-            // TODO - is there an Android alternative?
-            // scale = [basename hasSuffix:@"@2x"] ? 2.0f : 1.0f; // TODO: pull
-            // out number and use that?
-            //
-            // // resize, if necessary
-            // if (image && !CGSizeEqualToSize(image.size, size))
-            // {
-            // UIGraphicsBeginImageContextWithOptions(size, NO, 0.0);
-            // [image drawInRect:CGRectMake(0, 0, size.width, size.height)];
-            // image = UIGraphicsGetImageFromCurrentImageContext();
-            // UIGraphicsEndImageContext();
         }
         return image;
+    }
+
+    /**
+     * Initialize the remote bitmap loader with the dimensions of the bitmap we
+     * would like to load.
+     * 
+     * @param bounds
+     */
+    private void initRemoteLoader(final Rect bounds) {
+        // TODO - We assume here that this PXImagePaint will only download the
+        // bitmap for the first Rect bounds it gets. In case a different request
+        // will arrive later, the same bitmap will be used eventually. We may
+        // want to change this...
+        if (imageURL != null && remoteImageLoader == null) {
+            String scheme = imageURL.getScheme();
+            if (scheme != null && SUPPORTED_REMOTE_SCHEMES.contains(scheme.toLowerCase(Locale.US))) {
+                // Start a FutureTask to load that image.
+                // Note that this may require INTERNET permissions in the
+                // manifest.
+                // <uses-permission android:name="android.permission.INTERNET"/>
+                // The returned value can be a Drawable, in case that the url is
+                // for an image, and a PXShapeDocument in case the url
+                // represents a path to an SVG resource.
+                remoteImageLoader = new AsyncTask<Uri, Void, Object>() {
+                    @Override
+                    protected Object doInBackground(Uri... params) {
+                        try {
+                            if (hasSVGImageURL()) {
+                                // load SVG
+                                return PXSVGLoader.loadFromStream(UrlStreamOpener.open(params[0]
+                                        .toString()));
+                            } else {
+                                // load bitmap
+                                final Drawable[] result = new Drawable[1];
+                                int width = 0;
+                                int height = 0;
+                                if (bounds != null) {
+                                    width = bounds.width();
+                                    height = bounds.height();
+                                }
+                                PXURLBitmapLoader.loadBitmap(params[0], width, height,
+                                        new PXBitmapDownloaderCallback() {
+
+                                            @Override
+                                            public void onError(Exception error) {
+                                                PXLog.e(TAG, error,
+                                                        "Error while downloading a bitmap");
+                                            }
+
+                                            @Override
+                                            public void onBitmapLoaded(Bitmap bitmap) {
+                                                byte[] chunk = bitmap.getNinePatchChunk();
+                                                boolean isNinePatch = NinePatch
+                                                        .isNinePatchChunk(chunk);
+                                                if (isNinePatch) {
+                                                    result[0] = new NinePatchDrawable(
+                                                            PixateFreestyle.getAppContext()
+                                                                    .getResources(), bitmap, chunk,
+                                                            new Rect(), null);
+                                                } else {
+                                                    result[0] = new BitmapDrawable(PixateFreestyle
+                                                            .getAppContext().getResources(), bitmap);
+                                                }
+                                            }
+                                        }, true);
+                            }
+                        } catch (Exception e) {
+                            PXLog.e(TAG, e, "Error while loading remote image " + params[0]);
+                        }
+                        return null;
+                    }
+                };
+                remoteImageLoader.execute(imageURL);
+            }
+        }
+
     }
 
     public void applyFillToPath(Path path, Paint paint, Canvas context) {

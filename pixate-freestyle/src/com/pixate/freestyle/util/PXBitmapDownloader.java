@@ -20,10 +20,10 @@ public interface PXBitmapDownloader {
      * @param height The desired height of the {@link Bitmap}, or smaller than 0
      *            to not scale the bitmap.
      * @param callback A callback that will be informed when the bitmap is
-     *            loaded, or when an error occured.
+     *            loaded, or when an error occurred.
      * @param synchronous In case <code>true</code>, this call will block until
-     *            the download is completed (or an error occured).
+     *            the download is completed (or an error occurred).
      */
-    public void downloadBitmap(Uri uri, int width, int height, PXBitmapDownloaderCallback callback,
+    public void downloadBitmap(Uri uri, int width, int height, LoadingCallback<Bitmap> callback,
             boolean synchronous);
 }

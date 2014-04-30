@@ -47,8 +47,8 @@ public class PXURLBitmapLoader {
 
     /**
      * Sets the timeout for an image download when the
-     * {@link #loadBitmap(Uri, int, int, PXBitmapDownloaderCallback, boolean)}
-     * is called with a <code>synchronous</code> flag. The default value is
+     * {@link #loadBitmap(Uri, int, int, LoadingCallback, boolean)} is called
+     * with a <code>synchronous</code> flag. The default value is
      * {@value #IMAGE_DOWNLOAD_TIMEOUT}ms.
      * 
      * @param timeout The timeout in milliseconds
@@ -59,8 +59,8 @@ public class PXURLBitmapLoader {
 
     /**
      * Returns the timeout for an image download when the
-     * {@link #loadBitmap(Uri, int, int, PXBitmapDownloaderCallback, boolean)}
-     * is called with a <code>synchronous</code> flag.
+     * {@link #loadBitmap(Uri, int, int, LoadingCallback, boolean)} is called
+     * with a <code>synchronous</code> flag.
      * 
      * @return The timeout in milliseconds
      */
@@ -79,10 +79,9 @@ public class PXURLBitmapLoader {
      * @param width The bitmap's requested width
      * @param height The bitmap's requested height
      * @return A {@link Bitmap}
-     * @see #loadBitmap(Uri, PXBitmapDownloaderCallback, boolean)
+     * @see #loadBitmap(Uri, LoadingCallback, boolean)
      */
-    public static void loadBitmap(Uri uri, int width, int height,
-            PXBitmapDownloaderCallback callback) {
+    public static void loadBitmap(Uri uri, int width, int height, LoadingCallback<Bitmap> callback) {
         loadBitmap(uri, width, height, callback, false);
     }
 
@@ -97,10 +96,10 @@ public class PXURLBitmapLoader {
      * @param callback a callback implementation that will be informed when the
      *            bitmap is loaded.
      * @return A {@link Bitmap}
-     * @see #loadBitmap(Uri, PXBitmapDownloaderCallback)
+     * @see #loadBitmap(Uri, LoadingCallback)
      */
-    public static void loadBitmap(Uri uri, int width, int height,
-            PXBitmapDownloaderCallback callback, boolean synchronous) {
+    public static void loadBitmap(Uri uri, int width, int height, LoadingCallback<Bitmap> callback,
+            boolean synchronous) {
         PXURLBitmapLoader loader = getInstance();
         loader.doLoad(uri, width, height, callback, synchronous);
     }
@@ -131,7 +130,7 @@ public class PXURLBitmapLoader {
      * @throws IOException
      */
     private void doLoad(final Uri uri, int width, int height,
-            final PXBitmapDownloaderCallback callback, boolean synchronous) {
+            final LoadingCallback<Bitmap> callback, boolean synchronous) {
         downloader.downloadBitmap(uri, width, height, callback, synchronous);
     }
 
@@ -150,7 +149,7 @@ public class PXURLBitmapLoader {
          */
         @Override
         public void downloadBitmap(Uri uri, final int width, final int height,
-                final PXBitmapDownloaderCallback callback, boolean synchronous) {
+                final LoadingCallback<Bitmap> callback, boolean synchronous) {
             Thread downloadThread = new Thread(new DownloadRunnable(uri, width, height, callback));
             downloadThread.start();
             if (synchronous) {
@@ -199,7 +198,7 @@ public class PXURLBitmapLoader {
         private Uri uri;
         private int width;
         private int height;
-        private PXBitmapDownloaderCallback callback;
+        private LoadingCallback<Bitmap> callback;
 
         /**
          * Constructs a new download runnable.
@@ -209,7 +208,7 @@ public class PXURLBitmapLoader {
          * @param height
          * @param callback
          */
-        private DownloadRunnable(Uri uri, int width, int height, PXBitmapDownloaderCallback callback) {
+        private DownloadRunnable(Uri uri, int width, int height, LoadingCallback<Bitmap> callback) {
             this.uri = uri;
             this.width = width;
             this.height = height;
@@ -262,7 +261,7 @@ public class PXURLBitmapLoader {
             }
             // Notify the callback
             if (bitmap != null) {
-                callback.onBitmapLoaded(bitmap);
+                callback.onLoaded(bitmap);
             } else if (error != null) {
                 callback.onError(error);
             } else {

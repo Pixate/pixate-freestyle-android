@@ -22,6 +22,6 @@ package com.pixate.freestyle;
  * @author Shalom Gibly
  */
 public interface Version {
-    public static String PIXATE_FREESTYLE_VERSION = "0.3";
+    public static String PIXATE_FREESTYLE_VERSION = "0.3.1";
     public static int PIXATE_FREESTYLE_API_VERSION = 2;
 }

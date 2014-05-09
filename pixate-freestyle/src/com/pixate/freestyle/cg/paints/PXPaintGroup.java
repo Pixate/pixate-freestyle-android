@@ -87,8 +87,9 @@ public class PXPaintGroup extends BasePXPaint {
 
     /*
      * (non-Javadoc)
-     * @see com.pixate.freestyle.pxengine.cg.PXPaint#applyFillToPath(android.graphics.
-     * Path, android.graphics.Paint, android.graphics.Canvas)
+     * @see
+     * com.pixate.freestyle.pxengine.cg.PXPaint#applyFillToPath(android.graphics
+     * . Path, android.graphics.Paint, android.graphics.Canvas)
      */
     public void applyFillToPath(Path path, Paint paint, Canvas context) {
         if (paints != null) {
@@ -100,7 +101,8 @@ public class PXPaintGroup extends BasePXPaint {
 
     /*
      * (non-Javadoc)
-     * @see com.pixate.freestyle.pxengine.cg.BasePXPaint#setBleningMode(android.graphics
+     * @see
+     * com.pixate.freestyle.pxengine.cg.BasePXPaint#setBleningMode(android.graphics
      * .Xfermode)
      */
     @Override
@@ -154,6 +156,22 @@ public class PXPaintGroup extends BasePXPaint {
             }
         }
         return true;
+    }
+
+    /*
+     * (non-Javadoc)
+     * @see com.pixate.freestyle.cg.paints.PXPaint#isAsynchronous()
+     */
+    @Override
+    public boolean isAsynchronous() {
+        if (paints != null) {
+            for (PXPaint paint : paints) {
+                if (paint.isAsynchronous()) {
+                    return true;
+                }
+            }
+        }
+        return false;
     }
 
     /*

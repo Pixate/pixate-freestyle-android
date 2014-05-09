@@ -30,11 +30,13 @@ import android.graphics.Xfermode;
 public interface PXPaint {
 
     /**
-     * A method used to apply the implementations fill to the specified CGPath
-     * in the given CGContext
+     * A method used to apply the implementations fill to the specified
+     * {@link Path} in the given {@link Canvas} context.
      * 
      * @param path The path to which the fill is to be applied
-     * @param context The context within which the fill is to be rendered
+     * @param context The {@link Canvas} context within which the fill is to be
+     *            rendered
+     * @see #isAsynchronous()
      */
     void applyFillToPath(Path path, Paint paint, Canvas context);
 
@@ -69,4 +71,16 @@ public interface PXPaint {
      * Determine if this paint requires rendering with alpha
      */
     boolean isOpaque();
+
+    /**
+     * Returns <code>true</code> if this paint should be loaded asynchronously.
+     * This will be true, for example, when the paint is loading a remote image.
+     * Asynchronous {@link PXPaint} instances in a group will cause the whole
+     * painting process to run in an asynchronous way, displaying an
+     * intermediate content until it's done.
+     * 
+     * @return <code>true</code> if this {@link PXPaint} is asynchronous;
+     *         <code>false</code> otherwise.
+     */
+    boolean isAsynchronous();
 }

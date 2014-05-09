@@ -137,6 +137,15 @@ public abstract class PXGradient extends BasePXPaint {
         return true;
     }
 
+    /*
+     * (non-Javadoc)
+     * @see com.pixate.freestyle.cg.paints.PXPaint#isAsynchronous()
+     */
+    @Override
+    public boolean isAsynchronous() {
+        return false;
+    }
+
     /**
      * if color count and offset count don't match, then evenly distribute all
      * colors from 0 to 1

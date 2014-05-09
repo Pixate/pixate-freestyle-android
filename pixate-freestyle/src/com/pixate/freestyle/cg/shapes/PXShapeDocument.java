@@ -301,10 +301,10 @@ public class PXShapeDocument implements PXRenderable {
 
     /*
      * (non-Javadoc)
-     * @see com.pixate.freestyle.cg.shapes.PXRenderable#isAsynchronouse()
+     * @see com.pixate.freestyle.cg.shapes.PXRenderable#isAsynchronous()
      */
     @Override
-    public boolean isAsynchronouse() {
-        return shape != null && shape.isAsynchronouse();
+    public boolean isAsynchronous() {
+        return shape != null && shape.isAsynchronous();
     }
 }

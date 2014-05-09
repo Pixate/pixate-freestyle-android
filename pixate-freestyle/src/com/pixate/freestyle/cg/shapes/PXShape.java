@@ -352,10 +352,10 @@ public abstract class PXShape implements PXRenderable, PXPaintable {
     /**
      * A {@link PXShape} is asynchronous in case its inner {@link PXPaint} is.
      * 
-     * @see com.pixate.freestyle.cg.shapes.PXRenderable#isAsynchronouse()
+     * @see com.pixate.freestyle.cg.shapes.PXRenderable#isAsynchronous()
      */
     @Override
-    public boolean isAsynchronouse() {
+    public boolean isAsynchronous() {
         return fillColor != null && fillColor.isAsynchronous();
     }
 

@@ -106,6 +106,6 @@ public interface PXRenderable {
      * @return <code>true</code> if this {@link PXRectangle} is asynchronous;
      *         <code>false</code> otherwise.
      */
-    boolean isAsynchronouse();
+    boolean isAsynchronous();
 
 }

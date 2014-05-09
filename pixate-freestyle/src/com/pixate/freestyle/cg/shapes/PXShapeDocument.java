@@ -267,7 +267,9 @@ public class PXShapeDocument implements PXRenderable {
 
     /*
      * (non-Javadoc)
-     * @see com.pixate.freestyle.pxengine.cg.PXRenderable#render(android.graphics.Canvas)
+     * @see
+     * com.pixate.freestyle.pxengine.cg.PXRenderable#render(android.graphics
+     * .Canvas)
      */
     public void render(Canvas context) {
         if (shape != null) {
@@ -295,5 +297,14 @@ public class PXShapeDocument implements PXRenderable {
             return shape.renderToImage(bounds, opaque);
         }
         return null;
+    }
+
+    /*
+     * (non-Javadoc)
+     * @see com.pixate.freestyle.cg.shapes.PXRenderable#isAsynchronous()
+     */
+    @Override
+    public boolean isAsynchronous() {
+        return shape != null && shape.isAsynchronous();
     }
 }

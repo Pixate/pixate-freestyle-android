@@ -96,8 +96,8 @@ public abstract class PXShape implements PXRenderable, PXPaintable {
     /*
      * (non-Javadoc)
      * @see
-     * com.pixate.freestyle.cg.shapes.PXPaintable#setStroke(com.pixate.freestyle.pxengine
-     * .shape.PXStrokeRenderer)
+     * com.pixate.freestyle.cg.shapes.PXPaintable#setStroke(com.pixate.freestyle
+     * .pxengine .shape.PXStrokeRenderer)
      */
     public void setStroke(PXStrokeRenderer stroke) {
         if (!ObjectUtil.areEqual(this.stroke, stroke)) {
@@ -347,6 +347,16 @@ public abstract class PXShape implements PXRenderable, PXPaintable {
             innerRender(context);
         }
         context.restoreToCount(saveCount);
+    }
+
+    /**
+     * A {@link PXShape} is asynchronous in case its inner {@link PXPaint} is.
+     * 
+     * @see com.pixate.freestyle.cg.shapes.PXRenderable#isAsynchronous()
+     */
+    @Override
+    public boolean isAsynchronous() {
+        return fillColor != null && fillColor.isAsynchronous();
     }
 
     /**

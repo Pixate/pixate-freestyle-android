@@ -98,4 +98,14 @@ public interface PXRenderable {
      */
     public Drawable renderToImage(RectF bounds, boolean opaque);
 
+    /**
+     * Returns <code>true</code> if this {@link PXRectangle} should be loaded
+     * asynchronously. This will be true, for example, when the
+     * {@link PXRectangle} is loading a remote image.
+     * 
+     * @return <code>true</code> if this {@link PXRectangle} is asynchronous;
+     *         <code>false</code> otherwise.
+     */
+    boolean isAsynchronouse();
+
 }

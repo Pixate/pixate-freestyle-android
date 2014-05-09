@@ -75,6 +75,15 @@ public class PXImagePaint extends BasePXPaint {
         return true;
     }
 
+    /*
+     * (non-Javadoc)
+     * @see com.pixate.freestyle.cg.paints.PXPaint#isAsynchronous()
+     */
+    @Override
+    public boolean isAsynchronous() {
+        return isRemote();
+    }
+
     public boolean hasSVGImageURL() {
         if (imageURL == null) {
             return false;

@@ -74,8 +74,18 @@ public class PXSolidPaint extends BasePXPaint {
 
     /*
      * (non-Javadoc)
-     * @see com.pixate.freestyle.pxengine.PXPaint#applyFillToPath(android.graphics.Path,
-     * android.graphics.Paint, android.graphics.Canvas)
+     * @see com.pixate.freestyle.cg.paints.PXPaint#isAsynchronous()
+     */
+    @Override
+    public boolean isAsynchronous() {
+        return false;
+    }
+
+    /*
+     * (non-Javadoc)
+     * @see
+     * com.pixate.freestyle.pxengine.PXPaint#applyFillToPath(android.graphics
+     * .Path, android.graphics.Paint, android.graphics.Canvas)
      */
     public void applyFillToPath(Path path, Paint paint, Canvas context) {
         Paint p = ObjectPool.paintPool.checkOut(paint);

@@ -24,6 +24,7 @@ import java.util.Set;
 
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
+import android.graphics.Color;
 import android.graphics.NinePatch;
 import android.graphics.Paint;
 import android.graphics.Path;
@@ -39,6 +40,7 @@ import android.os.AsyncTask;
 import com.pixate.freestyle.PixateFreestyle;
 import com.pixate.freestyle.cg.parsing.PXSVGLoader;
 import com.pixate.freestyle.cg.shapes.PXShapeDocument;
+import com.pixate.freestyle.pxcomponentkit.view.overlay.PXBorderOverlay;
 import com.pixate.freestyle.util.LoadingCallback;
 import com.pixate.freestyle.util.PXLog;
 import com.pixate.freestyle.util.PXURLBitmapLoader;
@@ -145,10 +147,11 @@ public class PXImagePaint extends BasePXPaint {
                             // data.
                             d = NinePatchDrawable.createFromStream(inputStream, null);
                         }
-                        if (d != null) {
-                            d.setBounds(bounds);
-                            d.draw(canvas);
+                        if (d == null) {
+                            d = new PXBorderOverlay(Color.RED, 2);
                         }
+                        d.setBounds(bounds);
+                        d.draw(canvas);
                     } finally {
                         if (inputStream != null) {
                             inputStream.close();

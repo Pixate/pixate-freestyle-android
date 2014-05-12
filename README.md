@@ -82,6 +82,25 @@ The Pixate Freestyle library is a work in progress. At the moment there are a fe
 
 You can find a few sample projects under this repo's _Samples_ folder. These projects use Pixate Freestyle to style various components, and demonstrate the current capabilities of the framework.
 
+## Contributing
+
+Pixate welcomes contributions to our product. Just fork, make your changes, and submit a pull request. All contributors must sign a CLA (contributor license agreement).
+
+To contribute on behalf of yourself, sign the individual CLA here:
+
+ [http://www.freestyle.org/cla-individual.html](http://www.freestyle.org/cla-individual.html)
+
+To contribute on behalf of your employer, sign the company CLA here:
+
+ [http://www.freestyle.org/cla-company.html](http://www.freestyle.org/cla-company.html)
+
+All contributions:
+
+1. MUST be be licensed using the Apache License, Version 2.0
+2. authors MAY retain copyright by adding their copyright notice to the appropriate flies
+
+More information on the Apache License can be found here: [http://www.apache.org/foundation/license-faq.html](http://www.apache.org/foundation/license-faq.html)
+
 ## Mailing List & Twitter
 
 Keep up with notifications and announcements by joining Pixate's [mailing list](http://pixatesurvey.herokuapp.com) and [follow us](http://twitter.com/Pixate) on Twitter.

@@ -15,7 +15,6 @@
  ******************************************************************************/
 package com.pixate.freestyle.cg.paints;
 
-import java.io.IOException;
 import java.io.InputStream;
 import java.util.Arrays;
 import java.util.HashSet;
@@ -36,6 +35,7 @@ import android.graphics.drawable.Drawable;
 import android.graphics.drawable.NinePatchDrawable;
 import android.net.Uri;
 import android.os.AsyncTask;
+import android.os.Looper;
 
 import com.pixate.freestyle.PixateFreestyle;
 import com.pixate.freestyle.cg.parsing.PXSVGLoader;
@@ -60,12 +60,11 @@ public class PXImagePaint extends BasePXPaint {
     };
 
     private Uri imageURL;
-    private AsyncTask<Uri, Void, Bitmap> remoteBitmapLoader;
-    private AsyncTask<Uri, Void, PXShapeDocument> remoteSVGLoader;
+    private RemoteLoader<Bitmap> remoteBitmapLoader;
+    private RemoteLoader<PXShapeDocument> remoteSVGLoader;
 
     public PXImagePaint(Uri imageURL) {
         this.imageURL = imageURL;
-        initRemoteLoader(null);
     }
 
     /*
@@ -113,6 +112,7 @@ public class PXImagePaint extends BasePXPaint {
     public Picture imageForBounds(Rect bounds) {
         Picture image = null;
         if (imageURL != null) {
+            initRemoteLoader(bounds);
             // create image
             try {
                 image = new Picture();
@@ -204,16 +204,15 @@ public class PXImagePaint extends BasePXPaint {
 
             if (remoteSVGLoader == null && hasSVGImageURL()) {
                 // Prepare and start a remote SVG
-                remoteSVGLoader = new AsyncTask<Uri, Void, PXShapeDocument>() {
-                    @Override
-                    protected PXShapeDocument doInBackground(Uri... params) {
+                remoteSVGLoader = new RemoteLoader<PXShapeDocument>() {
+
+                    protected PXShapeDocument doLoad(Uri uri) {
                         // load SVG (TODO Eventually we'll need a callback
                         // here too)
                         try {
-                            return PXSVGLoader.loadFromStream(UrlStreamOpener.open(params[0]
-                                    .toString()));
-                        } catch (IOException e) {
-                            PXLog.e(TAG, e, "Error while loading remote SVG " + params[0]);
+                            return PXSVGLoader.loadFromStream(UrlStreamOpener.open(uri.toString()));
+                        } catch (Exception e) {
+                            PXLog.e(TAG, e, "Error while loading remote SVG " + uri);
                         }
                         // TODO - Return an SVG 'error' shape.
                         return null;
@@ -223,11 +222,9 @@ public class PXImagePaint extends BasePXPaint {
                 remoteSVGLoader.execute(imageURL);
             } else {
                 // Prepare and start a remote Bitmap loader
-                remoteBitmapLoader = new AsyncTask<Uri, Void, Bitmap>() {
-                    private Bitmap bitmap;
-
+                remoteBitmapLoader = new RemoteLoader<Bitmap>() {
                     @Override
-                    protected Bitmap doInBackground(Uri... params) {
+                    protected Bitmap doLoad(Uri uri) {
                         try {
                             // load bitmap
                             int width = 0;
@@ -239,11 +236,8 @@ public class PXImagePaint extends BasePXPaint {
                             // Note - although we are using a callback
                             // mechanism here, we are still forcing a
                             // synchronous mode.
-                            // This will have to change eventually, as we may
-                            // not have valid width and height at this point, so
-                            // the entire Bitmap will be fetched into the
-                            // memory.
-                            PXURLBitmapLoader.loadBitmap(params[0], width, height,
+                            final Bitmap[] result = new Bitmap[1];
+                            PXURLBitmapLoader.loadBitmap(uri, width, height,
                                     new LoadingCallback<Bitmap>() {
 
                                         @Override
@@ -253,12 +247,12 @@ public class PXImagePaint extends BasePXPaint {
 
                                         @Override
                                         public void onLoaded(Bitmap bm) {
-                                            bitmap = bm;
+                                            result[0] = bm;
                                         }
                                     }, true);
-                            return bitmap;
+                            return result[0];
                         } catch (Exception e) {
-                            PXLog.e(TAG, e, "Error while loading remote image " + params[0]);
+                            PXLog.e(TAG, e, "Error while loading remote image " + uri);
                         }
                         return null;
                     }
@@ -309,5 +303,68 @@ public class PXImagePaint extends BasePXPaint {
     public PXPaint darkenByPercent(float percent) {
         // TODO
         return this;
+    }
+
+    /**
+     * A wrapper loader that can execute as an {@link AsyncTask} when initiated
+     * from the UI thread, or execute synchronously when running from a non-UI
+     * thread.
+     * 
+     * @param <Params>
+     * @param <Progress>
+     * @param <Result>
+     */
+    private abstract class RemoteLoader<R> {
+        private AsyncTask<Uri, Void, R> task;
+        private Uri uri;
+
+        /**
+         * Call this execute to initiate the {@link Uri} an the an internal
+         * {@link AsyncTask} in case called from the UI thread.
+         * 
+         * @param uri
+         */
+        public void execute(Uri uri) {
+            this.uri = uri;
+            if (Looper.getMainLooper() == Looper.myLooper()) {
+                // The loader was constructed at the UI thread.
+                task = new AsyncTask<Uri, Void, R>() {
+                    @Override
+                    protected R doInBackground(Uri... params) {
+                        return doLoad(params[0]);
+                    }
+                };
+                task.execute(uri);
+            }
+        }
+
+        /**
+         * Returns the loading result. This method will block until a result is
+         * received.
+         * 
+         * @return The loading result (can be <code>null</code> in case of an
+         *         error)
+         */
+        public R get() {
+            if (task != null) {
+                try {
+                    return task.get();
+                } catch (Exception e) {
+                    PXLog.e(TAG, e, "Error loading an image/svg ('%s')", uri);
+                    return null;
+                }
+            }
+            // synchronous loading
+            return doLoad(uri);
+        }
+
+        /**
+         * Do the actual result loading.
+         * 
+         * @param uri
+         * @return The loading result.
+         */
+        protected abstract R doLoad(Uri uri);
+
     }
 }

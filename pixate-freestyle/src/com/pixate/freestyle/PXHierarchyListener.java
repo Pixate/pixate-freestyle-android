@@ -248,6 +248,9 @@ public class PXHierarchyListener implements OnHierarchyChangeListener {
         if (adapter instanceof SpinnerAdapter) {
             interfaces.add(SpinnerAdapter.class);
         }
+        if (adapter instanceof ProxyAdapter) {
+            interfaces.add(((ProxyAdapter) adapter).getAdapterInterface());
+        }
 
         // Create a proxy for the adapter to intercept
         // the 'getView'

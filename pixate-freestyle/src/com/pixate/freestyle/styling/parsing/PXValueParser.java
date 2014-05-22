@@ -38,20 +38,20 @@ import com.pixate.freestyle.cg.math.PXDimension;
 import com.pixate.freestyle.cg.math.PXOffsets;
 import com.pixate.freestyle.cg.paints.PXImagePaint;
 import com.pixate.freestyle.cg.paints.PXLinearGradient;
+import com.pixate.freestyle.cg.paints.PXLinearGradient.PXLinearGradientDirection;
 import com.pixate.freestyle.cg.paints.PXPaint;
 import com.pixate.freestyle.cg.paints.PXPaintGroup;
 import com.pixate.freestyle.cg.paints.PXRadialGradient;
 import com.pixate.freestyle.cg.paints.PXSolidPaint;
-import com.pixate.freestyle.cg.paints.PXLinearGradient.PXLinearGradientDirection;
 import com.pixate.freestyle.cg.shadow.PXShadow;
 import com.pixate.freestyle.cg.shadow.PXShadowGroup;
 import com.pixate.freestyle.cg.shadow.PXShadowPaint;
 import com.pixate.freestyle.styling.infos.PXAnimationInfo;
-import com.pixate.freestyle.styling.infos.PXBorderInfo;
 import com.pixate.freestyle.styling.infos.PXAnimationInfo.PXAnimationDirection;
 import com.pixate.freestyle.styling.infos.PXAnimationInfo.PXAnimationFillMode;
 import com.pixate.freestyle.styling.infos.PXAnimationInfo.PXAnimationPlayState;
 import com.pixate.freestyle.styling.infos.PXAnimationInfo.PXAnimationTimingFunction;
+import com.pixate.freestyle.styling.infos.PXBorderInfo;
 import com.pixate.freestyle.styling.infos.PXBorderInfo.PXBorderStyle;
 import com.pixate.freestyle.styling.stylers.PXStylerContext.GridStyle.PXColumnStretchMode;
 import com.pixate.freestyle.util.CollectionUtil;
@@ -1093,7 +1093,7 @@ public class PXValueParser {
                 assertType(PXStylesheetTokenType.URL);
                 String path = (String) currentLexeme.getValue();
                 advance();
-                result = Uri.parse(Uri.decode(path));
+                result = Uri.parse(path.replace(" ", "%20"));
             }
 
         } catch (Exception e) {

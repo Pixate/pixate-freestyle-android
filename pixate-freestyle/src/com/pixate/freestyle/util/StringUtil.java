@@ -115,4 +115,11 @@ public class StringUtil {
         }
         return text.substring(0, length - 3) + "...";
     }
+
+    public static int compare(String lhs, String rhs) {
+        if (lhs == null) {
+            return rhs == null ? 0 : 1;
+        }
+        return rhs == null ? -1 : lhs.compareTo(rhs);
+    }
 }

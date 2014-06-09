@@ -35,6 +35,8 @@ import android.view.ViewTreeObserver;
 import android.view.ViewTreeObserver.OnGlobalLayoutListener;
 import android.widget.Adapter;
 import android.widget.AdapterView;
+import android.widget.ExpandableListAdapter;
+import android.widget.ExpandableListView;
 import android.widget.ListAdapter;
 import android.widget.RadioGroup;
 import android.widget.SpinnerAdapter;
@@ -235,6 +237,14 @@ public class PXHierarchyListener implements OnHierarchyChangeListener {
             // Thou shalt not Proxy a Proxy!
             return;
         }
+        //
+        // if (adapterView instanceof ExpandableListView) {
+        // // Special case to handle the expandable list views.
+        // setExpendableListAdapterProxy((ExpandableListView) adapterView,
+        // adapter);
+        // return;
+        // }
+
         // Collect the Adapter sub-interfaces that we
         // would like to proxy.
         List<Class<?>> interfaces = new ArrayList<Class<?>>(4);
@@ -248,14 +258,17 @@ public class PXHierarchyListener implements OnHierarchyChangeListener {
         if (adapter instanceof SpinnerAdapter) {
             interfaces.add(SpinnerAdapter.class);
         }
-
         // Create a proxy for the adapter to intercept
         // the 'getView'
-        Adapter newAdapter = (Adapter) PXAdapterInvocationHandler.newInstance(adapterView,
+        Object newAdapter = PXAdapterInvocationHandler.newInstance(adapterView,
                 interfaces.toArray(new Class<?>[interfaces.size()]));
-
         // Set the proxy as the adapter
-        adapterView.setAdapter(newAdapter);
+        if (newAdapter instanceof Adapter) {
+            adapterView.setAdapter((Adapter) newAdapter);
+        } else if (newAdapter instanceof ExpandableListAdapter) {
+            // we can be certain that the view is an ExpandableListView
+            ((ExpandableListView) adapterView).setAdapter((ExpandableListAdapter) newAdapter);
+        }
     }
 
     @TargetApi(Build.VERSION_CODES.JELLY_BEAN)

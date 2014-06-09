@@ -16,6 +16,7 @@
 package com.pixate.freestyle;
 
 import java.lang.ref.WeakReference;
+import java.lang.reflect.Field;
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
@@ -27,8 +28,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Adapter;
 import android.widget.AdapterView;
+import android.widget.ExpandableListAdapter;
+import android.widget.ExpandableListView;
 import android.widget.Spinner;
 
+import com.pixate.freestyle.util.PXLog;
 import com.pixate.freestyle.util.ViewUtil;
 
 /**
@@ -42,10 +46,11 @@ import com.pixate.freestyle.util.ViewUtil;
  */
 public class PXAdapterInvocationHandler implements java.lang.reflect.InvocationHandler {
 
+    private static final String TAG = PXAdapterInvocationHandler.class.getSimpleName();
     // The methods we would like to intercept.
     private static Set<String> interceptedMethods = new HashSet<String>(Arrays.asList("getView",
-            "getDropDownView"));
-    private Adapter adapter;
+            "getDropDownView", "getGroupView", "getChildView"));
+    private Object adapter;
     private WeakReference<AdapterView<? extends Adapter>> viewRef;
 
     /**
@@ -64,16 +69,59 @@ public class PXAdapterInvocationHandler implements java.lang.reflect.InvocationH
     }
 
     private PXAdapterInvocationHandler(AdapterView<Adapter> adapterView) {
-        this.adapter = adapterView.getAdapter();
+        this.adapter = getAdapter(adapterView);
         this.viewRef = new WeakReference<AdapterView<? extends Adapter>>(adapterView);
     }
 
     /**
-     * Returns the original {@link Adapter} that is being proxied.
+     * Returns the {@link Adapter} that is set on the given adapter view. We
+     * have to special treat this for the case where the {@link AdapterView} is
+     * an instance of {@link ExpandableListView}.
      * 
-     * @return The original {@link Adapter} instance.
+     * @param view
+     * @return The {@link Adapter}
      */
-    public Adapter getOriginal() {
+    @SuppressWarnings("rawtypes")
+    private static Object getAdapter(AdapterView view) {
+        Adapter adapter = view.getAdapter();
+        if (view instanceof ExpandableListView) {
+            /*
+             * Those views, for some annoying reason, only accept
+             * ExpendableListAdapters, and we need to extract that adapter from
+             * a hidden mExpandableListAdapter field under a hidden class
+             * ExpandableListConnector
+             */
+            try {
+
+                Field adapterField = adapter.getClass().getDeclaredField("mExpandableListAdapter");
+                adapterField.setAccessible(true);
+                ExpandableListAdapter innerAdapter = (ExpandableListAdapter) adapterField
+                        .get(adapter);
+                return innerAdapter;
+            } catch (NoSuchFieldException e) {
+                PXLog.e(TAG,
+                        e,
+                        "Unable to locate the inner field 'mExpandableListAdapter'. Class name = %s",
+                        adapter.getClass().getName());
+            } catch (Exception e) {
+                PXLog.e(TAG, e,
+                        "Unable to read the inner field 'mExpandableListAdapter'. Class name = %s",
+                        adapter.getClass().getName());
+            }
+        } else {
+            return adapter;
+        }
+        return null;
+    }
+
+    /**
+     * Returns the original {@link Adapter} or {@link ExpandableListAdapter}
+     * that is being proxied.
+     * 
+     * @return The original {@link Adapter} or {@link ExpandableListAdapter}
+     *         instance.
+     */
+    public Object getOriginal() {
         return adapter;
     }
 
@@ -89,7 +137,13 @@ public class PXAdapterInvocationHandler implements java.lang.reflect.InvocationH
                 // where we can't locate a parent.
                 View view = (View) result;
                 view.setTag(ViewUtil.TAG_ELEMENT_INDEX, args[0]);
-                view.setTag(ViewUtil.TAG_ELEMENTS_COUNT, adapter.getCount());
+                if (adapter instanceof Adapter) {
+                    view.setTag(ViewUtil.TAG_ELEMENTS_COUNT, ((Adapter) adapter).getCount());
+                } else if (adapter instanceof ExpandableListAdapter) {
+                    // TODO - detect the group position from the arguments
+                    view.setTag(ViewUtil.TAG_ELEMENTS_COUNT,
+                            ((ExpandableListAdapter) adapter).getChildrenCount(groupPosition));
+                }
                 if (viewRef.get() != args[2]) {
                     // change the view-reference to what we get here (this will
                     // happen when dealing with Spinners)

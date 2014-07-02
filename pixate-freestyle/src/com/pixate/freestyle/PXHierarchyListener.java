@@ -35,6 +35,7 @@ import android.view.ViewTreeObserver;
 import android.view.ViewTreeObserver.OnGlobalLayoutListener;
 import android.widget.Adapter;
 import android.widget.AdapterView;
+import android.widget.ExpandableListView;
 import android.widget.ListAdapter;
 import android.widget.RadioGroup;
 import android.widget.SpinnerAdapter;
@@ -233,6 +234,12 @@ public class PXHierarchyListener implements OnHierarchyChangeListener {
         Adapter adapter = adapterView.getAdapter();
         if (adapter == null || Proxy.isProxyClass(adapter.getClass())) {
             // Thou shalt not Proxy a Proxy!
+            return;
+        }
+        if (adapterView instanceof ExpandableListView) {
+            // FIXME - Right now, skip the support for ExpandableListView.
+            // This class throws exceptions on setAdapter(Adapter), and requires
+            // a special adapter that only works with it.... Lame API break!
             return;
         }
         // Collect the Adapter sub-interfaces that we

@@ -28,6 +28,7 @@ import android.annotation.TargetApi;
 import android.graphics.Bitmap;
 import android.graphics.RectF;
 import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.DrawableContainer;
 import android.graphics.drawable.DrawableContainer.DrawableContainerState;
@@ -217,7 +218,17 @@ public class PXDrawableUtil {
     public static void setBackground(View view, Bitmap bitmap, boolean checkForLayer) {
         BitmapDrawable newDrawable = new BitmapDrawable(PixateFreestyle.getAppContext()
                 .getResources(), bitmap);
-        setBackgroundDrawable(view, newDrawable, checkForLayer);
+        Drawable background = view.getBackground();
+        if (background instanceof ColorDrawable) {
+            // keep the background color so it would show when the bitmap is
+            // transparent
+            LayerDrawable layerDrawable = new LayerDrawable(new Drawable[] { background,
+                    newDrawable });
+            layerDrawable.setId(1, android.R.id.background);
+            view.setBackground(layerDrawable);
+        } else {
+            setBackgroundDrawable(view, newDrawable, checkForLayer);
+        }
     }
 
     /**

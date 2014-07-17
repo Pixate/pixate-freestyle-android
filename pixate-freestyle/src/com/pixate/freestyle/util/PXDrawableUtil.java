@@ -159,7 +159,7 @@ public class PXDrawableUtil {
     public static Drawable createDrawable(RectF bounds, PXPaint paint) {
         PXRectangle rectangle = new PXRectangle(bounds);
         rectangle.setFillColor(paint);
-        return rectangle.renderToImage(bounds, true);
+        return rectangle.renderToImage(bounds, paint.isOpaque());
     }
 
     /**

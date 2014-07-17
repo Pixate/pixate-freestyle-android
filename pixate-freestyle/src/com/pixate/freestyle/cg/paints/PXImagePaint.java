@@ -62,9 +62,15 @@ public class PXImagePaint extends BasePXPaint {
     private Uri imageURL;
     private RemoteLoader<Bitmap> remoteBitmapLoader;
     private RemoteLoader<PXShapeDocument> remoteSVGLoader;
+    private boolean isOpaque;
 
     public PXImagePaint(Uri imageURL) {
+        this(imageURL, true);
+    }
+
+    public PXImagePaint(Uri imageURL, boolean isOpaque) {
         this.imageURL = imageURL;
+        this.isOpaque = isOpaque;
     }
 
     /*
@@ -72,8 +78,16 @@ public class PXImagePaint extends BasePXPaint {
      * @see com.pixate.freestyle.cg.paints.PXPaint#isOpaque()
      */
     public boolean isOpaque() {
-        // TODO
-        return true;
+        return isOpaque;
+    }
+
+    /**
+     * Sets the opaque flag for this image paint.
+     * 
+     * @param isOpaque
+     */
+    public void setOpaque(boolean isOpaque) {
+        this.isOpaque = isOpaque;
     }
 
     /*

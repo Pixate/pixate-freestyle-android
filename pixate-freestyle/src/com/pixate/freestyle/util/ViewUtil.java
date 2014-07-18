@@ -249,4 +249,29 @@ public class ViewUtil {
         }
         return h;
     }
+
+    public static void sendToBack(View view) {
+        /*
+         * There is no single "send to back" method in Android. Instead, move
+         * everything "under" this view to the front, one at a time. Also have
+         * to do that for the views "above" this view, so they take back their
+         * rightful place at the top after the lower views have been moved above
+         * them by "bringChildToFront". When all is said and done, this view
+         * will be sitting at the bottom, and the views above it will retain
+         * their original order. In Android L (as part of Material Design),
+         * view's will have an `elevation` property for this.
+         */
+        if (view != null && view.getParent() instanceof ViewGroup) {
+            ViewGroup parent = (ViewGroup) view.getParent();
+            int thisIndex = parent.indexOfChild(view);
+            for (int i = 0; i < parent.getChildCount(); i++) {
+                if (i < thisIndex) {
+                    parent.bringChildToFront(parent.getChildAt(0));
+                } else if (i > thisIndex) {
+                    parent.bringChildToFront(parent.getChildAt(1));
+                }
+            }
+        }
+    }
+
 }

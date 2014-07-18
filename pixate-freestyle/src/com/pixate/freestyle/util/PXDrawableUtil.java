@@ -225,7 +225,7 @@ public class PXDrawableUtil {
             LayerDrawable layerDrawable = new LayerDrawable(new Drawable[] { background,
                     newDrawable });
             layerDrawable.setId(1, android.R.id.background);
-            view.setBackground(layerDrawable);
+            setBackgroundDrawable(view, layerDrawable);
         } else {
             setBackgroundDrawable(view, newDrawable, checkForLayer);
         }

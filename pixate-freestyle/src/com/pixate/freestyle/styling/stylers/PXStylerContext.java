@@ -29,6 +29,7 @@ import android.util.LruCache;
 import android.view.View;
 import android.widget.GridView;
 
+import com.pixate.freestyle.PixateFreestyle;
 import com.pixate.freestyle.cg.math.PXOffsets;
 import com.pixate.freestyle.cg.paints.PXPaint;
 import com.pixate.freestyle.cg.paints.PXPaintGroup;
@@ -216,7 +217,6 @@ public class PXStylerContext {
 
     private Map<String, Object> properties;
 
-    private DisplayMetrics displayMetrics;
     private int styleHash;
 
     // TODO - What's a reasonable size for this? We may also need to overwrite
@@ -272,11 +272,6 @@ public class PXStylerContext {
         this.isVirtual = (styleable instanceof PXVirtualStyleable);
         this.activeStateName = stateName;
         this.styleHash = styleHash;
-
-        if (styleable instanceof View) {
-            this.displayMetrics = ((View) styleable).getContext().getResources()
-                    .getDisplayMetrics();
-        }
     }
 
     // Statics
@@ -586,7 +581,7 @@ public class PXStylerContext {
     }
 
     public DisplayMetrics getDisplayMetrics() {
-        return displayMetrics;
+        return PixateFreestyle.getAppContext().getResources().getDisplayMetrics();
     }
 
     public String getFontName() {

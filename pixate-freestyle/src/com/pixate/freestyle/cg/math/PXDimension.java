@@ -152,13 +152,11 @@ public class PXDimension {
                 result = number;
                 break;
             case DEVICE_PIXELS:
-                // TODO - In that equivalent to [UIScreen mainScreen].scale;
-                result = number / displayMetrics.density;
+                result = number * displayMetrics.density;
                 break;
             case CENTIMETERS:
                 result = (float) (number * 28.346456692913);
                 break;
-
             case MILLIMETERS:
                 result = (float) (number * 2.8346456692913);
                 break;

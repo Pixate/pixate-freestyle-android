@@ -15,6 +15,7 @@
  ******************************************************************************/
 package com.pixate.freestyle.cg.paints;
 
+import java.io.IOException;
 import java.io.InputStream;
 import java.util.Arrays;
 import java.util.HashSet;
@@ -22,6 +23,7 @@ import java.util.Locale;
 import java.util.Set;
 
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.NinePatch;
@@ -114,6 +116,68 @@ public class PXImagePaint extends BasePXPaint {
 
     public Uri getImageUrl() {
         return imageURL;
+    }
+
+    /**
+     * Returns true if this image-paint can return a {@link Bitmap} directly
+     * instead of a {@link Picture} instance that will later be rendered on a
+     * Canvas/Bitmap.
+     * 
+     * @return <code>true</code> in case this image paint is pointing to a
+     *         bitmap asset. <code>false</code> otherwise (and SVG, for
+     *         example).
+     */
+    public boolean canLoadAsBitmap() {
+        return imageURL != null && !hasSVGImageURL();
+    }
+
+    /**
+     * Returns a {@link Bitmap} instance for this image-paint. Call this only
+     * when {@link #canLoadAsBitmap()} returns <code>true</code>, otherwise,
+     * <code>null</code> will be returned.
+     * 
+     * @param bounds
+     * @return A {@link Bitmap}
+     */
+    public Bitmap bitmapForBounds(Rect bounds) {
+        Bitmap bitmap = null;
+        if (canLoadAsBitmap()) {
+            initRemoteLoader(bounds);
+            InputStream inputStream = null;
+            try {
+                if (remoteBitmapLoader != null) {
+                    // note that the remoteBitmapLoader was already initialized
+                    // with the right bounds, so there is no need to resize.
+                    bitmap = remoteBitmapLoader.get();
+                } else {
+                    inputStream = UrlStreamOpener.open(imageURL);
+                    BitmapFactory.Options options = new BitmapFactory.Options();
+                    options.inJustDecodeBounds = true;
+                    BitmapFactory.decodeStream(inputStream, new Rect(), options);
+                    try {
+                        inputStream.close();
+                    } catch (IOException e) {
+                    }
+
+                    // calculates the sample size
+                    options.inSampleSize = PXURLBitmapLoader.calculateSampleSize(options,
+                            bounds.width(), bounds.height());
+                    options.inJustDecodeBounds = false;
+
+                    // grab the bitmap at the requested size
+                    inputStream = UrlStreamOpener.open(imageURL);
+                    bitmap = BitmapFactory.decodeStream(inputStream, new Rect(), options);
+                }
+            } finally {
+                if (inputStream != null) {
+                    try {
+                        inputStream.close();
+                    } catch (IOException e) {
+                    }
+                }
+            }
+        }
+        return bitmap;
     }
 
     /**

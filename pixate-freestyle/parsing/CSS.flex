@@ -171,7 +171,7 @@ n			= [-+]?[0-9]*n
 "hsla("					{ return createLexeme(PXStylesheetTokenType.HSLA); }
 "rgb("					{ return createLexeme(PXStylesheetTokenType.RGB); }
 "rgba("					{ return createLexeme(PXStylesheetTokenType.RGBA); }
-"url("[^)]*")"			{ return createURLLexeme(); }
+url\(\s*[-a-zA-Z0-9\._~:/?#\[\]@%!$&'()*+,;=]*\s*\) 		{ return createURLLexeme(); }
 
 "#"{name}				{ return createLexeme(PXStylesheetTokenType.ID); }
 "."{ident}				{ return createLexeme(PXStylesheetTokenType.CLASS); }

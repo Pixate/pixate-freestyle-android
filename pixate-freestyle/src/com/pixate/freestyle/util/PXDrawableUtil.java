@@ -36,6 +36,7 @@ import android.graphics.drawable.LayerDrawable;
 import android.graphics.drawable.StateListDrawable;
 import android.os.Build;
 import android.view.View;
+import android.widget.ImageView;
 
 import com.pixate.freestyle.PixateFreestyle;
 import com.pixate.freestyle.cg.paints.PXPaint;
@@ -216,6 +217,10 @@ public class PXDrawableUtil {
      *            {@link LayerDrawable} when applying a background.
      */
     public static void setBackground(View view, Bitmap bitmap, boolean checkForLayer) {
+        if (view instanceof ImageView) {
+            ((ImageView) view).setImageBitmap(bitmap);
+            return;
+        }
         BitmapDrawable newDrawable = new BitmapDrawable(PixateFreestyle.getAppContext()
                 .getResources(), bitmap);
         Drawable background = view.getBackground();

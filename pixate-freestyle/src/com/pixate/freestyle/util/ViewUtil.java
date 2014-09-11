@@ -220,6 +220,9 @@ public class ViewUtil {
      * @return the View's width
      */
     public static int getWidth(View view) {
+        if (view == null) {
+            return 0;
+        }
         int w = view.getWidth();
         if (w == 0) {
             // try to get it from the layout
@@ -239,6 +242,9 @@ public class ViewUtil {
      * @return the View's height
      */
     public static int getHeight(View view) {
+        if (view == null) {
+            return 0;
+        }
         int h = view.getHeight();
         if (h == 0) {
             // try to get it from the layout

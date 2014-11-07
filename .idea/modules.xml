@@ -3,9 +3,10 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/samples/PixateFreestyleActionBarDemo/PixateFreestyleActionBarDemo.iml" filepath="$PROJECT_DIR$/samples/PixateFreestyleActionBarDemo/PixateFreestyleActionBarDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/samples/PixateFreestyleShowcase/PixateFreestyleShowcase.iml" filepath="$PROJECT_DIR$/samples/PixateFreestyleShowcase/PixateFreestyleShowcase.iml" />
       <module fileurl="file://$PROJECT_DIR$/samples/PixateFreestyleViewDemo/PixateFreestyleViewDemo.iml" filepath="$PROJECT_DIR$/samples/PixateFreestyleViewDemo/PixateFreestyleViewDemo.iml" />
-      <module fileurl="file://$PROJECT_DIR$/pixate-android-freestyle-staging.iml" filepath="$PROJECT_DIR$/pixate-android-freestyle-staging.iml" />
       <module fileurl="file://$PROJECT_DIR$/pixate-freestyle/pixate-freestyle.iml" filepath="$PROJECT_DIR$/pixate-freestyle/pixate-freestyle.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pixate-freestyle-android.iml" filepath="$PROJECT_DIR$/pixate-freestyle-android.iml" />
     </modules>
   </component>
 </project>

@@ -1,13 +1,13 @@
-apply plugin: 'android'
+apply plugin: 'com.android.application'
 
 dependencies {
-    compile fileTree(dir: 'libs', include: '*.jar')
     compile project(':pixate-freestyle')
+    compile 'com.android.support:support-v4:21.0.0'
 }
 
 android {
-    compileSdkVersion 19
-    buildToolsVersion "19.0.1"
+    compileSdkVersion 21
+    buildToolsVersion "21.0.2"
 
     sourceSets {
         main {

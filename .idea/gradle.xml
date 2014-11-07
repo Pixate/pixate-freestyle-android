@@ -11,6 +11,7 @@
             <option value="$PROJECT_DIR$/pixate-freestyle" />
             <option value="$PROJECT_DIR$/samples" />
             <option value="$PROJECT_DIR$/samples/PixateFreestyleActionBarDemo" />
+            <option value="$PROJECT_DIR$/samples/PixateFreestyleShowcase" />
             <option value="$PROJECT_DIR$/samples/PixateFreestyleViewDemo" />
           </set>
         </option>

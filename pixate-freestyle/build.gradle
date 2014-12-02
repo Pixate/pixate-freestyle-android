@@ -9,7 +9,6 @@ android {
     buildToolsVersion "21.0.2"
 
     defaultConfig {
-        applicationId "com.pixate.freestyle.pixatefreestyle"
         minSdkVersion 13
         targetSdkVersion 21
         versionCode 1

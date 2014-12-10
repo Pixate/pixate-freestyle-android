@@ -56,7 +56,7 @@ However, in most cases you would style a view by its ID (the same one that was d
 
 The above example is a very simple one. Pixate also supports advanced styling instructions, like _nth-child_ for Lists, matrix transformations and more.
 
-See the [Views Demo blog post](http://www.pixate.com/blog/2013-12-06-android-views-demo/index.html) to get a taste of what's possible.
+See the [Views Demo blog post](https://github.com/Pixate/pixate-freestyle-android/wiki/Styling-Views) to get a taste of what's possible.
 
 ### Supported Views
 

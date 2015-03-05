@@ -52,7 +52,7 @@ import com.pixate.freestyle.util.UrlStreamOpener;
 public class PXImagePaint extends BasePXPaint {
     private static final String TAG = PXImagePaint.class.getSimpleName();
     private static final Set<String> SUPPORTED_REMOTE_SCHEMES = new HashSet<String>(Arrays.asList(
-            "http", "https"));
+            "http", "https", "pixate"));
 
     public enum PXImageRepeatType {
         REPEAT,

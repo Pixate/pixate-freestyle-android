@@ -319,7 +319,7 @@ public class PXImagePaint extends BasePXPaint {
                                     new LoadingCallback<Bitmap>() {
 
                                         @Override
-                                        public void onError(Exception error) {
+                                        public void onError(Throwable error) {
                                             PXLog.e(TAG, error, "Error while downloading a bitmap");
                                         }
 

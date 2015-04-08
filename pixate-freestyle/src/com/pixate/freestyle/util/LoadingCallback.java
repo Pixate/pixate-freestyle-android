@@ -20,5 +20,5 @@ public interface LoadingCallback<T> {
      * 
      * @param error
      */
-    public void onError(Exception error);
+    public void onError(Throwable error);
 }

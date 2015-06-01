@@ -7,7 +7,7 @@
       <module fileurl="file://$PROJECT_DIR$/samples/PixateFreestyleViewDemo/PixateFreestyleViewDemo.iml" filepath="$PROJECT_DIR$/samples/PixateFreestyleViewDemo/PixateFreestyleViewDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/pixate-freestyle/pixate-freestyle.iml" filepath="$PROJECT_DIR$/pixate-freestyle/pixate-freestyle.iml" />
       <module fileurl="file://$PROJECT_DIR$/pixate-freestyle-android.iml" filepath="$PROJECT_DIR$/pixate-freestyle-android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/samples/samples.iml" filepath="$PROJECT_DIR$/samples/samples.iml" />
     </modules>
   </component>
 </project>
-
